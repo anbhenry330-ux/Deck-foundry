@@ -75,38 +75,38 @@ export function OrderFlow() {
             {!isLast && (
               <span
                 aria-hidden
-                className="absolute left-6 top-14 h-[calc(100%-3rem)] w-px bg-[#E1C699]"
+                className="absolute left-6 top-14 h-[calc(100%-3rem)] w-px bg-[#D9CEB4]"
               />
             )}
             <div
               className={`relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border ${
                 step.highlight
-                  ? "border-[#8B5E3C] bg-[#8B5E3C]/10"
-                  : "border-[#E1C699] bg-[#FFFDD0]"
+                  ? "border-[#3C382F] bg-[#3C382F]/10"
+                  : "border-[#D9CEB4] bg-[#F2ECE0]"
               }`}
             >
               <Icon
-                className={`h-5 w-5 ${step.highlight ? "text-[#8B5E3C]" : "text-[#8B5E3C]/70"}`}
+                className={`h-5 w-5 ${step.highlight ? "text-[#3C382F]" : "text-[#3C382F]/70"}`}
                 strokeWidth={1.5}
               />
             </div>
             <div
               className={`flex-1 rounded-lg border p-4 ${
                 step.highlight
-                  ? "border-[#8B5E3C] bg-[#8B5E3C]/5"
-                  : "border-[#E1C699]/60 bg-[#FFFDD0]"
+                  ? "border-[#3C382F] bg-[#3C382F]/5"
+                  : "border-[#D9CEB4]/60 bg-[#F2ECE0]"
               }`}
             >
               <div className="flex items-center gap-2">
-                <span className="font-mono text-xs text-[#8B5E3C]/40">{step.no}</span>
-                <h3 className="font-serif text-base font-bold text-[#8B5E3C]">{step.title}</h3>
+                <span className="font-mono text-xs text-[#3C382F]/40">{step.no}</span>
+                <h3 className="font-serif text-base font-bold text-[#3C382F]">{step.title}</h3>
                 {step.highlight && (
-                  <span className="rounded-full bg-[#8B5E3C] px-2 py-0.5 font-mono text-[10px] font-semibold text-[#FFFDD0]">
+                  <span className="rounded-full bg-[#3C382F] px-2 py-0.5 font-mono text-[10px] font-semibold text-[#F2ECE0]">
                     首次購買必看
                   </span>
                 )}
               </div>
-              <p className="mt-1.5 text-sm leading-relaxed text-[#8B5E3C]/75">{step.desc}</p>
+              <p className="mt-1.5 text-sm leading-relaxed text-[#3C382F]/75">{step.desc}</p>
             </div>
           </li>
         );

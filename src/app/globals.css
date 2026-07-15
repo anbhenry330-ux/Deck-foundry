@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --color-bg: #fffdd0;
-  --color-paper: #ffffff;
-  --color-kraft: #e1c699;
-  --color-ink: #8b5e3c;
-  --color-ember: #8b5e3c;
-  --color-tan: #e1c699;
-  --color-ledger: #8b5e3c;
-  --color-gold: #8b5e3c;
-  --color-brick: #9b4a3f;
+  --color-bg: #f2ece0;
+  --color-paper: #fbf8f1;
+  --color-kraft: #d9ceb4;
+  --color-ink: #3c382f;
+  --color-ember: #3c382f;
+  --color-tan: #d9ceb4;
+  --color-ledger: #3c382f;
+  --color-gold: #4b5741;
+  --color-brick: #a6553a;
 }
 
 body {
@@ -41,19 +41,27 @@ body {
   outline-offset: 2px;
 }
 
-/* kraft paper texture band — layered grain + soft vignette, no image assets */
+/* warm linen band — soft twin glow, faint grain, no image assets.
+   the glow drifts very slowly so brand bands never sit dead flat. */
 .bg-kraft-texture {
   background-color: var(--color-kraft);
   background-image:
-    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.25), transparent 45%),
-    radial-gradient(circle at 85% 75%, rgba(139, 94, 60, 0.10), transparent 50%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.18'/%3E%3C/svg%3E");
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.35), transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(60, 56, 47, 0.08), transparent 50%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+  background-size: 140% 140%, 140% 140%, auto;
+  animation: kraft-drift 22s ease-in-out infinite;
+}
+
+@keyframes kraft-drift {
+  0%, 100% { background-position: 0% 0%, 100% 100%, 0 0; }
+  50% { background-position: 6% 4%, 94% 96%, 0 0; }
 }
 
 /* mounted dossier card: paper surface pinned slightly off-axis on the sand band */
 .card-mounted {
   background: var(--color-paper);
-  box-shadow: 0 18px 40px -18px rgba(139, 94, 60, 0.35), 0 2px 0 rgba(139, 94, 60, 0.06);
+  box-shadow: 0 18px 40px -18px rgba(60, 56, 47, 0.25), 0 2px 0 rgba(60, 56, 47, 0.05);
 }
 
 /* scroll/load reveal animation is handled by the Reveal component (framer-motion),

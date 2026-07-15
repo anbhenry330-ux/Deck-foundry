@@ -36,7 +36,7 @@ const display = Fraunces({
 export const metadata: Metadata = {
   title: "構築所 Deck Foundry｜牌組構築專門",
   description:
-    "構築所（Deck Foundry）專門構築日本上位環境主流牌組，大量收購實用牌料，客製化打造你的下一副牌組，價格實惠、當日出貨。",
+    "構築所（Deck Foundry）專門販售日本上位環境主流牌組及牌料，同時提供牌組周邊與客製化訂製，價格實惠、當日出貨。",
 };
 
 export default function RootLayout({
@@ -47,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="zh-Hant">
       <body
-        className={`${serif.variable} ${sans.variable} ${mono.variable} ${display.variable} min-h-screen bg-[#FFFDD0] font-sans text-[#8B5E3C] antialiased`}
+        className={`${serif.variable} ${sans.variable} ${mono.variable} ${display.variable} min-h-screen bg-[#F2ECE0] font-sans text-[#3C382F] antialiased`}
       >
         <Header />
         <main className="min-h-[60vh]">{children}</main>

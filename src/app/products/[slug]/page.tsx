@@ -24,7 +24,7 @@ export default async function ProductDetailPage({
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-14">
-      <nav className="mb-8 font-mono text-xs text-[#8B5E3C]/50">
+      <nav className="mb-8 font-mono text-xs text-[#3C382F]/50">
         <Link href="/products" className="hover:underline">
           商品目錄
         </Link>
@@ -36,7 +36,7 @@ export default async function ProductDetailPage({
           {product.category}
         </Link>
         <span className="mx-2">/</span>
-        <span className="text-[#8B5E3C]/70">{product.name}</span>
+        <span className="text-[#3C382F]/70">{product.name}</span>
       </nav>
 
       <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
@@ -52,13 +52,13 @@ export default async function ProductDetailPage({
         </div>
 
         <div>
-          <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#8B5E3C]/50">
+          <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#3C382F]/50">
             {product.category} · LOT {product.lot}
           </span>
-          <h1 className="mt-2 font-serif text-3xl font-bold leading-tight text-[#8B5E3C]">
+          <h1 className="mt-2 font-serif text-3xl font-bold leading-tight text-[#3C382F]">
             {product.name}
           </h1>
-          <p className="mt-3 text-[15px] leading-relaxed text-[#8B5E3C]/80">
+          <p className="mt-3 text-[15px] leading-relaxed text-[#3C382F]/80">
             {product.tagline}
           </p>
 
@@ -70,18 +70,18 @@ export default async function ProductDetailPage({
 
       <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-3">
         <div className="md:col-span-2">
-          <h2 className="font-serif text-xl font-bold text-[#8B5E3C]">商品說明</h2>
-          <p className="mt-4 text-[15px] leading-relaxed text-[#8B5E3C]/80">
+          <h2 className="font-serif text-xl font-bold text-[#3C382F]">商品說明</h2>
+          <p className="mt-4 text-[15px] leading-relaxed text-[#3C382F]/80">
             {product.description}
           </p>
         </div>
         <div>
-          <h2 className="font-serif text-xl font-bold text-[#8B5E3C]">規格</h2>
-          <dl className="mt-4 divide-y divide-[#E1C699]/40 rounded-md border border-[#E1C699]">
+          <h2 className="font-serif text-xl font-bold text-[#3C382F]">規格</h2>
+          <dl className="mt-4 divide-y divide-[#D9CEB4]/40 rounded-md border border-[#D9CEB4]">
             {product.specs.map((spec) => (
               <div key={spec.label} className="flex justify-between px-4 py-2.5 text-sm">
-                <dt className="text-[#8B5E3C]/60">{spec.label}</dt>
-                <dd className="text-right font-medium text-[#8B5E3C]">{spec.value}</dd>
+                <dt className="text-[#3C382F]/60">{spec.label}</dt>
+                <dd className="text-right font-medium text-[#3C382F]">{spec.value}</dd>
               </div>
             ))}
           </dl>
@@ -89,8 +89,8 @@ export default async function ProductDetailPage({
       </div>
 
       {related.length > 0 && (
-        <div className="mt-16 border-t border-[#E1C699] pt-10">
-          <h2 className="mb-6 font-serif text-xl font-bold text-[#8B5E3C]">同類商品</h2>
+        <div className="mt-16 border-t border-[#D9CEB4] pt-10">
+          <h2 className="mb-6 font-serif text-xl font-bold text-[#3C382F]">同類商品</h2>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
             {related.map((p) => (
               <ProductCard key={p.id} product={p} />

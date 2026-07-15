@@ -20,12 +20,12 @@ const WARNINGS = [
 
 export function FraudAwareness() {
   return (
-    <div className="rounded-lg border border-[#9B4A3F]/50 bg-[#9B4A3F]/5 p-6">
+    <div className="rounded-lg border border-[#A6553A]/50 bg-[#A6553A]/5 p-6">
       <div className="flex items-center gap-2">
-        <ShieldAlert className="h-5 w-5 text-[#9B4A3F]" strokeWidth={1.5} />
-        <h2 className="font-serif text-xl font-bold text-[#8B5E3C]">防詐提醒</h2>
+        <ShieldAlert className="h-5 w-5 text-[#A6553A]" strokeWidth={1.5} />
+        <h2 className="font-serif text-xl font-bold text-[#3C382F]">防詐提醒</h2>
       </div>
-      <p className="mt-2 text-sm leading-relaxed text-[#8B5E3C]/75">
+      <p className="mt-2 text-sm leading-relaxed text-[#3C382F]/75">
         近期常見假冒物流／客服名義的詐騙電話與簡訊，請訓練家下單時特別留意以下幾點：
       </p>
 
@@ -33,20 +33,20 @@ export function FraudAwareness() {
         {WARNINGS.map((w) => (
           <div
             key={w.title}
-            className="rounded-md border border-[#9B4A3F]/30 bg-[#FFFDD0] p-4"
+            className="rounded-md border border-[#A6553A]/30 bg-[#F2ECE0] p-4"
           >
-            <w.icon className="h-5 w-5 text-[#9B4A3F]" strokeWidth={1.5} />
-            <h3 className="mt-2 font-serif text-sm font-bold text-[#8B5E3C]">{w.title}</h3>
-            <p className="mt-1.5 text-xs leading-relaxed text-[#8B5E3C]/70">{w.desc}</p>
+            <w.icon className="h-5 w-5 text-[#A6553A]" strokeWidth={1.5} />
+            <h3 className="mt-2 font-serif text-sm font-bold text-[#3C382F]">{w.title}</h3>
+            <p className="mt-1.5 text-xs leading-relaxed text-[#3C382F]/70">{w.desc}</p>
           </div>
         ))}
       </div>
 
-      <div className="mt-5 flex items-start gap-2 rounded-md bg-[#FFFDD0] px-4 py-3 text-sm text-[#8B5E3C]/80">
-        <PhoneCall className="mt-0.5 h-4 w-4 shrink-0 text-[#9B4A3F]" strokeWidth={1.5} />
+      <div className="mt-5 flex items-start gap-2 rounded-md bg-[#F2ECE0] px-4 py-3 text-sm text-[#3C382F]/80">
+        <PhoneCall className="mt-0.5 h-4 w-4 shrink-0 text-[#A6553A]" strokeWidth={1.5} />
         <span>
           如果遇到可疑來電或訊息，可撥打
-          <strong className="mx-1 font-mono text-[#8B5E3C]">165</strong>
+          <strong className="mx-1 font-mono text-[#3C382F]">165</strong>
           反詐騙諮詢專線查證，或直接透過構築所官方管道聯繫我們確認訂單狀態。
         </span>
       </div>

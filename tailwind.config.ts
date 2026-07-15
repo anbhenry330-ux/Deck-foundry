@@ -8,19 +8,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cream: "#FFFDD0",
-        sand: "#E1C699",
-        coffee: "#8B5E3C",
-        paper: "#FFFFFF",
+        cream: "#F2ECE0",
+        sand: "#D9CEB4",
+        coffee: "#3C382F",
+        paper: "#FBF8F1",
         brand: {
-          paper: "#FFFFFF",
-          kraft: "#E1C699",
-          ink: "#8B5E3C",
-          ember: "#8B5E3C",
-          brass: "#8B5E3C",
-          pine: "#8B5E3C",
-          tan: "#E1C699",
-          brick: "#9B4A3F",
+          paper: "#FBF8F1",
+          kraft: "#D9CEB4",
+          ink: "#3C382F",
+          ember: "#3C382F",
+          brass: "#3C382F",
+          pine: "#4B5741",
+          tan: "#D9CEB4",
+          brick: "#A6553A",
         },
       },
       fontFamily: {
