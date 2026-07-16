@@ -6,8 +6,8 @@ import { ExternalLink, Menu, X } from "lucide-react";
 
 const NAV = [
   { href: "/", label: "首頁" },
-  { href: "/products", label: "商品目錄" },
-  { href: "/tournament-results", label: "近期戰績" },
+  { href: "/products", label: "現有商品" },
+  { href: "/tournament-results", label: "上位卡表" },
   { href: "/order-guide", label: "下單教學" },
   { href: "/about", label: "關於我們" },
 ];

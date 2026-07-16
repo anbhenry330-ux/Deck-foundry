@@ -14,8 +14,9 @@ export default function OrderGuidePage() {
         </span>
         <h1 className="mt-2 font-serif text-3xl font-bold text-[#3C382F]">下單教學</h1>
         <p className="mt-3 text-[15px] leading-relaxed text-[#3C382F]/80">
-          構築所的商品透過賣貨便（7-11 MyShip）出貨，支援貨到付款。第一次購買的訓練家，
-          請先花一分鐘看完這頁，了解完整下單流程與防詐提醒。
+          所有商品皆會透過賣貨便（7-11 MyShip）出貨，支援貨到付款，
+          <br />
+          購買前請先瀏覽此頁，了解完整下單流程與防詐提醒。
         </p>
       </div>
 
@@ -28,8 +29,9 @@ export default function OrderGuidePage() {
               沒用過賣貨便嗎？請先註冊 7-11 會員
             </h2>
             <p className="mt-1 text-sm leading-relaxed text-[#3C382F]/75">
-              下單前系統會請你登入 7-11 OPEN POINT 會員，第一次使用的買家請先完成註冊，
-              才能繼續選擇取貨門市與貨到付款。
+              下單前系統會請你登入 7-11 OPEN POINT 會員，
+              <br />
+              第一次使用的買家請先完成會員註冊，才能繼續挑選商品。
             </p>
           </div>
         </div>

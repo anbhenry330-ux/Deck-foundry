@@ -53,8 +53,8 @@ const SERVICES = [
 ];
 
 const DELIVERY = [
-  { label: "超商取貨", value: "賣貨便、交貨便" },
-  { label: "付款方式", value: "貨到付款、匯款" },
+  { label: "超商取貨", value: "賣貨便" },
+  { label: "付款方式", value: "貨到付款" },
   { label: "面交地點", value: "北捷各大捷運站" },
 ];
 
@@ -253,7 +253,7 @@ export default function Home() {
           <Reveal delay={120} className="flex flex-col items-center gap-4 md:items-start">
             <MountedPoster
               src="/poster-payment.png"
-              alt="付款及交易方式海報：超商取貨（賣貨便、交貨便）、貨到付款或匯款、北捷各站面交，下單後最快可當日寄出"
+              alt="付款及交易方式海報：超商取貨（賣貨便）、貨到付款、北捷各站面交，下單後最快可當日寄出"
               rotate={1.4}
               className="w-full max-w-[240px]"
             />

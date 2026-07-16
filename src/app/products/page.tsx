@@ -2,7 +2,7 @@ import Link from "next/link";
 import { products, type ProductCategory } from "@/data/products";
 import { ProductCard } from "@/components/ProductCard";
 
-const CATEGORIES: ProductCategory[] = ["牌組", "單卡", "配件"];
+const CATEGORIES: ProductCategory[] = ["牌組", "配件"];
 
 export default async function ProductsPage({
   searchParams,

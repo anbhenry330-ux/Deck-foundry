@@ -10,6 +10,8 @@ export interface TierDeck {
   share: number; // percentage, e.g. 49.22
   tier: Tier;
   sourceUrl: string;
+  /** 牌組主要角色圖片，放在 public/decks 底下；尚未提供圖片前留空，會顯示預設圖示。 */
+  image?: string;
 }
 
 export interface TierListMeta {
@@ -54,6 +56,7 @@ interface RawDeck {
   points: number;
   share: number;
   sourceUrl: string;
+  image?: string;
 }
 
 const RAW_DECKS: RawDeck[] = [

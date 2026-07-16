@@ -22,19 +22,19 @@ const STEPS: Step[] = [
     no: "01",
     icon: ShoppingBag,
     title: "瀏覽商品目錄",
-    desc: "在構築所網站選定想要的牌組、單卡或配件。",
+    desc: "在構築所網站瀏覽有興趣的商品。",
   },
   {
     no: "02",
     icon: ExternalLink,
     title: "點擊「前往賣貨便下單」",
-    desc: "商品頁與商品卡片上都有這個按鈕，會開新分頁跳轉到賣貨便（myship.7-11.com.tw）。",
+    desc: "商品下方與現有商品頁面皆有前往下單按鈕，點擊便會前往賣貨便賣場。",
   },
   {
     no: "03",
     icon: UserPlus,
     title: "完成 7-11 會員登入／註冊",
-    desc: "第一次使用的買家，系統會請你先註冊／登入 7-11 OPEN POINT 會員，才能繼續下單。",
+    desc: "未使用過的買家需先註冊 7-11 OPEN POINT 會員，\n使用過及剛註冊完的買家需先登入會員，才能繼續下單。",
     highlight: true,
   },
   {
@@ -47,19 +47,19 @@ const STEPS: Step[] = [
     no: "05",
     icon: BellRing,
     title: "等待到貨通知",
-    desc: "商品到店後，系統會發送簡訊／APP 通知，告知可以取貨的時間。",
+    desc: "商品抵達取件門市後，系統會發送簡訊及email通知。",
   },
   {
     no: "06",
     icon: PackageCheck,
     title: "至門市取貨並付款",
-    desc: "攜帶取貨憑證到指定門市，確認商品後現場付款取貨。",
+    desc: "前往取件門市，確認商品後現場付款取貨。",
   },
   {
     no: "07",
     icon: CheckCircle2,
     title: "交易完成",
-    desc: "取貨付款完成，訂單即結束，如有問題可聯繫構築所客服。",
+    desc: "取貨付款後，訂單便完成，若對商品有任何疑慮可聯繫客服。",
   },
 ];
 
@@ -106,7 +106,9 @@ export function OrderFlow() {
                   </span>
                 )}
               </div>
-              <p className="mt-1.5 text-sm leading-relaxed text-[#3C382F]/75">{step.desc}</p>
+              <p className="mt-1.5 whitespace-pre-line text-sm leading-relaxed text-[#3C382F]/75">
+                {step.desc}
+              </p>
             </div>
           </li>
         );
