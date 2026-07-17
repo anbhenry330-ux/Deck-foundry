@@ -21,7 +21,7 @@ export function DeckGlyph({
           alt={deck.nameZh}
           fill
           sizes={sizes}
-          className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.06]"
+          className="object-contain transition-transform duration-500 ease-out group-hover:scale-[1.06]"
         />
       ) : (
         <div className="flex flex-col items-center gap-1.5 text-[#3C382F]/35">

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 import { sortedResults, tournamentResults } from "@/data/tournament-results";
-import { tierList, TIER_LABEL } from "@/data/tier-list";
+import { tierList } from "@/data/tier-list";
 import { ResultCard } from "@/components/ResultCard";
 import { DeckGlyph } from "@/components/DeckGlyph";
 
@@ -37,9 +37,6 @@ export default async function TournamentResultsPage({
               <div>
                 <p className="font-serif text-sm font-bold leading-snug text-[#3C382F] group-hover:underline">
                   {d.nameZh}
-                </p>
-                <p className="text-xs text-[#3C382F]/50">
-                  {TIER_LABEL[d.tier]}・{d.share.toFixed(2)}%
                 </p>
               </div>
             </Link>
