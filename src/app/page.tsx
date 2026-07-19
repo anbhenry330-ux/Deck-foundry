@@ -328,7 +328,7 @@ export default function Home() {
             href="/tournament-results"
             className="group overflow-hidden rounded-xl border border-[#D9CEB4] bg-[#FBF8F1] transition-shadow hover:shadow-[0_10px_30px_-14px_rgba(60,56,47,0.35)]"
           >
-            <ProductGlyph product={products[6]} className="rounded-none border-0" />
+            <ProductGlyph product={products[5]} className="rounded-none border-0" />
             <div className="p-7">
               <span className="font-mono text-xs uppercase tracking-[0.25em] text-[#3C382F]/45">
                 環境情報
