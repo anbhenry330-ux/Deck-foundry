@@ -97,8 +97,10 @@ export function OrderFlow() {
                   : "border-[#D9CEB4]/60 bg-[#F2ECE0]"
               }`}
             >
-              <div className="flex items-center gap-2">
-                <span className="font-mono text-xs text-[#3C382F]/40">{step.no}</span>
+              <div className="flex items-baseline gap-2">
+                <span className="inline-block w-6 shrink-0 font-mono text-base text-[#3C382F]/40">
+                  {step.no}
+                </span>
                 <h3 className="font-serif text-base font-bold text-[#3C382F]">{step.title}</h3>
                 {step.highlight && (
                   <span className="rounded-full bg-[#3C382F] px-2 py-0.5 font-mono text-[10px] font-semibold text-[#F2ECE0]">
@@ -106,7 +108,7 @@ export function OrderFlow() {
                   </span>
                 )}
               </div>
-              <p className="mt-1.5 whitespace-pre-line text-sm leading-relaxed text-[#3C382F]/75">
+              <p className="mt-1.5 whitespace-pre-line pl-8 text-sm leading-relaxed text-[#3C382F]/75">
                 {step.desc}
               </p>
             </div>

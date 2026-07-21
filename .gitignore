@@ -35,3 +35,7 @@ yarn-error.log*
 
 # claude code local settings (personal, not shared)
 .claude/settings.local.json
+
+# local scratch files (not for repo)
+*.docx
+螢幕擷取畫面*.png

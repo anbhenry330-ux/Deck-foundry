@@ -18,7 +18,6 @@ import { ProductCard } from "@/components/ProductCard";
 import { Reveal } from "@/components/Reveal";
 import { TiltCard } from "@/components/TiltCard";
 import { MountedPoster } from "@/components/MountedPoster";
-import { DeckBuildFlow } from "@/components/DeckBuildFlow";
 
 const LINE_URL = "https://line.me/R/ti/p/@881idjjb";
 const FB_URL = "https://www.facebook.com/profile.php?id=61584390375051&locale=zh_TW";
@@ -194,26 +193,6 @@ export default function Home() {
             </Reveal>
           ))}
         </div>
-      </section>
-
-      {/* Deck building flow */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
-        <Reveal className="mx-auto max-w-2xl text-center">
-          <span className="font-mono text-xs uppercase tracking-[0.25em] text-[#3C382F]/45">
-            構築知識
-          </span>
-          <h2 className="mt-3 font-serif text-2xl font-bold text-[#3C382F] md:text-3xl">
-            如何構築一副完整牌組？
-          </h2>
-          <p className="mt-3 text-sm leading-relaxed text-[#3C382F]/70">
-            一副完整的 PTCG 牌組為 60 張，
-            <br />
-            由寶可夢卡、訓練家卡（物品、道具、支援者、場地）及能量卡組成。
-          </p>
-        </Reveal>
-        <Reveal delay={120} className="mx-auto mt-10 max-w-3xl">
-          <DeckBuildFlow />
-        </Reveal>
       </section>
 
       {/* Featured decks */}
