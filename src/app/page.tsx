@@ -15,10 +15,10 @@ import {
 } from "lucide-react";
 import { products } from "@/data/products";
 import { ProductCard } from "@/components/ProductCard";
-import { ProductGlyph } from "@/components/ProductGlyph";
 import { Reveal } from "@/components/Reveal";
 import { TiltCard } from "@/components/TiltCard";
 import { MountedPoster } from "@/components/MountedPoster";
+import { DeckBuildFlow } from "@/components/DeckBuildFlow";
 
 const LINE_URL = "https://line.me/R/ti/p/@881idjjb";
 const FB_URL = "https://www.facebook.com/profile.php?id=61584390375051&locale=zh_TW";
@@ -95,8 +95,8 @@ export default function Home() {
                   <br />
                   把日本上位環境，鍛造成你的下一副牌。
                 </h1>
-                <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-[#3C382F]/80">
-                  構築所專門販售主流、強勢牌組及牌料，同時提供牌組周邊與客製化訂製——價格實惠，下單最快可當日寄出。
+                <p className="mt-5 max-w-lg font-serif text-xl italic leading-snug tracking-wide text-[#3C382F]">
+                  構築所－讓您不再為組牌擔憂
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <Link
@@ -194,6 +194,26 @@ export default function Home() {
             </Reveal>
           ))}
         </div>
+      </section>
+
+      {/* Deck building flow */}
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <Reveal className="mx-auto max-w-2xl text-center">
+          <span className="font-mono text-xs uppercase tracking-[0.25em] text-[#3C382F]/45">
+            構築知識
+          </span>
+          <h2 className="mt-3 font-serif text-2xl font-bold text-[#3C382F] md:text-3xl">
+            如何構築一副完整牌組？
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-[#3C382F]/70">
+            一副完整的 PTCG 牌組為 60 張，
+            <br />
+            由寶可夢卡、訓練家卡（物品、道具、支援者、場地）及能量卡組成。
+          </p>
+        </Reveal>
+        <Reveal delay={120} className="mx-auto mt-10 max-w-3xl">
+          <DeckBuildFlow />
+        </Reveal>
       </section>
 
       {/* Featured decks */}
@@ -319,30 +339,6 @@ export default function Home() {
             </div>
           </Reveal>
         </div>
-      </section>
-
-      {/* Competitive proof */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
-        <Reveal className="mx-auto max-w-2xl">
-          <Link
-            href="/tournament-results"
-            className="group overflow-hidden rounded-xl border border-[#D9CEB4] bg-[#FBF8F1] transition-shadow hover:shadow-[0_10px_30px_-14px_rgba(60,56,47,0.35)]"
-          >
-            <ProductGlyph product={products[5]} className="rounded-none border-0" />
-            <div className="p-7">
-              <span className="font-mono text-xs uppercase tracking-[0.25em] text-[#3C382F]/45">
-                環境情報
-              </span>
-              <h3 className="mt-3 flex items-center gap-2 font-serif text-xl font-bold text-[#3C382F]">
-                近期上位戰績
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-[#3C382F]/70">
-                各大賽事的上位入賞戰績與對應牌組，掌握目前真正在贏的構築。
-              </p>
-            </div>
-          </Link>
-        </Reveal>
       </section>
 
       {/* Closing CTA */}
