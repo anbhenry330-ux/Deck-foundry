@@ -12,8 +12,12 @@ import {
   TrendingUp,
   ShieldCheck,
   Facebook,
+  Radar,
+  Wallet,
+  PackageCheck,
 } from "lucide-react";
 import { products } from "@/data/products";
+import { tierList } from "@/data/tier-list";
 import { ProductCard } from "@/components/ProductCard";
 import { Reveal } from "@/components/Reveal";
 import { TiltCard } from "@/components/TiltCard";
@@ -28,6 +32,40 @@ const TICKER = [
   "滿額免運活動持續中",
   "牌組周邊現貨供應",
   "客製化 x 價格實惠",
+];
+
+const TRUST_POINTS = [
+  { icon: Radar, label: "賽事情報即時同步" },
+  { icon: Wallet, label: "貨到付款免風險" },
+  { icon: PackageCheck, label: "最快當日出貨" },
+  { icon: ShieldCheck, label: "商品全額保障" },
+];
+
+const CATEGORY_LINKS = [
+  {
+    icon: Hammer,
+    title: "現貨牌組",
+    desc: "日本上位環境牌組現貨供應",
+    href: "/products?category=牌組",
+  },
+  {
+    icon: ShoppingBag,
+    title: "牌組周邊",
+    desc: "卡套、對戰墊、收納卡冊",
+    href: "/products?category=配件",
+  },
+  {
+    icon: TrendingUp,
+    title: "上位環境卡表",
+    desc: `收錄 ${tierList.length} 副牌組戰績`,
+    href: "/tournament-results",
+  },
+  {
+    icon: Wrench,
+    title: "客製化訂製",
+    desc: "依手牌、預算客製構築",
+    href: "/deck-building",
+  },
 ];
 
 const SERVICES = [
@@ -131,6 +169,10 @@ export default function Home() {
                       sizes="(max-width: 1024px) 90vw, 45vw"
                       className="object-cover"
                     />
+                    <div className="absolute bottom-4 left-4 z-10 inline-flex items-center gap-2 rounded-full bg-[#FBF8F1]/95 px-3 py-1.5 text-xs font-semibold text-[#3C382F] shadow-md backdrop-blur-sm">
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#4B5741]" />
+                      本期上架 {products.length} 副現貨
+                    </div>
                   </div>
                 </div>
               </TiltCard>
@@ -154,42 +196,49 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Services */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1fr_auto]">
-          <Reveal className="max-w-xl">
-            <span className="font-mono text-xs uppercase tracking-[0.25em] text-[#3C382F]/45">
-              服務項目
-            </span>
-            <h2 className="mt-3 font-serif text-2xl font-bold text-[#3C382F] md:text-3xl">
-              從牌組、周邊到客製化，一站處理
-            </h2>
-          </Reveal>
-          <Reveal delay={120} className="mx-auto w-full max-w-[220px] lg:mx-0">
-            <MountedPoster
-              src="/poster-intro.png"
-              alt="構築所品牌介紹海報：牌組構築專門、日本上位主流牌組販售、大量收購牌料、客製化服務，附 LINE 官方帳號 QR code"
-              rotate={-1.6}
-            />
-          </Reveal>
+      {/* Trust bar — the at-a-glance shipping/payment/guarantee strip real storefronts open with */}
+      <div className="border-b border-[#D9CEB4]/60 bg-[#FBF8F1] py-6">
+        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-4 gap-y-5 px-6 sm:grid-cols-4">
+          {TRUST_POINTS.map((t) => (
+            <div key={t.label} className="flex items-center gap-3">
+              <t.icon className="h-6 w-6 shrink-0 text-[#4B5741]" strokeWidth={1.5} />
+              <span className="text-sm font-medium text-[#3C382F]/80">{t.label}</span>
+            </div>
+          ))}
         </div>
+      </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
-          {SERVICES.map((s, i) => (
-            <Reveal key={s.title} delay={i * 100}>
-              <div className="group h-full rounded-xl border border-[#D9CEB4] bg-[#FBF8F1] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#4B5741]/30 hover:shadow-[0_14px_34px_-14px_rgba(60,56,47,0.35)]">
-                <div className="flex items-center justify-between">
-                  <s.icon
-                    className="h-9 w-9 text-[#3C382F] transition-all duration-300 group-hover:-rotate-6 group-hover:text-[#4B5741]"
-                    strokeWidth={1.25}
-                  />
-                  <span className="font-mono text-[11px] tracking-wider text-[#3C382F]/35">
-                    {s.lot}
-                  </span>
+      {/* Category strip — quick shop-by-category browsing */}
+      <section className="mx-auto max-w-6xl px-6 py-16">
+        <Reveal>
+          <span className="font-mono text-xs uppercase tracking-[0.25em] text-[#3C382F]/45">
+            快速選購
+          </span>
+          <h2 className="mt-3 font-serif text-2xl font-bold text-[#3C382F] md:text-3xl">
+            從這裡開始逛
+          </h2>
+        </Reveal>
+
+        <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
+          {CATEGORY_LINKS.map((c, i) => (
+            <Reveal key={c.title} delay={i * 80}>
+              <Link
+                href={c.href}
+                className="group flex h-full flex-col gap-3 rounded-xl border border-[#D9CEB4] bg-[#FBF8F1] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#4B5741]/30 hover:shadow-[0_14px_34px_-14px_rgba(60,56,47,0.35)]"
+              >
+                <c.icon
+                  className="h-7 w-7 text-[#3C382F] transition-colors group-hover:text-[#4B5741]"
+                  strokeWidth={1.25}
+                />
+                <div>
+                  <h3 className="font-serif text-base font-bold text-[#3C382F]">{c.title}</h3>
+                  <p className="mt-1 text-xs leading-relaxed text-[#3C382F]/60">{c.desc}</p>
                 </div>
-                <h3 className="mt-5 font-serif text-lg font-bold text-[#3C382F]">{s.title}</h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-[#3C382F]/70">{s.desc}</p>
-              </div>
+                <span className="mt-auto inline-flex items-center gap-1 text-xs font-medium text-[#3C382F]/50 group-hover:text-[#3C382F]">
+                  前往查看
+                  <ArrowRight className="h-3 w-3" strokeWidth={2} />
+                </span>
+              </Link>
             </Reveal>
           ))}
         </div>
@@ -225,6 +274,49 @@ export default function Home() {
             <Link href="/products" className="text-sm font-medium text-[#3C382F]/70">
               查看全部 →
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="border-y border-[#D9CEB4]/70 bg-[#D9CEB4]/40">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1fr_auto]">
+            <Reveal className="max-w-xl">
+              <span className="font-mono text-xs uppercase tracking-[0.25em] text-[#3C382F]/45">
+                服務項目
+              </span>
+              <h2 className="mt-3 font-serif text-2xl font-bold text-[#3C382F] md:text-3xl">
+                從牌組、周邊到客製化，一站處理
+              </h2>
+            </Reveal>
+            <Reveal delay={120} className="mx-auto w-full max-w-[220px] lg:mx-0">
+              <MountedPoster
+                src="/poster-intro.png"
+                alt="構築所品牌介紹海報：牌組構築專門、日本上位主流牌組販售、大量收購牌料、客製化服務，附 LINE 官方帳號 QR code"
+                rotate={-1.6}
+              />
+            </Reveal>
+          </div>
+
+          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {SERVICES.map((s, i) => (
+              <Reveal key={s.title} delay={i * 100}>
+                <div className="group h-full rounded-xl border border-[#D9CEB4] bg-[#FBF8F1] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#4B5741]/30 hover:shadow-[0_14px_34px_-14px_rgba(60,56,47,0.35)]">
+                  <div className="flex items-center justify-between">
+                    <s.icon
+                      className="h-9 w-9 text-[#3C382F] transition-all duration-300 group-hover:-rotate-6 group-hover:text-[#4B5741]"
+                      strokeWidth={1.25}
+                    />
+                    <span className="font-mono text-[11px] tracking-wider text-[#3C382F]/35">
+                      {s.lot}
+                    </span>
+                  </div>
+                  <h3 className="mt-5 font-serif text-lg font-bold text-[#3C382F]">{s.title}</h3>
+                  <p className="mt-2.5 text-sm leading-relaxed text-[#3C382F]/70">{s.desc}</p>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>

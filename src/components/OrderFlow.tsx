@@ -91,7 +91,7 @@ export function OrderFlow() {
               />
             </div>
             <div
-              className={`flex-1 rounded-lg border p-4 ${
+              className={`flex-1 rounded-lg border px-4 pb-4 pt-3 ${
                 step.highlight
                   ? "border-[#3C382F] bg-[#3C382F]/5"
                   : "border-[#D9CEB4]/60 bg-[#F2ECE0]"

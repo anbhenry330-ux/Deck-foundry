@@ -128,7 +128,7 @@ export function DeckBuildFlow() {
                 <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#D9CEB4] bg-[#F2ECE0]">
                   <span className="font-mono text-lg font-bold text-[#3C382F]/70">{m.no}</span>
                 </div>
-                <div className="flex-1 rounded-lg border border-[#D9CEB4]/60 bg-[#F2ECE0] p-4">
+                <div className="flex-1 rounded-lg border border-[#D9CEB4]/60 bg-[#F2ECE0] px-4 pb-4 pt-3">
                   <h4 className="font-serif text-base font-bold text-[#3C382F]">{m.title}</h4>
                   <ul className="mt-2 space-y-1.5">
                     {m.pros.map((p) => (
