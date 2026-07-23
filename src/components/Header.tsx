@@ -60,15 +60,6 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a
-            href={STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden items-center gap-2 rounded-md bg-[#3C382F] px-4 py-2 text-sm font-semibold text-[#FBF8F1] transition-transform hover:-translate-y-0.5 hover:shadow-md sm:inline-flex"
-          >
-            前往下單
-            <ExternalLink className="h-3.5 w-3.5" strokeWidth={1.5} />
-          </a>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
