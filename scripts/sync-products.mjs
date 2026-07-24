@@ -86,6 +86,14 @@ const COPY_OVERRIDES = {
       "魔靈多龍牌組主打飛行系的靈活調度，是店內詢問度最高的一副，如遇缺貨歡迎私訊預約下一批到貨通知。",
     attribute: "飛行 / 龍",
   },
+  大針蜂牌組: { tagline: "" },
+  猛雷鼓牌組: { tagline: "" },
+  夠讚狗牌組: { tagline: "" },
+  寶石海星牌組: { tagline: "" },
+  火箭隊超夢牌組: { tagline: "" },
+  鋁鋼橋龍牌組: { tagline: "" },
+  寶石海星卡套: { tagline: "" },
+  卡比獸卡套: { tagline: "" },
 };
 
 function slugify(name, id) {

@@ -45,7 +45,7 @@ export const products: Product[] = [
     imageHeight: 1344,
     inStock: true,
     minQty: 1,
-    tagline: "大針蜂牌組，詳細介紹更新中。",
+    tagline: "",
     description: "大針蜂牌組的完整介紹尚待補充，歡迎私訊詢問構築細節。",
     specs: [
       { label: "規格", value: "1 副" },
@@ -65,7 +65,7 @@ export const products: Product[] = [
     imageHeight: 495,
     inStock: true,
     minQty: 1,
-    tagline: "猛雷鼓牌組，詳細介紹更新中。",
+    tagline: "",
     description: "猛雷鼓牌組的完整介紹尚待補充，歡迎私訊詢問構築細節。",
     specs: [
       { label: "規格", value: "1 副" },
@@ -85,7 +85,7 @@ export const products: Product[] = [
     imageHeight: 856,
     inStock: true,
     minQty: 1,
-    tagline: "夠讚狗牌組，詳細介紹更新中。",
+    tagline: "",
     description: "夠讚狗牌組的完整介紹尚待補充，歡迎私訊詢問構築細節。",
     specs: [
       { label: "規格", value: "1 副" },
@@ -105,7 +105,7 @@ export const products: Product[] = [
     imageHeight: 1344,
     inStock: true,
     minQty: 1,
-    tagline: "寶石海星牌組，詳細介紹更新中。",
+    tagline: "",
     description: "寶石海星牌組的完整介紹尚待補充，歡迎私訊詢問構築細節。",
     specs: [
       { label: "規格", value: "1 副" },
@@ -125,7 +125,7 @@ export const products: Product[] = [
     imageHeight: 497,
     inStock: true,
     minQty: 1,
-    tagline: "火箭隊超夢牌組，詳細介紹更新中。",
+    tagline: "",
     description: "火箭隊超夢牌組的完整介紹尚待補充，歡迎私訊詢問構築細節。",
     specs: [
       { label: "規格", value: "1 副" },
@@ -145,7 +145,7 @@ export const products: Product[] = [
     imageHeight: 924,
     inStock: true,
     minQty: 1,
-    tagline: "鋁鋼橋龍牌組，詳細介紹更新中。",
+    tagline: "",
     description: "鋁鋼橋龍牌組的完整介紹尚待補充，歡迎私訊詢問構築細節。",
     specs: [
       { label: "規格", value: "1 副" },
@@ -165,7 +165,7 @@ export const products: Product[] = [
     imageHeight: 500,
     inStock: true,
     minQty: 1,
-    tagline: "寶石海星卡套，詳細介紹更新中。",
+    tagline: "",
     description: "寶石海星卡套的完整介紹尚待補充，歡迎私訊詢問構築細節。",
     specs: [
       { label: "規格", value: "1 副" },
@@ -185,7 +185,7 @@ export const products: Product[] = [
     imageHeight: 600,
     inStock: true,
     minQty: 1,
-    tagline: "卡比獸卡套，詳細介紹更新中。",
+    tagline: "",
     description: "卡比獸卡套的完整介紹尚待補充，歡迎私訊詢問構築細節。",
     specs: [
       { label: "規格", value: "1 副" },

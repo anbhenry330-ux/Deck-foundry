@@ -58,9 +58,11 @@ export default async function ProductDetailPage({
           <h1 className="mt-2 font-serif text-3xl font-bold leading-tight text-[#3C382F]">
             {product.name}
           </h1>
-          <p className="mt-3 text-[15px] leading-relaxed text-[#3C382F]/80">
-            {product.tagline}
-          </p>
+          {product.tagline && (
+            <p className="mt-3 text-[15px] leading-relaxed text-[#3C382F]/80">
+              {product.tagline}
+            </p>
+          )}
 
           <div className="mt-6">
             <OrderCTA product={product} />

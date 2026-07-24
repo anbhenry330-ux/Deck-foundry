@@ -8,11 +8,7 @@ import {
   Gift,
   Send,
   TrendingUp,
-  ShieldCheck,
   Facebook,
-  Radar,
-  Wallet,
-  PackageCheck,
   Truck,
   CreditCard,
   MapPin,
@@ -49,37 +45,30 @@ const HERO_SLIDES: HeroSlide[] = [
   },
 ];
 
-const TRUST_POINTS = [
-  { icon: Radar, label: "賽事情報即時同步" },
-  { icon: Wallet, label: "貨到付款免風險" },
-  { icon: PackageCheck, label: "最快當日出貨" },
-  { icon: ShieldCheck, label: "商品全額保障" },
-];
-
 const CATEGORY_LINKS = [
   {
     icon: Hammer,
-    title: "現貨牌組",
-    desc: "日本上位環境牌組現貨供應",
-    href: "/products?category=牌組",
-  },
-  {
-    icon: ShoppingBag,
-    title: "牌組周邊",
-    desc: "卡套、對戰墊、收納卡冊",
-    href: "/products?category=卡套",
+    title: "牌組構築",
+    en: "Deck Building",
+    desc: "鎖定日本上位環境的主流、強勢牌組，依照環境趨勢構築出最具競爭力的牌組。",
   },
   {
     icon: TrendingUp,
-    title: "上位環境卡表",
-    desc: `收錄 ${tierList.length} 副牌組戰績`,
-    href: "/tournament-results",
+    title: "牌料收購",
+    en: "Card Buyback",
+    desc: "大量收購實用牌料，讓你手中的閒置卡牌變現，收購價格公道實在。",
+  },
+  {
+    icon: ShoppingBag,
+    title: "周邊販售",
+    en: "Accessories",
+    desc: "卡套、對戰墊、收納卡冊一應俱全，從保護愛卡到賽場配件，齊全周邊讓你的裝備不掉鏈。",
   },
   {
     icon: Wrench,
-    title: "客製化訂製",
-    desc: "依手牌、預算客製構築",
-    href: "/deck-building",
+    title: "客製化牌組",
+    en: "Custom Deck",
+    desc: "告訴我們你手上有什麼牌、預算多少、想打什麼風格，我們依需求客製構築，價格實惠不加價。",
   },
 ];
 
@@ -116,13 +105,19 @@ const FAQ_ITEMS = [
   },
 ];
 
-function SectionEyebrow({ children }: { children: React.ReactNode }) {
+function SectionEyebrow({
+  children,
+  line = true,
+}: {
+  children: React.ReactNode;
+  line?: boolean;
+}) {
   return (
     <div className="flex items-center gap-3">
       <span className="shrink-0 font-mono text-xs uppercase tracking-[0.25em] text-[#3C382F]/45">
         {children}
       </span>
-      <span className="h-px flex-1 bg-[#3C382F]/15" />
+      {line && <span className="h-px flex-1 bg-[#3C382F]/15" />}
     </div>
   );
 }
@@ -132,67 +127,65 @@ export default function Home() {
   const highlightResults = sortedResults().slice(0, 4);
 
   return (
-    <div>
+    <div className="bg-cream-texture">
       <HeroCarousel slides={HERO_SLIDES} />
 
       {/* Announcement ticker */}
-      <div className="overflow-hidden border-y border-[#3C382F]/10 bg-[#3C382F] py-2.5">
+      <div className="overflow-hidden bg-kraft-texture py-2.5">
         <div className="flex w-max animate-marquee gap-10 whitespace-nowrap hover:[animation-play-state:paused]">
           {[...TICKER, ...TICKER].map((item, i) => (
             <span
               key={i}
-              className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#FBF8F1]/90"
+              className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#3C382F]/80"
             >
-              <span className="h-1 w-1 animate-pulse rounded-full bg-[#FBF8F1]/60" />
+              <span className="h-1 w-1 animate-pulse rounded-full bg-[#3C382F]/50" />
               {item}
             </span>
           ))}
         </div>
       </div>
 
-      {/* Trust bar */}
-      <div className="border-y border-[#D9CEB4]/60 bg-[#FBF8F1] py-7">
-        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-5 px-6 sm:grid-cols-4">
-          {TRUST_POINTS.map((t) => (
-            <div key={t.label} className="flex items-center gap-3">
-              <t.icon className="h-6 w-6 shrink-0 text-[#4B5741]" strokeWidth={1.5} />
-              <span className="text-sm font-medium text-[#3C382F]/80">{t.label}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* Service items */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
-        <Reveal>
-          <SectionEyebrow>服務項目</SectionEyebrow>
-          <h2 className="mt-3 font-serif text-2xl font-bold text-[#3C382F] md:text-3xl">
-            從這裡開始逛
-          </h2>
-        </Reveal>
+      <section className="bg-paper-texture px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <Reveal className="text-center">
+            <h2 className="font-serif text-2xl font-bold text-[#3C382F] md:text-3xl">
+              服務項目
+            </h2>
+          </Reveal>
 
-        <div className="mt-10 grid grid-cols-2 gap-5 md:grid-cols-4">
-          {CATEGORY_LINKS.map((c, i) => (
-            <Reveal key={c.title} delay={i * 80}>
-              <Link
-                href={c.href}
-                className="group flex h-full flex-col gap-3 rounded-xl border border-[#D9CEB4] bg-[#FBF8F1] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#4B5741]/30 hover:shadow-[0_14px_34px_-14px_rgba(60,56,47,0.35)]"
-              >
-                <c.icon
-                  className="h-7 w-7 text-[#3C382F] transition-colors group-hover:text-[#4B5741]"
-                  strokeWidth={1.25}
-                />
-                <div>
-                  <h3 className="font-serif text-base font-bold text-[#3C382F]">{c.title}</h3>
-                  <p className="mt-1 text-xs leading-relaxed text-[#3C382F]/60">{c.desc}</p>
-                </div>
-                <span className="mt-auto inline-flex items-center gap-1 text-xs font-medium text-[#3C382F]/50 group-hover:text-[#3C382F]">
-                  前往查看
-                  <ArrowRight className="h-3 w-3" strokeWidth={2} />
-                </span>
-              </Link>
-            </Reveal>
-          ))}
+          <div className="mt-10 flex flex-col gap-6">
+            {CATEGORY_LINKS.map((c, i) => {
+              const reversed = i % 2 === 1;
+              return (
+                <Reveal key={c.title} delay={i * 80}>
+                  <div
+                    className={`flex flex-col overflow-hidden rounded-2xl border border-[#D9CEB4] bg-white md:flex-row ${
+                      reversed ? "md:flex-row-reverse" : ""
+                    }`}
+                  >
+                    {/* Placeholder visual — swap for real photography later */}
+                    <div className="flex aspect-[16/9] shrink-0 items-center justify-center bg-[#3C382F]/[0.06] md:aspect-auto md:w-2/3">
+                      <c.icon className="h-14 w-14 text-[#3C382F]/20" strokeWidth={1} />
+                    </div>
+                    <div
+                      className={`flex flex-1 flex-col justify-center gap-2 p-8 md:w-1/3 ${
+                        reversed ? "md:items-end md:text-right" : "md:items-start md:text-left"
+                      }`}
+                    >
+                      <h3 className="font-serif text-xl font-bold text-[#3C382F] md:text-2xl">
+                        {c.title}
+                      </h3>
+                      <span className="font-serif text-xs uppercase tracking-[0.2em] text-[#4B5741]">
+                        {c.en}
+                      </span>
+                      <p className="mt-2 text-sm leading-relaxed text-[#3C382F]/65">{c.desc}</p>
+                    </div>
+                  </div>
+                </Reveal>
+              );
+            })}
+          </div>
         </div>
       </section>
 
@@ -229,11 +222,11 @@ export default function Home() {
       </section>
 
       {/* Featured products */}
-      <section className="px-6 py-20">
+      <section className="bg-stone-texture-a px-6 py-20">
         <div className="mx-auto max-w-6xl">
           <Reveal className="mb-12 flex items-end justify-between gap-6">
             <div className="min-w-0 flex-1">
-              <SectionEyebrow>本期精選</SectionEyebrow>
+              <SectionEyebrow line={false}>本期精選</SectionEyebrow>
               <h2 className="mt-3 font-serif text-2xl font-bold text-[#3C382F] md:text-3xl">
                 本期上架牌組
               </h2>
@@ -261,11 +254,11 @@ export default function Home() {
       </section>
 
       {/* Tournament highlights */}
-      <section className="px-6 py-20">
+      <section className="bg-stone-texture-b px-6 py-20">
         <div className="mx-auto max-w-6xl">
           <Reveal className="mb-12 flex items-end justify-between gap-6">
             <div className="min-w-0 flex-1">
-              <SectionEyebrow>環境情報</SectionEyebrow>
+              <SectionEyebrow line={false}>環境情報</SectionEyebrow>
               <h2 className="mt-3 font-serif text-2xl font-bold text-[#3C382F] md:text-3xl">
                 近期上位戰績
               </h2>
@@ -314,41 +307,43 @@ export default function Home() {
       </section>
 
       {/* Delivery & payment */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
-        <Reveal className="text-center">
-          <SectionEyebrow>交易與出貨</SectionEyebrow>
-          <h2 className="mt-3 font-serif text-2xl font-bold text-[#3C382F] md:text-3xl">
-            付款及交易方式
-          </h2>
-        </Reveal>
+      <section className="bg-stone-texture-a px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <Reveal className="text-center">
+            <SectionEyebrow line={false}>交易與出貨</SectionEyebrow>
+            <h2 className="mt-3 font-serif text-2xl font-bold text-[#3C382F] md:text-3xl">
+              付款及交易方式
+            </h2>
+          </Reveal>
 
-        <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-3">
-          {DELIVERY.map((row, i) => (
-            <Reveal key={row.label} delay={i * 100}>
-              <div className="flex h-full flex-col items-center gap-3 rounded-xl border border-[#D9CEB4] bg-[#FBF8F1] p-6 text-center">
-                <row.icon className="h-7 w-7 text-[#4B5741]" strokeWidth={1.5} />
-                <span className="text-xs uppercase tracking-[0.15em] text-[#3C382F]/50">
-                  {row.label}
-                </span>
-                <span className="font-serif text-lg font-bold text-[#3C382F]">{row.value}</span>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-
-        <Reveal delay={300} className="mt-6 flex justify-center">
-          <div className="inline-flex items-center gap-2 rounded-full bg-[#3C382F]/10 px-3 py-1.5 text-xs font-semibold text-[#3C382F]">
-            <Gift className="h-3.5 w-3.5" strokeWidth={1.75} />
-            滿額免運活動持續中
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-3">
+            {DELIVERY.map((row, i) => (
+              <Reveal key={row.label} delay={i * 100}>
+                <div className="flex h-full flex-col items-center gap-3 rounded-xl border border-[#D9CEB4] bg-[#FBF8F1] p-6 text-center">
+                  <row.icon className="h-7 w-7 text-[#4B5741]" strokeWidth={1.5} />
+                  <span className="text-xs uppercase tracking-[0.15em] text-[#3C382F]/50">
+                    {row.label}
+                  </span>
+                  <span className="font-serif text-lg font-bold text-[#3C382F]">{row.value}</span>
+                </div>
+              </Reveal>
+            ))}
           </div>
-        </Reveal>
+
+          <Reveal delay={300} className="mt-6 flex justify-center">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#3C382F]/10 px-3 py-1.5 text-xs font-semibold text-[#3C382F]">
+              <Gift className="h-3.5 w-3.5" strokeWidth={1.75} />
+              滿額免運活動持續中
+            </div>
+          </Reveal>
+        </div>
       </section>
 
       {/* FAQ */}
-      <section className="px-6 py-20">
+      <section className="bg-stone-texture-b px-6 py-20">
         <div className="mx-auto max-w-3xl">
           <Reveal className="text-center">
-            <SectionEyebrow>常見問題</SectionEyebrow>
+            <SectionEyebrow line={false}>常見問題</SectionEyebrow>
             <h2 className="mt-3 font-serif text-2xl font-bold text-[#3C382F] md:text-3xl">
               下單前，你可能想知道
             </h2>
