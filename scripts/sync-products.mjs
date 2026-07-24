@@ -95,7 +95,7 @@ function slugify(name, id) {
 
 function inferCategory(name) {
   if (name.endsWith("牌組")) return "牌組";
-  if (/配件|套組|收納|對局墊|卡冊|牌套/.test(name)) return "配件";
+  if (/卡套|牌套|套組|收納|對局墊|卡冊/.test(name)) return "卡套";
   return "單卡";
 }
 

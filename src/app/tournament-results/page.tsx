@@ -22,7 +22,7 @@ export default async function TournamentResultsPage({
           </span>
           <h1 className="mt-2 font-serif text-3xl font-bold text-[#3C382F]">上位卡表</h1>
           <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-[#3C382F]/80">
-            點選牌組查看該牌組近期各賽事的上位入賞戰績與卡表。
+            點擊圖片查看該牌組近期上位戰績及卡表。
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export default async function TournamentResultsPage({
           {deck.nameZh}｜近期上位戰績
         </h1>
         <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-[#3C382F]/80">
-          彙整各大賽事的上位入賞戰績，依賽事時間由新到舊排列，同一天則依名次排序。
+          彙整國外各大賽事的上位卡表，依賽事時間由新到舊排列，提供訓練家作為組牌參考。
         </p>
       </div>
 

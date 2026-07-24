@@ -16,10 +16,10 @@ export function Footer() {
                 Deck Foundry
               </p>
             </div>
-            <h4 className="font-mono text-xs uppercase tracking-[0.2em] text-[#3C382F]/45">
+            <h4 className="self-end font-mono text-xs uppercase tracking-[0.2em] text-[#3C382F]/45">
               服務項目
             </h4>
-            <h4 className="font-mono text-xs uppercase tracking-[0.2em] text-[#3C382F]/45">
+            <h4 className="self-end font-mono text-xs uppercase tracking-[0.2em] text-[#3C382F]/45">
               交易方式
             </h4>
 

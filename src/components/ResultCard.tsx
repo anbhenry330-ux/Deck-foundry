@@ -1,6 +1,5 @@
 import { Calendar, Trophy, User, Image as ImageIcon, ExternalLink } from "lucide-react";
 import type { TournamentResult } from "@/data/tournament-results";
-import { tierList } from "@/data/tier-list";
 
 function formatDate(iso: string) {
   const d = new Date(iso);
@@ -23,8 +22,6 @@ function placementLabel(placement: number) {
 }
 
 export function ResultCard({ result }: { result: TournamentResult }) {
-  const deck = result.deckSlug ? tierList.find((d) => d.slug === result.deckSlug) : null;
-
   return (
     <div className="overflow-hidden rounded-lg border border-[#D9CEB4] bg-[#F2ECE0]">
       <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto]">
@@ -59,13 +56,6 @@ export function ResultCard({ result }: { result: TournamentResult }) {
               {placementLabel(result.placement)}
             </span>
           </dd>
-
-          {deck && (
-            <>
-              <dt className="text-[#3C382F]/50">牌組</dt>
-              <dd className="text-[#3C382F]">{deck.nameZh}</dd>
-            </>
-          )}
         </dl>
 
         {/* 卡表 */}

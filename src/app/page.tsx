@@ -42,7 +42,6 @@ const HERO_SLIDES: HeroSlide[] = [
   {
     image: "/cover.png",
     alt: "構築所工作桌：牌組整理、卡表分析與出貨作業的日常",
-    eyebrow: "構築所 — Deck Foundry",
     title: "把日本上位環境，鍛造成你的下一副牌",
     desc: "構築所－讓您不再為組牌擔憂",
     ctaLabel: "瀏覽本期牌組",
@@ -68,7 +67,7 @@ const CATEGORY_LINKS = [
     icon: ShoppingBag,
     title: "牌組周邊",
     desc: "卡套、對戰墊、收納卡冊",
-    href: "/products?category=配件",
+    href: "/products?category=卡套",
   },
   {
     icon: TrendingUp,
@@ -137,7 +136,7 @@ export default function Home() {
       <HeroCarousel slides={HERO_SLIDES} />
 
       {/* Announcement ticker */}
-      <div className="overflow-hidden border-y border-[#4B5741]/10 bg-[#4B5741] py-2.5">
+      <div className="overflow-hidden border-y border-[#3C382F]/10 bg-[#3C382F] py-2.5">
         <div className="flex w-max animate-marquee gap-10 whitespace-nowrap hover:[animation-play-state:paused]">
           {[...TICKER, ...TICKER].map((item, i) => (
             <span
@@ -152,7 +151,7 @@ export default function Home() {
       </div>
 
       {/* Trust bar */}
-      <div className="border-b border-[#D9CEB4]/60 bg-[#FBF8F1] py-7">
+      <div className="border-y border-[#D9CEB4]/60 bg-[#FBF8F1] py-7">
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-5 px-6 sm:grid-cols-4">
           {TRUST_POINTS.map((t) => (
             <div key={t.label} className="flex items-center gap-3">
@@ -163,10 +162,10 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Category / service cards */}
+      {/* Service items */}
       <section className="mx-auto max-w-6xl px-6 py-20">
         <Reveal>
-          <SectionEyebrow>快速選購</SectionEyebrow>
+          <SectionEyebrow>服務項目</SectionEyebrow>
           <h2 className="mt-3 font-serif text-2xl font-bold text-[#3C382F] md:text-3xl">
             從這裡開始逛
           </h2>
@@ -197,41 +196,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured products */}
-      <section className="border-y border-[#D9CEB4]/70 bg-[#D9CEB4]/40">
-        <div className="mx-auto max-w-6xl px-6 py-20">
-          <Reveal className="mb-12 flex items-end justify-between gap-6">
-            <div className="min-w-0 flex-1">
-              <SectionEyebrow>本期精選</SectionEyebrow>
-              <h2 className="mt-3 font-serif text-2xl font-bold text-[#3C382F] md:text-3xl">
-                本期上架牌組
-              </h2>
-            </div>
-            <Link
-              href="/products"
-              className="hidden text-sm font-medium text-[#3C382F]/70 hover:text-[#3C382F] sm:inline"
-            >
-              查看全部 →
-            </Link>
-          </Reveal>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {featured.map((product, i) => (
-              <Reveal key={product.id} delay={i * 80}>
-                <ProductCard product={product} />
-              </Reveal>
-            ))}
-          </div>
-          <div className="mt-8 text-center sm:hidden">
-            <Link href="/products" className="text-sm font-medium text-[#3C382F]/70">
-              查看全部 →
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Brand intro */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1.1fr]">
+      <section className="px-6 py-20">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1.1fr]">
           <Reveal className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl">
             <Image
               src="/cover.png"
@@ -261,9 +228,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured products */}
+      <section className="px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <Reveal className="mb-12 flex items-end justify-between gap-6">
+            <div className="min-w-0 flex-1">
+              <SectionEyebrow>本期精選</SectionEyebrow>
+              <h2 className="mt-3 font-serif text-2xl font-bold text-[#3C382F] md:text-3xl">
+                本期上架牌組
+              </h2>
+            </div>
+            <Link
+              href="/products"
+              className="hidden text-sm font-medium text-[#3C382F]/70 hover:text-[#3C382F] sm:inline"
+            >
+              查看全部 →
+            </Link>
+          </Reveal>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {featured.map((product, i) => (
+              <Reveal key={product.id} delay={i * 80}>
+                <ProductCard product={product} />
+              </Reveal>
+            ))}
+          </div>
+          <div className="mt-8 text-center sm:hidden">
+            <Link href="/products" className="text-sm font-medium text-[#3C382F]/70">
+              查看全部 →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Tournament highlights */}
-      <section className="border-y border-[#D9CEB4]/70 bg-[#D9CEB4]/40">
-        <div className="mx-auto max-w-6xl px-6 py-20">
+      <section className="px-6 py-20">
+        <div className="mx-auto max-w-6xl">
           <Reveal className="mb-12 flex items-end justify-between gap-6">
             <div className="min-w-0 flex-1">
               <SectionEyebrow>環境情報</SectionEyebrow>
@@ -346,8 +345,8 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="border-y border-[#D9CEB4]/70 bg-[#D9CEB4]/40">
-        <div className="mx-auto max-w-3xl px-6 py-20">
+      <section className="px-6 py-20">
+        <div className="mx-auto max-w-3xl">
           <Reveal className="text-center">
             <SectionEyebrow>常見問題</SectionEyebrow>
             <h2 className="mt-3 font-serif text-2xl font-bold text-[#3C382F] md:text-3xl">

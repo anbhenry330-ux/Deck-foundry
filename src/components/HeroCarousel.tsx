@@ -8,7 +8,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 export interface HeroSlide {
   image: string;
   alt: string;
-  eyebrow: string;
   title: string;
   desc: string;
   ctaLabel: string;
@@ -58,10 +57,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
             <div className="relative flex h-full items-end">
               <div className="mx-auto w-full max-w-6xl px-6 pb-14 md:pb-20">
                 <div className="max-w-xl">
-                  <span className="font-mono text-xs uppercase tracking-[0.3em] text-white/70">
-                    {slide.eyebrow}
-                  </span>
-                  <h1 className="mt-4 font-serif text-3xl font-black leading-tight text-white md:text-5xl">
+                  <h1 className="font-serif text-3xl font-black leading-tight text-white md:text-5xl">
                     {slide.title}
                   </h1>
                   <p
