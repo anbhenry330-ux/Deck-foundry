@@ -45,27 +45,44 @@ const HERO_SLIDES: HeroSlide[] = [
   },
 ];
 
-const CATEGORY_LINKS = [
+const CATEGORY_LINKS: {
+  icon: typeof Hammer;
+  image?: string;
+  imageAspect?: string;
+  imageFit?: "cover" | "contain";
+  panelBg?: string;
+  title: string;
+  en: string;
+  desc: string;
+}[] = [
   {
     icon: Hammer,
+    image: "/service-deck-building.jpg",
+    imageAspect: "1907 / 858",
+    panelBg: "#EFEADF",
     title: "牌組構築",
     en: "Deck Building",
     desc: "鎖定日本上位環境的主流、強勢牌組，依照環境趨勢構築出最具競爭力的牌組。",
   },
   {
     icon: TrendingUp,
+    image: "/service-card-buyback.jpg",
+    imageAspect: "2056 / 795",
+    panelBg: "#EFEADF",
     title: "牌料收購",
     en: "Card Buyback",
     desc: "大量收購實用牌料，讓你手中的閒置卡牌變現，收購價格公道實在。",
   },
   {
     icon: ShoppingBag,
+    panelBg: "#EFEADF",
     title: "周邊販售",
     en: "Accessories",
     desc: "卡套、對戰墊、收納卡冊一應俱全，從保護愛卡到賽場配件，齊全周邊讓你的裝備不掉鏈。",
   },
   {
     icon: Wrench,
+    panelBg: "#EFEADF",
     title: "客製化牌組",
     en: "Custom Deck",
     desc: "告訴我們你手上有什麼牌、預算多少、想打什麼風格，我們依需求客製構築，價格實惠不加價。",
@@ -146,7 +163,7 @@ export default function Home() {
       </div>
 
       {/* Service items */}
-      <section className="bg-paper-texture px-6 py-20">
+      <section className="bg-kraft-texture px-6 py-20">
         <div className="mx-auto max-w-6xl">
           <Reveal className="text-center">
             <h2 className="font-serif text-2xl font-bold text-[#3C382F] md:text-3xl">
@@ -164,14 +181,29 @@ export default function Home() {
                       reversed ? "md:flex-row-reverse" : ""
                     }`}
                   >
-                    {/* Placeholder visual — swap for real photography later */}
-                    <div className="flex aspect-[16/9] shrink-0 items-center justify-center bg-[#3C382F]/[0.06] md:aspect-auto md:w-2/3">
-                      <c.icon className="h-14 w-14 text-[#3C382F]/20" strokeWidth={1} />
+                    <div
+                      className={`relative flex shrink-0 items-center justify-center overflow-hidden bg-[#3C382F]/[0.06] md:w-2/3 ${
+                        c.image ? "md:self-start" : "aspect-[16/9] md:aspect-auto"
+                      }`}
+                      style={c.imageAspect ? { aspectRatio: c.imageAspect } : undefined}
+                    >
+                      {c.image ? (
+                        <Image
+                          src={c.image}
+                          alt={c.title}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 66vw"
+                          className={
+                            c.imageFit === "contain" ? "object-contain p-6" : "object-cover"
+                          }
+                        />
+                      ) : (
+                        <c.icon className="h-14 w-14 text-[#3C382F]/20" strokeWidth={1} />
+                      )}
                     </div>
                     <div
-                      className={`flex flex-1 flex-col justify-center gap-2 p-8 md:w-1/3 ${
-                        reversed ? "md:items-end md:text-right" : "md:items-start md:text-left"
-                      }`}
+                      className="flex flex-1 flex-col justify-center items-start gap-2 p-8 text-left md:w-1/3"
+                      style={c.panelBg ? { backgroundColor: c.panelBg } : undefined}
                     >
                       <h3 className="font-serif text-xl font-bold text-[#3C382F] md:text-2xl">
                         {c.title}
@@ -179,7 +211,7 @@ export default function Home() {
                       <span className="font-serif text-xs uppercase tracking-[0.2em] text-[#4B5741]">
                         {c.en}
                       </span>
-                      <p className="mt-2 text-sm leading-relaxed text-[#3C382F]/65">{c.desc}</p>
+                      <p className="mt-2 text-base leading-relaxed text-[#3C382F]/65">{c.desc}</p>
                     </div>
                   </div>
                 </Reveal>
@@ -206,7 +238,7 @@ export default function Home() {
             <h2 className="mt-3 font-serif text-2xl font-bold text-[#3C382F] md:text-3xl">
               牌組構築專門店
             </h2>
-            <p className="mt-4 text-[15px] leading-relaxed text-[#3C382F]/75">
+            <p className="mt-4 text-base leading-relaxed text-[#3C382F]/75">
               構築所專注於 Pokémon TCG
               牌組構築——鎖定日本上位環境的主流、強勢牌組及牌料現貨供應，同時販售牌組周邊，並提供客製化訂製，價格實惠、下單最快可當日寄出。買了之後我們還在：對戰策略詢問、構築調整回饋、賽場環境趨勢分析，一路陪你打到下一場比賽。
             </p>
@@ -361,7 +393,7 @@ export default function Home() {
             <h2 className="font-serif text-2xl font-bold text-[#3C382F] md:text-3xl">
               私訊預購最新牌組
             </h2>
-            <p className="max-w-md text-sm leading-relaxed text-[#3C382F]/75">
+            <p className="max-w-md text-base leading-relaxed text-[#3C382F]/75">
               想要的牌組還沒上架？加 LINE 或私訊 FB 粉專，構築所幫你優先預留。
             </p>
             <div className="flex flex-wrap justify-center gap-3">

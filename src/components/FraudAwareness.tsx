@@ -25,7 +25,7 @@ export function FraudAwareness() {
         <ShieldAlert className="h-5 w-5 text-[#A6553A]" strokeWidth={1.5} />
         <h2 className="font-serif text-xl font-bold text-[#3C382F]">防詐提醒</h2>
       </div>
-      <p className="mt-2 text-sm leading-relaxed text-[#3C382F]/75">
+      <p className="mt-2 text-base leading-relaxed text-[#3C382F]/75">
         近期詐騙猖獗，請訓練家特別留意以下幾點，避免落入詐騙陷阱。
       </p>
 
@@ -37,12 +37,12 @@ export function FraudAwareness() {
           >
             <w.icon className="h-5 w-5 text-[#A6553A]" strokeWidth={1.5} />
             <h3 className="mt-2 font-serif text-sm font-bold text-[#3C382F]">{w.title}</h3>
-            <p className="mt-1.5 text-xs leading-relaxed text-[#3C382F]/70">{w.desc}</p>
+            <p className="mt-1.5 text-base leading-relaxed text-[#3C382F]/70">{w.desc}</p>
           </div>
         ))}
       </div>
 
-      <div className="mt-5 flex items-start gap-2 rounded-md bg-[#F2ECE0] px-4 py-3 text-sm text-[#3C382F]/80">
+      <div className="mt-5 flex items-start gap-2 rounded-md bg-[#F2ECE0] px-4 py-3 text-base text-[#3C382F]/80">
         <PhoneCall className="mt-0.5 h-4 w-4 shrink-0 text-[#A6553A]" strokeWidth={1.5} />
         <span>
           如果遇到可疑來電或訊息，可撥打

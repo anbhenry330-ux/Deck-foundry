@@ -102,10 +102,10 @@ export default async function AboutPage({
         {activeTab === "story" && (
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
             <Reveal>
-              <p className="text-[15px] leading-relaxed text-[#3C382F]/80">
+              <p className="text-base leading-relaxed text-[#3C382F]/80">
                 構築所成立的初衷，是看不慣坊間牌組代購資訊不透明、缺卡漏配求助無門的亂象。我們相信「組牌」這件事該回歸單純：訓練家只要專心研究環境、思考構築，其餘的貨源、品質、售後都交給我們。
               </p>
-              <p className="mt-4 text-[15px] leading-relaxed text-[#3C382F]/80">
+              <p className="mt-4 text-base leading-relaxed text-[#3C382F]/80">
                 秉持「牌組即戰力，服務即保障」的理念，構築所專注於 Pokémon TCG
                 牌組構築——鎖定日本上位環境的主流、強勢牌組及牌料現貨供應，同時販售牌組周邊，並提供客製化訂製，價格實惠、下單最快可當日寄出。
               </p>
@@ -128,13 +128,13 @@ export default async function AboutPage({
               <h2 className="font-serif text-xl font-bold text-[#3C382F]">
                 以訓練家為中心，緊貼賽場脈動
               </h2>
-              <p className="mt-3 text-[15px] leading-relaxed text-[#3C382F]/80">
+              <p className="mt-3 text-base leading-relaxed text-[#3C382F]/80">
                 秉持「牌組即戰力」的服務理念，深入理解每位訓練家的真實需求——不是隨便找一副能打的牌組，而是根據手牌、預算與想打的風格，找到最適合的構築。我們同步日本上位環境的最新戰績與牌表，確保上架的每一副牌組都禁得起賽場考驗。
               </p>
             </div>
             <div>
               <h2 className="font-serif text-xl font-bold text-[#3C382F]">誠信優質</h2>
-              <p className="mt-3 text-[15px] leading-relaxed text-[#3C382F]/80">
+              <p className="mt-3 text-base leading-relaxed text-[#3C382F]/80">
                 價格實惠、不加價，商品來源與庫存狀態誠實透明。良好的購物體驗來自對訓練家需求的深度理解，構築所所有商品皆提供全額保障，缺卡或嚴重受損可全額退款或更換。
               </p>
             </div>
@@ -148,7 +148,7 @@ export default async function AboutPage({
                 <div className="h-full rounded-xl border border-[#D9CEB4] bg-[#FBF8F1] p-7">
                   <a.icon className="h-8 w-8 text-[#3C382F]" strokeWidth={1.25} />
                   <h3 className="mt-4 font-serif text-lg font-bold text-[#3C382F]">{a.title}</h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-[#3C382F]/75">{a.desc}</p>
+                  <p className="mt-2.5 text-base leading-relaxed text-[#3C382F]/75">{a.desc}</p>
                 </div>
               </Reveal>
             ))}

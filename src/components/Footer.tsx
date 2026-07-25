@@ -23,13 +23,13 @@ export function Footer() {
               交易方式
             </h4>
 
-            <ul className="max-w-sm space-y-2 text-sm text-[#3C382F]/80">
+            <ul className="max-w-sm space-y-2 text-base text-[#3C382F]/80">
               <li>專營PTCG主流及熱門牌組構築</li>
               <li>日本最新上位卡表、賽場環境變化分享</li>
               <li>服務全臺各地PTCG玩家，解決組牌需求</li>
               <li>牌組皆可客製化、構築可根據需求調整</li>
             </ul>
-            <ul className="space-y-2 text-sm text-[#3C382F]/80">
+            <ul className="space-y-2 text-base text-[#3C382F]/80">
               <li>日本上位環境牌組及牌料販售</li>
               <li>牌組周邊販售</li>
               <li>客製化牌組訂製</li>
@@ -39,7 +39,7 @@ export function Footer() {
                 </Link>
               </li>
             </ul>
-            <ul className="space-y-2 text-sm text-[#3C382F]/80">
+            <ul className="space-y-2 text-base text-[#3C382F]/80">
               <li>超商取貨：賣貨便</li>
               <li>付款方式：貨到付款</li>
               <li>面交地點：北捷各大捷運站</li>

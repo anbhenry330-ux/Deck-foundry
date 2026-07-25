@@ -35,7 +35,7 @@ export default async function TournamentResultsPage({
             >
               <DeckGlyph deck={d} />
               <div>
-                <p className="font-serif text-sm font-bold leading-snug text-[#3C382F] group-hover:underline">
+                <p className="font-serif text-base font-bold leading-snug text-[#3C382F] group-hover:underline">
                   {d.nameZh}
                 </p>
               </div>

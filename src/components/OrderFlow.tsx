@@ -108,7 +108,7 @@ export function OrderFlow() {
                   </span>
                 )}
               </div>
-              <p className="mt-1.5 whitespace-pre-line pl-8 text-sm leading-relaxed text-[#3C382F]/75">
+              <p className="mt-1.5 whitespace-pre-line pl-8 text-base leading-relaxed text-[#3C382F]/75">
                 {step.desc}
               </p>
             </div>
