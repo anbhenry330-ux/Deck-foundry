@@ -57,11 +57,11 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
             <div className="relative flex h-full items-end">
               <div className="mx-auto w-full max-w-6xl px-6 pb-14 md:pb-20">
                 <div className="max-w-xl">
-                  <h1 className="font-serif text-3xl font-black leading-tight text-white md:text-5xl">
+                  <h1 className="whitespace-pre-line font-serif text-3xl font-black leading-tight text-white md:text-5xl">
                     {slide.title}
                   </h1>
                   <p
-                    className="mt-4 max-w-md text-sm italic leading-relaxed text-white/80 md:text-base"
+                    className="mt-4 max-w-md text-base italic leading-relaxed text-white/80"
                     style={{ fontFamily: "'DFKai-SP', 'BiauKai', 'KaiTi', serif" }}
                   >
                     {slide.desc}

@@ -38,7 +38,7 @@ const HERO_SLIDES: HeroSlide[] = [
   {
     image: "/cover.png",
     alt: "構築所工作桌：牌組整理、卡表分析與出貨作業的日常",
-    title: "把日本上位環境，鍛造成你的下一副牌",
+    title: "把手中的卡牌，\n構築成專屬於你的牌組",
     desc: "構築所－讓您不再為組牌擔憂",
     ctaLabel: "瀏覽本期牌組",
     ctaHref: "/products",
@@ -62,30 +62,30 @@ const CATEGORY_LINKS: {
     panelBg: "#EFEADF",
     title: "牌組構築",
     en: "Deck Building",
-    desc: "鎖定日本上位環境的主流、強勢牌組，依照環境趨勢構築出最具競爭力的牌組。",
+    desc: "參考各國大賽上位卡表，依照賽場環境構築出各式強勢牌組，提供給訓練家選購。",
   },
   {
     icon: TrendingUp,
     image: "/service-card-buyback.jpg",
     imageAspect: "2056 / 795",
     panelBg: "#EFEADF",
-    title: "牌料收購",
+    title: "牌料買取",
     en: "Card Buyback",
-    desc: "大量收購實用牌料，讓你手中的閒置卡牌變現，收購價格公道實在。",
+    desc: "大量收購實用牌料，讓你手中的卡牌變現，收購價格實惠公道，立即私訊問價。",
   },
   {
     icon: ShoppingBag,
     panelBg: "#EFEADF",
     title: "周邊販售",
     en: "Accessories",
-    desc: "卡套、對戰墊、收納卡冊一應俱全，從保護愛卡到賽場配件，齊全周邊讓你的裝備不掉鏈。",
+    desc: "卡套、卡盒等周邊不定時優惠，立即選購，滿足您打牌時的一切需求。",
   },
   {
     icon: Wrench,
     panelBg: "#EFEADF",
     title: "客製化牌組",
     en: "Custom Deck",
-    desc: "告訴我們你手上有什麼牌、預算多少、想打什麼風格，我們依需求客製構築，價格實惠不加價。",
+    desc: "可以照您的預算及需求，為您客製化牌組，無須加價，可立即私訊詢問。",
   },
 ];
 
@@ -239,8 +239,7 @@ export default function Home() {
               牌組構築專門店
             </h2>
             <p className="mt-4 text-base leading-relaxed text-[#3C382F]/75">
-              構築所專注於 Pokémon TCG
-              牌組構築——鎖定日本上位環境的主流、強勢牌組及牌料現貨供應，同時販售牌組周邊，並提供客製化訂製，價格實惠、下單最快可當日寄出。買了之後我們還在：對戰策略詢問、構築調整回饋、賽場環境趨勢分析，一路陪你打到下一場比賽。
+              專營PTCG卡牌，參考各國賽事卡表構築各式主流、強勢牌組，同時販售牌組周邊，服務全臺各地玩家，解決其組牌需求。
             </p>
             <Link
               href="/about"
@@ -327,7 +326,7 @@ export default function Home() {
                     <h3 className="mt-2 font-serif text-sm font-bold leading-snug text-[#3C382F] group-hover:underline">
                       {deck?.nameZh ?? result.tournamentNameZh}
                     </h3>
-                    <p className="mt-1 line-clamp-1 text-xs text-[#3C382F]/55">
+                    <p className="mt-1 line-clamp-1 text-base text-[#3C382F]/55">
                       {result.tournamentNameZh} · {result.player}
                     </p>
                   </Link>

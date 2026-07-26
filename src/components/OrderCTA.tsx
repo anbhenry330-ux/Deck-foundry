@@ -32,7 +32,7 @@ export function OrderCTA({ product }: { product: Product }) {
         {!soldOut && <ExternalLink className="h-4 w-4" strokeWidth={1.5} />}
       </a>
 
-      <div className="mt-4 flex items-start gap-2 rounded-md bg-[#D9CEB4] px-3 py-2.5 text-xs leading-relaxed text-[#3C382F]/70">
+      <div className="mt-4 flex items-start gap-2 rounded-md bg-[#D9CEB4] px-3 py-2.5 text-base leading-relaxed text-[#3C382F]/70">
         <Truck className="mt-0.5 h-4 w-4 shrink-0" strokeWidth={1.5} />
         <span>
           點擊後會跳轉到賣貨便賣場總覽頁，在頁面上點開「{product.name}」即可下單，支援貨到付款。

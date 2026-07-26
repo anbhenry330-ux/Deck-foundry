@@ -78,7 +78,7 @@ export function DeckBuildFlow() {
               <div className="relative mx-auto aspect-[5/7] w-20 overflow-hidden rounded-md shadow-sm">
                 <Image src={c.image} alt={c.label} fill sizes="80px" className="object-cover" />
               </div>
-              <p className="mt-3 text-sm text-[#3C382F]/70">{c.label}</p>
+              <p className="mt-3 text-base text-[#3C382F]/70">{c.label}</p>
               <div className="mt-1 font-serif text-2xl font-black text-[#3C382F]">
                 {c.count}
                 <span className="ml-1 text-sm font-normal text-[#3C382F]/50">張</span>
@@ -99,7 +99,7 @@ export function DeckBuildFlow() {
               <div className="relative mx-auto aspect-[5/7] w-14 overflow-hidden rounded-md shadow-sm">
                 <Image src={t.image} alt={t.label} fill sizes="56px" className="object-cover" />
               </div>
-              <p className="mt-2 text-xs text-[#3C382F]/60">{t.label}</p>
+              <p className="mt-2 text-base text-[#3C382F]/60">{t.label}</p>
               <div className="mt-0.5 font-serif text-base font-bold text-[#3C382F]">
                 {t.count}
                 <span className="ml-0.5 text-xs font-normal text-[#3C382F]/50">張</span>
@@ -134,7 +134,7 @@ export function DeckBuildFlow() {
                     {m.pros.map((p) => (
                       <li
                         key={p}
-                        className="flex gap-2 text-sm leading-relaxed text-[#3C382F]/80"
+                        className="flex gap-2 text-base leading-relaxed text-[#3C382F]/80"
                       >
                         <CheckCircle2
                           className="mt-0.5 h-4 w-4 shrink-0 text-[#4B5741]"
@@ -146,7 +146,7 @@ export function DeckBuildFlow() {
                     {m.cons.map((c) => (
                       <li
                         key={c}
-                        className="flex gap-2 text-sm leading-relaxed text-[#3C382F]/70"
+                        className="flex gap-2 text-base leading-relaxed text-[#3C382F]/70"
                       >
                         <XCircle
                           className="mt-0.5 h-4 w-4 shrink-0 text-[#A6553A]"

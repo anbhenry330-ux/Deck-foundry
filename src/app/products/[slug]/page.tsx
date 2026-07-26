@@ -59,7 +59,7 @@ export default async function ProductDetailPage({
             {product.name}
           </h1>
           {product.tagline && (
-            <p className="mt-3 text-[15px] leading-relaxed text-[#3C382F]/80">
+            <p className="mt-3 text-base leading-relaxed text-[#3C382F]/80">
               {product.tagline}
             </p>
           )}
@@ -73,7 +73,7 @@ export default async function ProductDetailPage({
       <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-3">
         <div className="md:col-span-2">
           <h2 className="font-serif text-xl font-bold text-[#3C382F]">商品說明</h2>
-          <p className="mt-4 text-[15px] leading-relaxed text-[#3C382F]/80">
+          <p className="mt-4 text-base leading-relaxed text-[#3C382F]/80">
             {product.description}
           </p>
         </div>

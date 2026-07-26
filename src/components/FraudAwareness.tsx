@@ -36,7 +36,7 @@ export function FraudAwareness() {
             className="rounded-md border border-[#A6553A]/30 bg-[#F2ECE0] p-4"
           >
             <w.icon className="h-5 w-5 text-[#A6553A]" strokeWidth={1.5} />
-            <h3 className="mt-2 font-serif text-sm font-bold text-[#3C382F]">{w.title}</h3>
+            <h3 className="mt-2 font-serif text-base font-bold text-[#3C382F]">{w.title}</h3>
             <p className="mt-1.5 text-base leading-relaxed text-[#3C382F]/70">{w.desc}</p>
           </div>
         ))}

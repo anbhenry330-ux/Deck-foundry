@@ -20,7 +20,7 @@ export function ProductCard({ product }: { product: Product }) {
           </h3>
         </Link>
         {product.tagline && (
-          <p className="line-clamp-2 text-sm text-[#3C382F]/70">{product.tagline}</p>
+          <p className="line-clamp-2 text-base text-[#3C382F]/70">{product.tagline}</p>
         )}
         <div className="mt-auto flex items-center justify-between pt-2">
           <span className="font-mono text-base font-semibold text-[#3C382F]">

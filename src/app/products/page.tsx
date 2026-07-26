@@ -56,7 +56,7 @@ export default async function ProductsPage({
       </div>
 
       {filtered.length === 0 ? (
-        <p className="mt-16 text-center text-sm text-[#3C382F]/60">
+        <p className="mt-16 text-center text-base text-[#3C382F]/60">
           目前此分類尚無上架商品，換個分類看看吧。
         </p>
       ) : (
