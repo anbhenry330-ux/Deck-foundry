@@ -74,7 +74,10 @@ export default async function AboutPage({
 
       {/* Page title */}
       <Reveal mode="load" className="mt-6 border-l-4 border-[#D9CEB4] pl-6">
-        <span className="font-mono text-xs uppercase tracking-[0.25em] text-[#3C382F]/50">
+        <span
+          className="block text-left text-xs tracking-[0.25em] text-[#3C382F]/50"
+          style={{ fontFamily: "'Times New Roman', Times, serif" }}
+        >
           {active.sub}
         </span>
         <h1 className="mt-2 font-serif text-3xl font-bold text-[#3C382F]">{active.label}</h1>
@@ -86,7 +89,7 @@ export default async function AboutPage({
           <Link
             key={t.key}
             href={`/about?tab=${t.key}`}
-            className={`-mb-px border-b-2 px-4 py-2.5 text-sm font-medium transition-colors ${
+            className={`-mb-px border-b-2 px-4 py-2.5 text-[16px] font-medium transition-colors ${
               activeTab === t.key
                 ? "border-[#3C382F] text-[#3C382F]"
                 : "border-transparent text-[#3C382F]/50 hover:text-[#3C382F]"
@@ -103,11 +106,7 @@ export default async function AboutPage({
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
             <Reveal>
               <p className="text-base leading-relaxed text-[#3C382F]/80">
-                構築所成立的初衷，是看不慣坊間牌組代購資訊不透明、缺卡漏配求助無門的亂象。我們相信「組牌」這件事該回歸單純：訓練家只要專心研究環境、思考構築，其餘的貨源、品質、售後都交給我們。
-              </p>
-              <p className="mt-4 text-base leading-relaxed text-[#3C382F]/80">
-                秉持「牌組即戰力，服務即保障」的理念，構築所專注於 Pokémon TCG
-                牌組構築——鎖定日本上位環境的主流、強勢牌組及牌料現貨供應，同時販售牌組周邊，並提供客製化訂製，價格實惠、下單最快可當日寄出。
+                構築所成立於2024年12月，當時繁中版剛推出超級夢想的年底擴充包，收入大量牌料，構築所創辦人發現有大量玩家在抽到自己心儀的卡後，將剩餘的牌料便宜出售，就萌生出可利用訓練家手邊不需要的卡組成牌組的想法，於是創辦了構築所，開始服務有組牌需求的訓練家，並解決收藏家需要花時間處理牌料的煩惱。
               </p>
             </Reveal>
             <Reveal delay={100} className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl">

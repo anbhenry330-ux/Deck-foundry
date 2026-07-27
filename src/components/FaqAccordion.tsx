@@ -23,7 +23,7 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
               aria-expanded={isOpen}
               className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
             >
-              <span className="font-serif text-[15px] font-bold text-[#3C382F] md:text-base">
+              <span className="font-serif text-[18.7px] font-bold text-[#3C382F]">
                 {item.q}
               </span>
               <ChevronDown

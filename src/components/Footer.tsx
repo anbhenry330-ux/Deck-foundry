@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Facebook, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 const LINE_URL = "https://line.me/R/ti/p/@881idjjb";
 const FB_URL = "https://www.facebook.com/profile.php?id=61584390375051&locale=zh_TW";
@@ -60,9 +60,8 @@ export function Footer() {
                 href={FB_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md bg-[#1877F2] px-4 py-2 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 whitespace-nowrap rounded-md bg-[#1877F2] px-4 py-2 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
               >
-                <Facebook className="h-4 w-4" strokeWidth={1.75} />
                 FB 粉專
               </a>
             </div>

@@ -6,103 +6,57 @@
   - Local:        http://localhost:3000
 
  ✓ Starting...
- ✓ Ready in 3.3s
+ ✓ Ready in 3.2s
+ ○ Compiling /about ...
+ ✓ Compiled /about in 4.1s (1381 modules)
+ GET /about 200 in 4517ms
  ○ Compiling / ...
- ✓ Compiled / in 9.9s (1467 modules)
- GET / 200 in 10374ms
- ✓ Compiled in 716ms (1431 modules)
- ✓ Compiled in 473ms (1431 modules)
- ✓ Compiled in 786ms (1431 modules)
- GET / 200 in 207ms
- ✓ Compiled in 1006ms (1431 modules)
- GET / 200 in 204ms
- ✓ Compiled in 975ms (1431 modules)
- ✓ Compiled in 755ms (1431 modules)
- GET / 200 in 180ms
- ✓ Compiled in 957ms (1431 modules)
- ✓ Compiled in 687ms (1431 modules)
- GET / 200 in 179ms
- ✓ Compiled in 926ms (1431 modules)
- ✓ Compiled in 577ms (1431 modules)
- GET / 200 in 187ms
- ✓ Compiled in 957ms (1431 modules)
- ✓ Compiled in 680ms (1431 modules)
- GET / 200 in 177ms
- ✓ Compiled in 1053ms (1431 modules)
- ✓ Compiled in 634ms (1431 modules)
- ✓ Compiled in 639ms (1431 modules)
- GET / 200 in 194ms
- ✓ Compiled in 1066ms (1431 modules)
- GET / 200 in 146ms
- GET / 200 in 106ms
- ✓ Compiled in 965ms (1431 modules)
- GET / 200 in 172ms
- ✓ Compiled in 906ms (1431 modules)
- ✓ Compiled in 735ms (1431 modules)
- ✓ Compiled in 644ms (1431 modules)
- ✓ Compiled in 597ms (1431 modules)
- GET / 200 in 209ms
- GET / 200 in 111ms
- GET / 200 in 138ms
- ✓ Compiled in 723ms (1431 modules)
- GET / 200 in 169ms
- ✓ Compiled in 772ms (1431 modules)
- GET / 200 in 77ms
- ✓ Compiled in 831ms (1431 modules)
- GET / 200 in 74ms
- ✓ Compiled in 829ms (1431 modules)
- GET / 200 in 81ms
- ✓ Compiled in 885ms (1431 modules)
- GET / 200 in 142ms
- ✓ Compiled in 766ms (1431 modules)
- GET / 200 in 110ms
- GET / 200 in 93ms
- ✓ Compiled in 1034ms (1431 modules)
- GET / 200 in 191ms
- ✓ Compiled in 1313ms (1431 modules)
- GET / 200 in 324ms
- GET / 200 in 53ms
- GET / 200 in 104ms
- ✓ Compiled in 1143ms (1431 modules)
- ✓ Compiled in 751ms (1431 modules)
- GET / 200 in 254ms
+ ✓ Compiled / in 1483ms (1425 modules)
  ○ Compiling /products ...
- ✓ Compiled /products in 1354ms (1421 modules)
- GET / 200 in 206ms
- ✓ Compiled in 928ms (1435 modules)
- GET / 200 in 83ms
- GET / 200 in 95ms
- ✓ Compiled in 1274ms (1432 modules)
- ✓ Compiled in 647ms (1432 modules)
- GET / 200 in 203ms
- ✓ Compiled /tournament-results in 489ms (1428 modules)
+ ✓ Compiled /products in 700ms (1429 modules)
+ ✓ Compiled in 3.6s (1436 modules)
+ ✓ Compiled in 944ms (1436 modules)
+ ✓ Compiled in 1088ms (1436 modules)
+ ✓ Compiled in 1458ms (1436 modules)
+ ✓ Compiled in 845ms (1436 modules)
+ ✓ Compiled in 738ms (1435 modules)
+ ✓ Compiled in 776ms (1435 modules)
+ GET / 200 in 700ms
+ ✓ Compiled in 949ms (1435 modules)
+ ✓ Compiled in 751ms (1435 modules)
+ ✓ Compiled in 1181ms (1435 modules)
+ GET / 200 in 351ms
+ ✓ Compiled in 1053ms (1435 modules)
+ GET / 200 in 217ms
+ ✓ Compiled in 888ms (1435 modules)
+ ✓ Compiled /about in 383ms (738 modules)
+ ✓ Compiled in 1059ms (1435 modules)
+ ✓ Compiled in 951ms (1435 modules)
+ ✓ Compiled in 800ms (1435 modules)
+ ✓ Compiled /about in 154ms (738 modules)
+ GET / 200 in 324ms
+ ✓ Compiled in 582ms (1442 modules)
+ GET / 200 in 221ms
+ ✓ Compiled in 981ms (1435 modules)
+ ✓ Compiled in 1012ms (1437 modules)
+ ✓ Compiled in 412ms (704 modules)
+ ✓ Compiled in 247ms (704 modules)
+ ✓ Compiled in 804ms (1437 modules)
+ ✓ Compiled in 1389ms (1444 modules)
+ ✓ Compiled in 985ms (1444 modules)
+ GET / 200 in 265ms
+ GET / 200 in 148ms
+ ✓ Compiled in 974ms (1444 modules)
+ ✓ Compiled in 993ms (1444 modules)
+ ✓ Compiled in 857ms (1444 modules)
+ GET / 200 in 267ms
+ ○ Compiling /tournament-results ...
+ ✓ Compiled /tournament-results in 876ms (1439 modules)
  ○ Compiling /deck-building ...
- ✓ Compiled /deck-building in 601ms (1436 modules)
- ○ Compiling /about ...
- ✓ Compiled /products in 1204ms (1446 modules)
- GET /tournament-results 200 in 218ms
- ✓ Compiled in 1343ms (1444 modules)
- ✓ Compiled in 906ms (1444 modules)
- GET / 200 in 232ms
- GET /tournament-results 200 in 57ms
- ○ Compiling /about ...
- ✓ Compiled /about in 1453ms (1456 modules)
- ✓ Compiled in 988ms (1470 modules)
- GET / 200 in 252ms
- ○ Compiling /deck-building ...
- ✓ Compiled /deck-building in 818ms (753 modules)
- ✓ Compiled /order-guide in 240ms (770 modules)
- ✓ Compiled /products in 322ms (772 modules)
- ✓ Compiled in 1193ms (1472 modules)
- ✓ Compiled in 946ms (1472 modules)
- ✓ Compiled in 936ms (1472 modules)
- ✓ Compiled in 834ms (1472 modules)
- ✓ Compiled in 807ms (1472 modules)
- ✓ Compiled in 909ms (1472 modules)
- GET /order-guide 200 in 128ms
- GET /order-guide 200 in 69ms
- ✓ Compiled in 658ms (1470 modules)
- ✓ Compiled in 744ms (1470 modules)
- GET /about 200 in 165ms
- GET /about?tab=philosophy 200 in 33ms
- GET /about?tab=advantages 200 in 39ms
+ ✓ Compiled /deck-building in 1000ms (1447 modules)
+ ○ Compiling /order-guide ...
+ ✓ Compiled /order-guide in 540ms (1465 modules)
+ ✓ Compiled /about in 314ms (777 modules)
+ ✓ Compiled in 970ms (1462 modules)
+ ✓ Compiled in 1158ms (1462 modules)
+ ✓ Compiled in 837ms (1462 modules)

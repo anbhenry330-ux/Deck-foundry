@@ -8,17 +8,19 @@ import {
   Gift,
   Send,
   TrendingUp,
-  Facebook,
   Truck,
   CreditCard,
   MapPin,
   Trophy,
+  Users,
+  Layers,
 } from "lucide-react";
 import { products } from "@/data/products";
 import { tierList } from "@/data/tier-list";
 import { sortedResults } from "@/data/tournament-results";
 import { ProductCard } from "@/components/ProductCard";
 import { Reveal } from "@/components/Reveal";
+import { CountUpStat } from "@/components/CountUpStat";
 import { HeroCarousel, type HeroSlide } from "@/components/HeroCarousel";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { DeckGlyph } from "@/components/DeckGlyph";
@@ -233,21 +235,38 @@ export default function Home() {
               className="object-cover"
             />
           </Reveal>
-          <Reveal delay={100}>
+          <Reveal delay={100} className="text-left">
             <SectionEyebrow>關於構築所</SectionEyebrow>
             <h2 className="mt-3 font-serif text-2xl font-bold text-[#3C382F] md:text-3xl">
               牌組構築專門店
             </h2>
             <p className="mt-4 text-base leading-relaxed text-[#3C382F]/75">
-              專營PTCG卡牌，參考各國賽事卡表構築各式主流、強勢牌組，同時販售牌組周邊，服務全臺各地玩家，解決其組牌需求。
+              專營PTCG牌組構築，參考國外各大賽事卡表構築各式主流及強勢牌組，同時販售牌組周邊，服務全臺各地玩家，解決其組牌需求。
             </p>
             <Link
               href="/about"
-              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#3C382F] hover:text-[#4B5741]"
+              className="mt-3 inline-flex items-center text-[16px] font-semibold text-[#3C382F] hover:text-[#4B5741]"
             >
-              了解更多關於我們
-              <ArrowRight className="h-3.5 w-3.5" strokeWidth={2} />
+              了解更多
+              <ArrowRight className="h-4 w-4 shrink-0 self-center" strokeWidth={2} />
             </Link>
+            <div className="mt-6 grid grid-cols-3 gap-3">
+              <CountUpStat
+                icon={<ShoppingBag className="h-5 w-5 text-[#3C382F]/60" strokeWidth={1.75} />}
+                value={200}
+                label="售出牌組"
+              />
+              <CountUpStat
+                icon={<Users className="h-5 w-5 text-[#3C382F]/60" strokeWidth={1.75} />}
+                value={300}
+                label="客人數量"
+              />
+              <CountUpStat
+                icon={<Layers className="h-5 w-5 text-[#3C382F]/60" strokeWidth={1.75} />}
+                value={10000}
+                label="收購牌料"
+              />
+            </div>
           </Reveal>
         </div>
       </section>
@@ -393,25 +412,26 @@ export default function Home() {
               私訊預購最新牌組
             </h2>
             <p className="max-w-md text-base leading-relaxed text-[#3C382F]/75">
-              想要的牌組還沒上架？加 LINE 或私訊 FB 粉專，構築所幫你優先預留。
+              想要的牌組還沒上架？
+              <br />
+              加 LINE 或私訊 FB 粉專，構築所幫你優先預留。
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <a
                 href={LINE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md bg-[#06C755] px-5 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 whitespace-nowrap rounded-md bg-[#06C755] px-5 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
               >
-                <Send className="h-4 w-4" strokeWidth={1.75} />
-                LINE 官方帳號 @881idjjb
+                <Send className="h-4 w-4 shrink-0" strokeWidth={1.75} />
+                LINE @881idjjb
               </a>
               <a
                 href={FB_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md bg-[#1877F2] px-5 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 whitespace-nowrap rounded-md bg-[#1877F2] px-5 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
               >
-                <Facebook className="h-4 w-4" strokeWidth={1.75} />
                 FB 粉專「構築所」
               </a>
             </div>
