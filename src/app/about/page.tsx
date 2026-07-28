@@ -105,8 +105,16 @@ export default async function AboutPage({
         {activeTab === "story" && (
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
             <Reveal>
-              <p className="text-base leading-relaxed text-[#3C382F]/80">
-                構築所成立於2024年12月，當時繁中版剛推出超級夢想的年底擴充包，收入大量牌料，構築所創辦人發現有大量玩家在抽到自己心儀的卡後，將剩餘的牌料便宜出售，就萌生出可利用訓練家手邊不需要的卡組成牌組的想法，於是創辦了構築所，開始服務有組牌需求的訓練家，並解決收藏家需要花時間處理牌料的煩惱。
+              <h2 className="font-serif text-xl font-bold text-[#3C382F]">創立起源</h2>
+              <p className="mt-3 text-base leading-normal text-justify text-[#3C382F]/80">
+                構築所成立於2024年12月，當時繁中版剛推出年底擴充卡包，收入大量牌料，構築所創辦人發現有大量玩家在抽到自己心儀的卡後，將剩餘的牌料便宜出售，就萌生出可利用玩家手中卡牌組成牌組想法，於是創辦了構築所，開始服務有組牌需求的訓練家，並解決收藏家需要花時間處理牌料的煩惱。
+              </p>
+              <h2 className="mt-6 font-serif text-xl font-bold text-[#3C382F]">品牌由來</h2>
+              <p className="mt-3 text-base leading-normal text-justify text-[#3C382F]/80">
+                「構築所」的名稱源於創辦人最初的核心理念——希望將玩家手中閒置的卡牌回收再利用，構築出嶄新的牌組。
+              </p>
+              <p className="mt-3 text-base leading-normal text-justify text-[#3C382F]/80">
+                在發想過程中，創辦人聯想到英文的 Foundry（鑄造廠），象徵著熔煉、改造與新生。以此為概念延伸，最終轉化為帶有職人手作與日式美學風格的「構築所」，寓意在此被重新琢磨、精準構築，淬煉出獨一無二的對戰力量。
               </p>
             </Reveal>
             <Reveal delay={100} className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl">
@@ -125,16 +133,19 @@ export default async function AboutPage({
           <Reveal className="max-w-2xl space-y-8">
             <div>
               <h2 className="font-serif text-xl font-bold text-[#3C382F]">
-                以訓練家為中心，緊貼賽場脈動
+                以客戶為中心，實現利他主義
               </h2>
               <p className="mt-3 text-base leading-relaxed text-[#3C382F]/80">
-                秉持「牌組即戰力」的服務理念，深入理解每位訓練家的真實需求——不是隨便找一副能打的牌組，而是根據手牌、預算與想打的風格，找到最適合的構築。我們同步日本上位環境的最新戰績與牌表，確保上架的每一副牌組都禁得起賽場考驗。
+                秉持「客戶至上」的服務理念，深入理解每位訓練家的真實需求，促進PTCG市場發展。
+              </p>
+              <p className="mt-3 text-base leading-relaxed text-[#3C382F]/80">
+                根據客戶的的需求及偏好，透過構築所擁有的資源，協助客戶構築完整的牌組，並提供組牌建議、牌組構築、周邊販售、售後服務等一條龍服務，打造良好的組牌體驗。
               </p>
             </div>
             <div>
-              <h2 className="font-serif text-xl font-bold text-[#3C382F]">誠信優質</h2>
+              <h2 className="font-serif text-xl font-bold text-[#3C382F]">創新創意</h2>
               <p className="mt-3 text-base leading-relaxed text-[#3C382F]/80">
-                價格實惠、不加價，商品來源與庫存狀態誠實透明。良好的購物體驗來自對訓練家需求的深度理解，構築所所有商品皆提供全額保障，缺卡或嚴重受損可全額退款或更換。
+                為因應不斷變化的賽場環境及每年年初的退標機制，構築所販售的牌組皆是現環境版本，可直接用於比賽，並參考國外各大賽事上位卡表優化構築出具創新創意的牌組。
               </p>
             </div>
           </Reveal>

@@ -6,57 +6,42 @@
   - Local:        http://localhost:3000
 
  ✓ Starting...
- ✓ Ready in 3.2s
- ○ Compiling /about ...
- ✓ Compiled /about in 4.1s (1381 modules)
- GET /about 200 in 4517ms
+ ✓ Ready in 2.8s
  ○ Compiling / ...
- ✓ Compiled / in 1483ms (1425 modules)
- ○ Compiling /products ...
- ✓ Compiled /products in 700ms (1429 modules)
- ✓ Compiled in 3.6s (1436 modules)
- ✓ Compiled in 944ms (1436 modules)
- ✓ Compiled in 1088ms (1436 modules)
- ✓ Compiled in 1458ms (1436 modules)
- ✓ Compiled in 845ms (1436 modules)
- ✓ Compiled in 738ms (1435 modules)
- ✓ Compiled in 776ms (1435 modules)
- GET / 200 in 700ms
- ✓ Compiled in 949ms (1435 modules)
- ✓ Compiled in 751ms (1435 modules)
- ✓ Compiled in 1181ms (1435 modules)
- GET / 200 in 351ms
- ✓ Compiled in 1053ms (1435 modules)
- GET / 200 in 217ms
- ✓ Compiled in 888ms (1435 modules)
- ✓ Compiled /about in 383ms (738 modules)
- ✓ Compiled in 1059ms (1435 modules)
- ✓ Compiled in 951ms (1435 modules)
- ✓ Compiled in 800ms (1435 modules)
- ✓ Compiled /about in 154ms (738 modules)
- GET / 200 in 324ms
- ✓ Compiled in 582ms (1442 modules)
- GET / 200 in 221ms
- ✓ Compiled in 981ms (1435 modules)
- ✓ Compiled in 1012ms (1437 modules)
- ✓ Compiled in 412ms (704 modules)
- ✓ Compiled in 247ms (704 modules)
- ✓ Compiled in 804ms (1437 modules)
- ✓ Compiled in 1389ms (1444 modules)
- ✓ Compiled in 985ms (1444 modules)
- GET / 200 in 265ms
- GET / 200 in 148ms
- ✓ Compiled in 974ms (1444 modules)
- ✓ Compiled in 993ms (1444 modules)
- ✓ Compiled in 857ms (1444 modules)
- GET / 200 in 267ms
+ ✓ Compiled / in 2.9s (1425 modules)
+ GET / 200 in 3256ms
+ ○ Compiling /about ...
+ ✓ Compiled /about in 852ms (1433 modules)
+ GET /about?tab=story 200 in 1151ms
  ○ Compiling /tournament-results ...
- ✓ Compiled /tournament-results in 876ms (1439 modules)
+ ✓ Compiled /tournament-results in 711ms (1444 modules)
+ ✓ Compiled /products in 500ms (1446 modules)
  ○ Compiling /deck-building ...
- ✓ Compiled /deck-building in 1000ms (1447 modules)
+ ✓ Compiled /deck-building in 624ms (1454 modules)
  ○ Compiling /order-guide ...
- ✓ Compiled /order-guide in 540ms (1465 modules)
- ✓ Compiled /about in 314ms (777 modules)
- ✓ Compiled in 970ms (1462 modules)
- ✓ Compiled in 1158ms (1462 modules)
- ✓ Compiled in 837ms (1462 modules)
+ ✓ Compiled /order-guide in 671ms (1472 modules)
+ ✓ Compiled in 3.4s (1467 modules)
+ ✓ Compiled in 1026ms (1467 modules)
+ ✓ Compiled in 1092ms (1467 modules)
+ ✓ Compiled in 1165ms (1467 modules)
+ ✓ Compiled in 962ms (1467 modules)
+ ✓ Compiled in 874ms (1467 modules)
+ ✓ Compiled in 994ms (1467 modules)
+ ✓ Compiled in 1161ms (1467 modules)
+ ✓ Compiled in 987ms (1467 modules)
+ ✓ Compiled in 1036ms (1467 modules)
+ ✓ Compiled in 941ms (1467 modules)
+ ✓ Compiled in 1047ms (1467 modules)
+ ✓ Compiled in 1230ms (1467 modules)
+ GET /about?tab=story 200 in 224ms
+ ✓ Compiled in 1144ms (1467 modules)
+ ✓ Compiled in 973ms (1467 modules)
+ ✓ Compiled /products in 474ms (760 modules)
+ ○ Compiling /order-guide ...
+ ✓ Compiled /order-guide in 618ms (777 modules)
+ ✓ Compiled in 1141ms (1467 modules)
+ ✓ Compiled in 1121ms (1467 modules)
+ ✓ Compiled /products in 212ms (760 modules)
+ ✓ Compiled in 445ms (758 modules)
+ GET /tournament-results?deck=ghost-dragapult 200 in 319ms
+ GET /tournament-results?deck=ghost-dragapult 200 in 203ms
