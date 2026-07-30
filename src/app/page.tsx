@@ -5,12 +5,8 @@ import {
   Hammer,
   ShoppingBag,
   Wrench,
-  Gift,
   Send,
   TrendingUp,
-  Truck,
-  CreditCard,
-  MapPin,
   Trophy,
   Users,
   Layers,
@@ -92,9 +88,9 @@ const CATEGORY_LINKS: {
 ];
 
 const DELIVERY = [
-  { icon: Truck, label: "超商取貨", value: "賣貨便" },
-  { icon: CreditCard, label: "付款方式", value: "貨到付款" },
-  { icon: MapPin, label: "面交地點", value: "北捷各大捷運站" },
+  { image: "/payment/maihuobian.png", label: "超商取貨", value: "賣貨便" },
+  { image: "/payment/cod.png", label: "付款方式", value: "貨到付款" },
+  { image: "/payment/mrt-meetup.png", label: "面交地點", value: "北捷各大捷運站" },
 ];
 
 const FAQ_ITEMS = [
@@ -370,7 +366,15 @@ export default function Home() {
             {DELIVERY.map((row, i) => (
               <Reveal key={row.label} delay={i * 100}>
                 <div className="flex h-full flex-col items-center gap-3 rounded-xl border border-[#D9CEB4] bg-[#FBF8F1] p-6 text-center">
-                  <row.icon className="h-7 w-7 text-[#4B5741]" strokeWidth={1.5} />
+                  <div className="relative aspect-square w-full max-w-[180px] overflow-hidden rounded-lg">
+                    <Image
+                      src={row.image}
+                      alt={row.value}
+                      fill
+                      sizes="(max-width: 640px) 60vw, 180px"
+                      className="scale-110 object-cover"
+                    />
+                  </div>
                   <span className="text-xs uppercase tracking-[0.15em] text-[#3C382F]/50">
                     {row.label}
                   </span>
@@ -379,13 +383,6 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
-
-          <Reveal delay={300} className="mt-6 flex justify-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#3C382F]/10 px-3 py-1.5 text-xs font-semibold text-[#3C382F]">
-              <Gift className="h-3.5 w-3.5" strokeWidth={1.75} />
-              滿額免運活動持續中
-            </div>
-          </Reveal>
         </div>
       </section>
 
