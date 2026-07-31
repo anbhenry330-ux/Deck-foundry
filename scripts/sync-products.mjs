@@ -246,7 +246,7 @@ ${specsLines}
 // 商品的行銷文案維護在該腳本的 COPY_OVERRIDES 裡，不要直接改這裡的文案，
 // 下次執行 sync 會被覆蓋。要調整版面／欄位型別可以直接改這個檔案。
 
-export type ProductCategory = "牌組" | "單卡" | "配件";
+export type ProductCategory = "牌組" | "單卡" | "卡套";
 
 export interface Product {
   id: string;

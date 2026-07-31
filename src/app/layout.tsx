@@ -3,6 +3,7 @@ import { Noto_Serif_TC, Noto_Sans_TC, JetBrains_Mono, Fraunces } from "next/font
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SITE_URL } from "@/lib/site";
 
 const serif = Noto_Serif_TC({
   subsets: ["latin"],
@@ -33,10 +34,39 @@ const display = Fraunces({
   display: "swap",
 });
 
+const TITLE = "構築所 Deck Foundry｜牌組構築專門";
+const DESCRIPTION =
+  "構築所（Deck Foundry）專門販售日本上位環境主流牌組及牌料，同時提供牌組周邊與客製化訂製，價格實惠、當日出貨。";
+
 export const metadata: Metadata = {
-  title: "構築所 Deck Foundry｜牌組構築專門",
-  description:
-    "構築所（Deck Foundry）專門販售日本上位環境主流牌組及牌料，同時提供牌組周邊與客製化訂製，價格實惠、當日出貨。",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: TITLE,
+    template: "%s｜構築所 Deck Foundry",
+  },
+  description: DESCRIPTION,
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: SITE_URL,
+    siteName: "構築所 Deck Foundry",
+    locale: "zh_TW",
+    type: "website",
+    images: [{ url: "/cover.png", width: 1600, height: 900 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/cover.png"],
+  },
+  verification: {
+    google: "Ca3G3S_CWNw2tabGURVpIdV-gvGtzZppNDidGmR-Kso",
+  },
 };
 
 export default function RootLayout({
