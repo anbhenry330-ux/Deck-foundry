@@ -204,3 +204,28 @@ Require stack:
  GET /_next/static/chunks/main-app.js?v=1785482929241 404 in 60ms
  GET /_next/static/chunks/app-pages-internals.js 404 in 61ms
  GET /_next/static/chunks/app/page.js 404 in 61ms
+ GET / 200 in 69ms
+ GET /_next/static/css/app/layout.css?v=1785483155913 404 in 41ms
+ GET /_next/static/chunks/main-app.js?v=1785483155913 404 in 55ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 55ms
+ GET /_next/static/chunks/app/page.js 404 in 54ms
+ GET / 200 in 92ms
+ GET /_next/static/css/app/layout.css?v=1785483402135 404 in 41ms
+ GET /_next/static/chunks/main-app.js?v=1785483402135 404 in 56ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 56ms
+ GET /_next/static/chunks/app/page.js 404 in 56ms
+ GET / 200 in 56ms
+ GET /_next/static/css/app/layout.css?v=1785483531845 404 in 33ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 47ms
+ GET /_next/static/chunks/main-app.js?v=1785483531845 404 in 49ms
+ GET /_next/static/chunks/app/page.js 404 in 47ms
+ GET / 200 in 50ms
+ GET /_next/static/css/app/layout.css?v=1785483578682 404 in 45ms
+ GET /_next/static/chunks/main-app.js?v=1785483578682 404 in 53ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 51ms
+ GET /_next/static/chunks/app/page.js 404 in 50ms
+ GET / 200 in 64ms
+ GET /_next/static/css/app/layout.css?v=1785483579287 404 in 32ms
+ GET /_next/static/chunks/main-app.js?v=1785483579287 404 in 43ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 42ms
+ GET /_next/static/chunks/app/page.js 404 in 42ms
