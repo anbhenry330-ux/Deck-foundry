@@ -39,7 +39,7 @@ export function Header() {
         }`}
       >
         <Link href="/" className="group flex items-center gap-2.5">
-          <span className="flex flex-col leading-none">
+          <span className="flex flex-col items-center leading-none">
             <span className="font-serif text-xl font-black text-[#3C382F]">構築所</span>
             <span className="font-display text-[10px] italic tracking-[0.15em] text-[#3C382F]/50">
               Deck Foundry
