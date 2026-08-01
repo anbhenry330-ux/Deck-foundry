@@ -35,16 +35,13 @@ export function CountUpStat({
   }, [isInView, value]);
 
   return (
-    <div className="flex flex-col items-center gap-2 rounded-xl border border-[#D9CEB4] bg-[#FBF8F1] p-4 text-center">
+    <div className="flex flex-col items-center gap-2 rounded-xl border border-[#D9CEB4] bg-[#FBF8F1] p-3 text-center sm:p-4">
       {icon}
-      <p ref={ref} className="relative inline-flex font-serif text-xl font-bold text-[#3C382F]">
+      <p ref={ref} className="inline-flex items-center justify-center gap-0.5 font-serif text-lg font-bold text-[#3C382F] sm:text-xl">
         {count.toLocaleString()}
-        <ArrowUp
-          className="absolute left-full top-1/2 ml-1 h-4 w-4 -translate-y-1/2"
-          strokeWidth={2.5}
-        />
+        <ArrowUp className="h-4 w-4 shrink-0" strokeWidth={2.5} />
       </p>
-      <p className="text-[16px] text-[#3C382F]/60">{label}</p>
+      <p className="text-sm text-[#3C382F]/60 sm:text-[16px]">{label}</p>
     </div>
   );
 }

@@ -36,7 +36,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      <div className="relative h-[460px] w-full md:h-[580px]">
+      <div className="relative h-[380px] w-full sm:h-[460px] md:h-[580px]">
         {slides.map((slide, i) => (
           <div
             key={slide.image}
@@ -85,7 +85,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
             type="button"
             onClick={prev}
             aria-label="上一張"
-            className="absolute left-3 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-white/15 p-2 text-white backdrop-blur transition-colors hover:bg-white/25 sm:flex"
+            className="absolute left-3 top-1/2 z-10 flex -translate-y-1/2 rounded-full bg-white/15 p-2 text-white backdrop-blur transition-colors hover:bg-white/25"
           >
             <ChevronLeft className="h-5 w-5" strokeWidth={2} />
           </button>
@@ -93,7 +93,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
             type="button"
             onClick={next}
             aria-label="下一張"
-            className="absolute right-3 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-white/15 p-2 text-white backdrop-blur transition-colors hover:bg-white/25 sm:flex"
+            className="absolute right-3 top-1/2 z-10 flex -translate-y-1/2 rounded-full bg-white/15 p-2 text-white backdrop-blur transition-colors hover:bg-white/25"
           >
             <ChevronRight className="h-5 w-5" strokeWidth={2} />
           </button>

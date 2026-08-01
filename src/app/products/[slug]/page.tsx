@@ -24,19 +24,19 @@ export default async function ProductDetailPage({
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-14">
-      <nav className="mb-8 font-mono text-xs text-[#3C382F]/50">
-        <Link href="/products" className="hover:underline">
+      <nav className="mb-8 flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-xs text-[#3C382F]/50">
+        <Link href="/products" className="shrink-0 hover:underline">
           商品目錄
         </Link>
-        <span className="mx-2">/</span>
+        <span className="shrink-0">/</span>
         <Link
           href={`/products?category=${encodeURIComponent(product.category)}`}
-          className="hover:underline"
+          className="shrink-0 hover:underline"
         >
           {product.category}
         </Link>
-        <span className="mx-2">/</span>
-        <span className="text-[#3C382F]/70">{product.name}</span>
+        <span className="shrink-0">/</span>
+        <span className="min-w-0 flex-1 truncate text-[#3C382F]/70">{product.name}</span>
       </nav>
 
       <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
