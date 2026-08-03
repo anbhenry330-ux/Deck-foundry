@@ -25,9 +25,11 @@ src/
 │  ├─ OrderFlow.tsx           下單教學頁用的流程圖（7 個步驟，含會員註冊提醒）
 │  └─ FraudAwareness.tsx      下單教學頁用的防詐提醒區塊
 ├─ data/
-│  └─ products.ts             商品資料（mock），每筆都有 orderUrl 欄位
+│  ├─ tier-list.ts            上位卡表快照資料
+│  └─ tournament-results.ts   近期上位戰績資料
 └─ lib/
-   └─ format.ts               金額格式化工具
+   ├─ format.ts               金額格式化工具
+   └─ store.ts                商品資料：即時向賣貨便賣場頁面抓取並解析
 ```
 
 > 這一版已經**移除**站內購物車／結帳流程，因為下單與貨到付款都交給賣貨便處理，站內只需
@@ -35,8 +37,16 @@ src/
 
 ## 賣貨便串接說明
 
-- `src/data/products.ts` **由 `scripts/sync-products.mjs` 自動產生**，不要手動改這個檔
-  案（下次同步會被覆蓋）。
+- 商品資料**不是**寫死的檔案，而是 `src/lib/store.ts` 的 `getProducts()` 在每次頁面
+  重新驗證（ISR，預設每 `1800` 秒，即 30 分鐘）時，直接向賣貨便賣場頁面即時抓取、解
+  析。**在賣貨便上架、下架、改價或換圖後，不需要跑任何腳本或重新部署**，網站最慢
+  30 分鐘內就會自動反映最新狀態。
+  - 想調整同步頻率，改 `src/lib/store.ts` 裡的 `REVALIDATE_SECONDS` 常數即可。
+- 解析邏輯：賣貨便的商品列表頁是伺服器端渲染的靜態 HTML，每個商品卡片
+  （`<div class="product" data-product="...">`）的 `data-product` 屬性裡就包了一整包
+  結構化 JSON（名稱／價格／即時庫存／圖片檔名），不是用 AI 猜版面。
+- 商品圖片直接連到賣貨便的圖床（`myship.7-11.com.tw`），不再下載到 `public/products/`
+  ——`next.config.mjs` 的 `images.remotePatterns` 已允許這個網域。
 - 賣貨便上每個商品是用頁面內彈窗（`/CPF0102/PopupProduct`）呈現的，沒有各自獨立的網
   址，所以所有商品的 `orderUrl` 本來就會是同一個賣場總覽網址：
   ```
@@ -45,29 +55,12 @@ src/
   這是刻意的行為，不是待補的佔位符——買家點「前往賣貨便下單」之後，在賣場頁面上點開對
   應商品即可下單。
 
-### 商品同步（新增／下架／改價／換圖後要做的事）
-
-在賣貨便上架、下架、改價或換圖之後，執行：
-
-```bash
-node scripts/sync-products.mjs
-```
-
-這支腳本會：
-
-1. 抓取賣場頁面，解析每個商品卡片 `data-product` 屬性內的結構化 JSON（賣貨便原生資
-   料，包含名稱／價格／即時庫存／圖片檔名，不是用 AI 猜版面）
-2. 把每個商品的最新圖片下載到 `public/products/`（會自動判斷圖檔實際格式，賣貨便的圖
-   網址雖然都是 `.jpg` 結尾，但實際內容有些其實是 PNG）
-3. 重新產生 `src/data/products.ts`
-
-跑完之後看一下 `git diff` 確認結果合理（價格、庫存、新增/消失的商品），再照平常流程部
-署。
+### 商品的行銷文案／網址 slug
 
 商品的行銷文案（tagline／description／規格裡的屬性核心）賣貨便不會提供，維護在
-`scripts/sync-products.mjs` 檔案裡的 `COPY_OVERRIDES`，用商品名稱對應。新上架但還沒
-寫文案的商品，跑同步時會先套用通用預設文案，並在終端機印出提醒，之後手動幫它在
-`COPY_OVERRIDES` 補一筆即可。商品的網址 slug 同理維護在同一支腳本的 `SLUG_OVERRIDES`。
+`src/lib/store.ts` 檔案裡的 `COPY_OVERRIDES`，用商品名稱對應。新上架但還沒寫文案的商
+品，會先套用通用預設文案，之後可以直接在 `COPY_OVERRIDES` 補一筆。商品的網址 slug 同
+理維護在同一支檔案的 `SLUG_OVERRIDES`。
 
 - `src/components/Header.tsx` 頂部也有一個全站共用的「前往下單」按鈕，導去賣場總覽頁。
 
@@ -134,9 +127,7 @@ npm run dev
 
 ## 建議下一步
 
-1. 把 `products.ts` 裡每個商品的 `orderUrl` 換成賣貨便上對應的個別連結
-2. 商品圖片：`ProductGlyph` 目前用 icon 佔位，有實拍圖後可換成 `next/image`
-3. 若之後想把賣貨便賣場「嵌入」在站內某一頁（iframe），也可以再加，但賣貨便平台是否允
+1. 若之後想把賣貨便賣場「嵌入」在站內某一頁（iframe），也可以再加，但賣貨便平台是否允
    許被嵌入需另外確認
-4. 加上商品搜尋／排序、SEO metadata、Open Graph 圖片
+2. 加上商品搜尋／排序
 

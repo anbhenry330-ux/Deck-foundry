@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { UserPlus, ExternalLink } from "lucide-react";
 import { OrderFlow } from "@/components/OrderFlow";
 import { FraudAwareness } from "@/components/FraudAwareness";
@@ -55,21 +54,6 @@ export default function OrderGuidePage() {
       {/* fraud awareness */}
       <div className="mt-12">
         <FraudAwareness />
-      </div>
-
-      <div className="mt-12 flex flex-wrap gap-3 border-t border-[#D9CEB4] pt-8">
-        <Link
-          href="/products"
-          className="rounded-md bg-[#3C382F] px-5 py-3 text-sm font-semibold text-[#F2ECE0] hover:opacity-90"
-        >
-          瀏覽商品目錄
-        </Link>
-        <Link
-          href="/about"
-          className="rounded-md border border-[#D9CEB4] px-5 py-3 text-sm font-semibold text-[#3C382F] hover:bg-[#D9CEB4]"
-        >
-          關於我們
-        </Link>
       </div>
     </div>
   );

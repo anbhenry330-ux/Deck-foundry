@@ -6,226 +6,47 @@
   - Local:        http://localhost:3000
 
  ✓ Starting...
- ✓ Ready in 3.7s
- ○ Compiling /about ...
- ✓ Compiled /about in 7.1s (1380 modules)
- GET /about?tab=advantages 200 in 7365ms
+ ✓ Ready in 3.5s
  ○ Compiling / ...
- ✓ Compiled / in 851ms (1429 modules)
- ✓ Compiled in 646ms (737 modules)
- GET / 200 in 670ms
- ✓ Compiled in 6.3s (1443 modules)
- ✓ Compiled in 542ms (1443 modules)
- ✓ Compiled in 550ms (1443 modules)
- ✓ Compiled in 366ms (1444 modules)
- ✓ Compiled in 159ms (738 modules)
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 504ms (1433 modules)
- GET /_next/static/css/app/layout.css?v=1785481204623 404 in 609ms
- ⨯ Error: Cannot find module './948.js'
-Require stack:
-- C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\webpack-runtime.js
-- C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\app\_not-found\page.js
-- C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\require.js
-- C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\load-components.js
-- C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\utils.js
-- C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\dev\hot-middleware.js
-- C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\dev\hot-reloader-webpack.js
-- C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
-- C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\lib\router-server.js
-- C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\lib\start-server.js
-    at Module.<anonymous> (node:internal/modules/cjs/loader:1517:15)
-    at C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\require-hook.js:55:36
-    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
-    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
-    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
-    at Module._load (node:internal/modules/cjs/loader:1294:5)
-    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
-    at Module.<anonymous> (node:internal/modules/cjs/loader:1617:12)
-    at mod.require (C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\require-hook.js:65:28)
-    at require (node:internal/modules/helpers:153:16)
-    at __webpack_require__.f.require (C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\webpack-runtime.js:198:28)
-    at C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\webpack-runtime.js:111:40
-    at Array.reduce (<anonymous>)
-    at __webpack_require__.e (C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\webpack-runtime.js:110:67)
-    at Array.map (<anonymous>)
-    at __webpack_require__.X (C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\webpack-runtime.js:162:22)
-    at C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\app\page.js:1:20568
-    at Object.<anonymous> (C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\app\page.js:1:20628)
-    at Module._compile (node:internal/modules/cjs/loader:1871:14)
-    at Object..js (node:internal/modules/cjs/loader:2002:10)
-    at Module.load (node:internal/modules/cjs/loader:1594:32)
-    at Module._load (node:internal/modules/cjs/loader:1396:12)
-    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
-    at Module.<anonymous> (node:internal/modules/cjs/loader:1617:12)
-    at mod.require (C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\require-hook.js:65:28)
-    at require (node:internal/modules/helpers:153:16)
-    at requirePage (C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\require.js:109:84)
-    at C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\load-components.js:103:84
-    at async loadComponentsImpl (C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\load-components.js:103:26)
-    at async DevServer.findPageComponentsImpl (C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\next-server.js:714:36)
-    at async DevServer.findPageComponents (C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\dev\next-dev-server.js:577:20)
-    at async DevServer.renderPageComponent (C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\base-server.js:1910:24)
-    at async DevServer.renderToResponseImpl (C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\base-server.js:1962:32)
-    at async DevServer.pipeImpl (C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\base-server.js:922:25)
-    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\next-server.js:272:17)
-    at async DevServer.handleRequestImpl (C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\base-server.js:818:17)
-    at async C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\dev\next-dev-server.js:339:20
-    at async Span.traceAsyncFn (C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\trace\trace.js:154:20)
-    at async DevServer.handleRequest (C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
-    at async invokeRender (C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\lib\router-server.js:179:21)
-    at async handleRequest (C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\lib\router-server.js:359:24)
-    at async requestHandlerImpl (C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\lib\router-server.js:383:13)
-    at async Server.requestListener (C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\lib\start-server.js:141:13) {
-  code: 'MODULE_NOT_FOUND',
-  requireStack: [
-    'C:\\Users\\neilx\\OneDrive\\Desktop\\Deck\\.next\\server\\webpack-runtime.js',
-    'C:\\Users\\neilx\\OneDrive\\Desktop\\Deck\\.next\\server\\app\\_not-found\\page.js',
-    'C:\\Users\\neilx\\OneDrive\\Desktop\\Deck\\node_modules\\next\\dist\\server\\require.js',
-    'C:\\Users\\neilx\\OneDrive\\Desktop\\Deck\\node_modules\\next\\dist\\server\\load-components.js',
-    'C:\\Users\\neilx\\OneDrive\\Desktop\\Deck\\node_modules\\next\\dist\\build\\utils.js',
-    'C:\\Users\\neilx\\OneDrive\\Desktop\\Deck\\node_modules\\next\\dist\\server\\dev\\hot-middleware.js',
-    'C:\\Users\\neilx\\OneDrive\\Desktop\\Deck\\node_modules\\next\\dist\\server\\dev\\hot-reloader-webpack.js',
-    'C:\\Users\\neilx\\OneDrive\\Desktop\\Deck\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
-    'C:\\Users\\neilx\\OneDrive\\Desktop\\Deck\\node_modules\\next\\dist\\server\\lib\\router-server.js',
-    'C:\\Users\\neilx\\OneDrive\\Desktop\\Deck\\node_modules\\next\\dist\\server\\lib\\start-server.js'
-  ],
-  page: '/'
-}
- ○ Compiling /_error ...
- ✓ Compiled /_error in 6.4s (1657 modules)
- GET / 500 in 6757ms
-<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\vendor-chunks\motion-utils.js'
-<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/motion-utils' in C:\Users\neilx\OneDrive\Desktop\Deck\.next\server for build dependencies doesn't lead to expected result 'C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\vendor-chunks\motion-utils.js', but to 'Error: Can't resolve './vendor-chunks/motion-utils' in 'C:\Users\neilx\OneDrive\Desktop\Deck\.next\server'' instead. Resolving dependencies are ignored for this path.
-<w>  at resolve commonjs file ./vendor-chunks/motion-utils (expected C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\vendor-chunks\motion-utils.js)
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\webpack-runtime.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\webpack-runtime.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\pages\_error.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\pages\_error.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\require.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\require.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\load-components.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\load-components.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\utils.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\utils.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
-<w>  at resolve commonjs C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
-<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/lucide-react' in C:\Users\neilx\OneDrive\Desktop\Deck\.next\server for build dependencies doesn't lead to expected result 'C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\vendor-chunks\lucide-react.js', but to 'Error: Can't resolve './vendor-chunks/lucide-react' in 'C:\Users\neilx\OneDrive\Desktop\Deck\.next\server'' instead. Resolving dependencies are ignored for this path.
-<w>  at resolve commonjs file ./vendor-chunks/lucide-react (expected C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\vendor-chunks\lucide-react.js)
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\webpack-runtime.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\webpack-runtime.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\pages\_error.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\pages\_error.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\require.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\require.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\load-components.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\load-components.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\utils.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\utils.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
-<w>  at resolve commonjs C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
-<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/framer-motion' in C:\Users\neilx\OneDrive\Desktop\Deck\.next\server for build dependencies doesn't lead to expected result 'C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\vendor-chunks\framer-motion.js', but to 'Error: Can't resolve './vendor-chunks/framer-motion' in 'C:\Users\neilx\OneDrive\Desktop\Deck\.next\server'' instead. Resolving dependencies are ignored for this path.
-<w>  at resolve commonjs file ./vendor-chunks/framer-motion (expected C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\vendor-chunks\framer-motion.js)
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\webpack-runtime.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\webpack-runtime.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\pages\_error.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\pages\_error.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\require.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\require.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\load-components.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\load-components.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\utils.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\utils.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
-<w>  at resolve commonjs C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
-<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/motion-dom' in C:\Users\neilx\OneDrive\Desktop\Deck\.next\server for build dependencies doesn't lead to expected result 'C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\vendor-chunks\motion-dom.js', but to 'Error: Can't resolve './vendor-chunks/motion-dom' in 'C:\Users\neilx\OneDrive\Desktop\Deck\.next\server'' instead. Resolving dependencies are ignored for this path.
-<w>  at resolve commonjs file ./vendor-chunks/motion-dom (expected C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\vendor-chunks\motion-dom.js)
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\webpack-runtime.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\webpack-runtime.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\pages\_error.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\pages\_error.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\require.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\require.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\load-components.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\load-components.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\utils.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\utils.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
-<w>  at resolve commonjs C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
- ✓ Compiled in 165ms (779 modules)
- GET / 200 in 136ms
- ✓ Compiled /_not-found in 256ms (1660 modules)
- GET /_next/static/css/app/layout.css?v=1785481599317 404 in 329ms
- GET /_next/static/chunks/main-app.js?v=1785481599317 404 in 325ms
- GET /_next/static/chunks/app-pages-internals.js 404 in 324ms
- GET /_next/static/chunks/app/page.js 404 in 24ms
- GET /_next/static/chunks/app/layout.js 404 in 30ms
-<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\vendor-chunks\lucide-react.js'
-<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/lucide-react' in C:\Users\neilx\OneDrive\Desktop\Deck\.next\server for build dependencies doesn't lead to expected result 'C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\vendor-chunks\lucide-react.js', but to 'Error: Can't resolve './vendor-chunks/lucide-react' in 'C:\Users\neilx\OneDrive\Desktop\Deck\.next\server'' instead. Resolving dependencies are ignored for this path.
-<w>  at resolve commonjs file ./vendor-chunks/lucide-react (expected C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\vendor-chunks\lucide-react.js)
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\webpack-runtime.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\webpack-runtime.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\app\_not-found\page.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\.next\server\app\_not-found\page.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\require.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\require.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\load-components.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\server\load-components.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\utils.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\utils.js
-<w>  at file dependencies C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
-<w>  at file C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
-<w>  at resolve commonjs C:\Users\neilx\OneDrive\Desktop\Deck\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
- GET / 200 in 166ms
- GET /_next/static/css/app/layout.css?v=1785482244522 404 in 63ms
- GET /_next/static/chunks/main-app.js?v=1785482244522 404 in 75ms
- GET /_next/static/chunks/app-pages-internals.js 404 in 74ms
- GET /_next/static/chunks/app/page.js 404 in 73ms
- GET /_next/static/chunks/app/layout.js 404 in 70ms
- GET / 200 in 56ms
- GET /_next/static/css/app/layout.css?v=1785482280248 404 in 37ms
- GET /_next/static/chunks/app-pages-internals.js 404 in 47ms
- GET /_next/static/chunks/main-app.js?v=1785482280248 404 in 47ms
- GET /_next/static/chunks/app/page.js 404 in 46ms
- GET /_next/static/chunks/app/layout.js 404 in 45ms
- ✓ Compiled in 547ms (1671 modules)
+ ✓ Compiled / in 9.6s (1472 modules)
+ GET / 200 in 9896ms
  GET / 200 in 121ms
- ✓ Compiled /_not-found in 391ms (1660 modules)
- GET /_next/static/css/app/layout.css?v=1785482844484 404 in 489ms
- GET /_next/static/chunks/main-app.js?v=1785482844484 404 in 485ms
- GET /_next/static/chunks/app-pages-internals.js 404 in 484ms
- GET /_next/static/chunks/app/page.js 404 in 486ms
- GET / 200 in 103ms
- GET /_next/static/css/app/layout.css?v=1785482929241 404 in 42ms
- GET /_next/static/chunks/main-app.js?v=1785482929241 404 in 60ms
- GET /_next/static/chunks/app-pages-internals.js 404 in 61ms
- GET /_next/static/chunks/app/page.js 404 in 61ms
- GET / 200 in 69ms
- GET /_next/static/css/app/layout.css?v=1785483155913 404 in 41ms
- GET /_next/static/chunks/main-app.js?v=1785483155913 404 in 55ms
- GET /_next/static/chunks/app-pages-internals.js 404 in 55ms
- GET /_next/static/chunks/app/page.js 404 in 54ms
- GET / 200 in 92ms
- GET /_next/static/css/app/layout.css?v=1785483402135 404 in 41ms
- GET /_next/static/chunks/main-app.js?v=1785483402135 404 in 56ms
- GET /_next/static/chunks/app-pages-internals.js 404 in 56ms
- GET /_next/static/chunks/app/page.js 404 in 56ms
- GET / 200 in 56ms
- GET /_next/static/css/app/layout.css?v=1785483531845 404 in 33ms
- GET /_next/static/chunks/app-pages-internals.js 404 in 47ms
- GET /_next/static/chunks/main-app.js?v=1785483531845 404 in 49ms
- GET /_next/static/chunks/app/page.js 404 in 47ms
- GET / 200 in 50ms
- GET /_next/static/css/app/layout.css?v=1785483578682 404 in 45ms
- GET /_next/static/chunks/main-app.js?v=1785483578682 404 in 53ms
- GET /_next/static/chunks/app-pages-internals.js 404 in 51ms
- GET /_next/static/chunks/app/page.js 404 in 50ms
- GET / 200 in 64ms
- GET /_next/static/css/app/layout.css?v=1785483579287 404 in 32ms
- GET /_next/static/chunks/main-app.js?v=1785483579287 404 in 43ms
- GET /_next/static/chunks/app-pages-internals.js 404 in 42ms
- GET /_next/static/chunks/app/page.js 404 in 42ms
+ GET / 200 in 96ms
+ ○ Compiling /order-guide ...
+ ✓ Compiled /deck-building in 1551ms (1462 modules)
+ ○ Compiling /products ...
+ ✓ Compiled /order-guide in 2s (1475 modules)
+ ○ Compiling /about ...
+ ✓ Compiled /about in 1616ms (1483 modules)
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 3.1s
+ ○ Compiling /products ...
+ ✓ Compiled /products in 8.1s (883 modules)
+ GET /products 200 in 8775ms
+ ○ Compiling /products/[slug] ...
+ ✓ Compiled /products/[slug] in 3.8s (1672 modules)
+ GET /products/product-2608021286908785 200 in 548ms
+ GET /products/product-2607301282597932.png 404 in 1046ms
+ GET /products/cinccino-deck.jpg 404 in 1053ms
+ GET /products/product-2607301282595564.jpg 404 in 1064ms
+ GET /products/product-2607301282597252.png 404 in 1068ms
+ GET /products/product-2607291280977245.jpg 404 in 564ms
+ GET /products/product-2607241274128475.jpg 404 in 544ms
+ GET /products/abomasnow-deck.png 404 in 264ms
+ ○ Compiling /tournament-results ...
+ ✓ Compiled /tournament-results in 959ms (1673 modules)
+ ✓ Compiled in 464ms (698 modules)
+ ✓ Compiled in 249ms (698 modules)
+ ✓ Compiled in 313ms (698 modules)
+ ✓ Compiled in 199ms (698 modules)
+ ○ Compiling /order-guide ...
+ ✓ Compiled /order-guide in 678ms (1678 modules)
+ GET /order-guide 200 in 864ms
+ ✓ Compiled /tournament-results in 218ms (1008 modules)
+ ○ Compiling /deck-building ...
+ ✓ Compiled / in 1538ms (1738 modules)
+ ○ Compiling /about ...
+ ✓ Compiled /about in 870ms (1746 modules)

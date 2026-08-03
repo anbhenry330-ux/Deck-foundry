@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { products, type ProductCategory } from "@/data/products";
+import { getProducts, type ProductCategory } from "@/lib/store";
 import { ProductCard } from "@/components/ProductCard";
 
 const CATEGORIES: ProductCategory[] = ["牌組", "卡套"];
@@ -14,6 +14,7 @@ export default async function ProductsPage({
     ? (category as ProductCategory)
     : undefined;
 
+  const products = await getProducts();
   const filtered = activeCategory
     ? products.filter((p) => p.category === activeCategory)
     : products;

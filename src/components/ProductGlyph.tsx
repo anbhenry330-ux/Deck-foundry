@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { Product } from "@/data/products";
+import type { Product } from "@/lib/store";
 
 export function ProductGlyph({
   product,

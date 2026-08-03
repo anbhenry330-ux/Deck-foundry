@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
-import type { Product } from "@/data/products";
+import type { Product } from "@/lib/store";
 import { ProductGlyph } from "./ProductGlyph";
 import { formatTWD } from "@/lib/format";
 

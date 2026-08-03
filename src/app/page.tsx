@@ -11,7 +11,7 @@ import {
   Users,
   Layers,
 } from "lucide-react";
-import { products } from "@/data/products";
+import { getProducts } from "@/lib/store";
 import { tierList } from "@/data/tier-list";
 import { sortedResults } from "@/data/tournament-results";
 import { ProductCard } from "@/components/ProductCard";
@@ -137,8 +137,8 @@ function SectionEyebrow({
   );
 }
 
-export default function Home() {
-  const featured = products;
+export default async function Home() {
+  const featured = await getProducts();
   const highlightResults = sortedResults().slice(0, 4);
 
   return (

@@ -1,0 +1,10 @@
+ ⚠ Found a change in next.config.mjs. Restarting the server to apply the changes...
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, stat 'C:\Users\neilx\OneDrive\Desktop\Deck\.next\cache\webpack\server-development\3.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, stat 'C:\Users\neilx\OneDrive\Desktop\Deck\.next\cache\webpack\client-development\3.pack.gz'
+ ⨯ The requested resource isn't a valid image for /products/product-2607301282597932.png received null
+ ⨯ The requested resource isn't a valid image for /products/cinccino-deck.jpg received null
+ ⨯ The requested resource isn't a valid image for /products/product-2607301282595564.jpg received null
+ ⨯ The requested resource isn't a valid image for /products/product-2607301282597252.png received null
+ ⨯ The requested resource isn't a valid image for /products/product-2607291280977245.jpg received null
+ ⨯ The requested resource isn't a valid image for /products/product-2607241274128475.jpg received null
+ ⨯ The requested resource isn't a valid image for /products/abomasnow-deck.png received null

@@ -1,6 +1,6 @@
 import { ExternalLink, Truck } from "lucide-react";
 import Link from "next/link";
-import type { Product } from "@/data/products";
+import type { Product } from "@/lib/store";
 import { formatTWD } from "@/lib/format";
 
 export function OrderCTA({ product }: { product: Product }) {
