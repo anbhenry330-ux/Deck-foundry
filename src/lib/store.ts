@@ -50,7 +50,7 @@ const STORE_URL = "https://myship.7-11.com.tw/general/detail/GM2604248168251";
 const IMAGE_BASE = "https://myship.7-11.com.tw/i/cgdm/GM2604248168251/";
 
 /** 資料重新驗證間隔（秒）。賣貨便更新商品後，最慢這麼多秒網站就會同步。 */
-const REVALIDATE_SECONDS = 1800;
+const REVALIDATE_SECONDS = 300;
 
 // 商品名稱 -> 網址 slug。新商品若不在這裡，會 fallback 成 product-<編號>，
 // 建議之後手動補一筆更好看的 slug。
