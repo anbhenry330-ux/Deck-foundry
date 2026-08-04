@@ -73,6 +73,8 @@ const CATEGORY_LINKS: {
   },
   {
     icon: ShoppingBag,
+    image: "/service-accessories.jpg",
+    imageAspect: "1907 / 858",
     panelBg: "#EFEADF",
     title: "周邊販售",
     en: "Accessories",
@@ -80,6 +82,8 @@ const CATEGORY_LINKS: {
   },
   {
     icon: Wrench,
+    image: "/service-custom-deck.jpg",
+    imageAspect: "1907 / 858",
     panelBg: "#EFEADF",
     title: "客製化牌組",
     en: "Custom Deck",
