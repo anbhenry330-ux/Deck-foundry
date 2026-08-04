@@ -6,7 +6,7 @@ import { formatTWD } from "@/lib/format";
 
 export function ProductCard({ product }: { product: Product }) {
   return (
-    <div className="group flex flex-col overflow-hidden rounded-lg border border-[#D9CEB4] bg-[#FBF8F1] transition-all duration-300 hover:shadow-[0_16px_36px_-14px_rgba(60,56,47,0.4)]">
+    <div className="group flex h-full flex-col overflow-hidden rounded-lg border border-[#D9CEB4] bg-[#FBF8F1] transition-all duration-300 hover:shadow-[0_16px_36px_-14px_rgba(60,56,47,0.4)]">
       <Link href={`/products/${product.slug}`}>
         <ProductGlyph product={product} className="rounded-none border-0 border-b" />
       </Link>
