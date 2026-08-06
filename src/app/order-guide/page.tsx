@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "下單教學",
   description:
     "構築所下單流程完整教學：透過賣貨便（7-11 MyShip）支援貨到付款，含會員註冊提醒、完整下單步驟與防詐提醒，購買前請先詳閱。",
+  keywords: ["賣貨便下單教學", "7-11 MyShip", "貨到付款牌組", "超商取貨PTCG"],
 };
 
 export default function OrderGuidePage() {

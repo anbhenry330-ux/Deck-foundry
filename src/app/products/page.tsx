@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "商品目錄",
   description:
     "構築所商品目錄：日本上位環境主流 PTCG 牌組、牌組周邊現貨供應，價格實惠、當日出貨，支援貨到付款。",
+  keywords: ["PTCG牌組購買", "寶可夢卡牌目錄", "卡套周邊販售", "上位環境牌組現貨"],
 };
 
 const CATEGORIES: ProductCategory[] = ["牌組", "卡套"];

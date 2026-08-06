@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "牌組構築教學",
   description:
     "如何構築一副完整的 PTCG 牌組？寶可夢卡、訓練家卡、能量卡建議配置比例，以及開卡包、購買官方戰術牌組、實體卡牌店、線上通路等獲取完整牌組的四種方式比較。",
+  keywords: ["PTCG牌組教學", "寶可夢卡牌配置", "能量卡比例", "牌組構築方法"],
 };
 
 export default function DeckBuildingPage() {

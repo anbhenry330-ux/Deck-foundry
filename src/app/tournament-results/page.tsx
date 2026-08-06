@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "上位卡表與賽事戰績",
   description:
     "PTCG 上位環境卡表即時更新，收錄各大賽事戰績牌組與構築牌譜，掌握最新環境強勢牌組動態。",
+  keywords: ["PTCG賽事戰績", "上位卡表", "環境牌組排名", "寶可夢大賽牌組"],
 };
 
 export default async function TournamentResultsPage({

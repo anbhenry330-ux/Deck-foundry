@@ -60,6 +60,22 @@ const websiteJsonLd = {
   inLanguage: "zh-Hant",
 };
 
+const KEYWORDS = [
+  "構築所",
+  "Deck Foundry",
+  "PTCG",
+  "寶可夢集換式卡牌",
+  "寶可夢卡牌",
+  "神奇寶貝卡牌",
+  "牌組構築",
+  "牌組購買",
+  "日本上位環境",
+  "上位環境牌組",
+  "客製化牌組",
+  "牌料收購",
+  "卡牌買賣",
+];
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -67,6 +83,7 @@ export const metadata: Metadata = {
     template: "%s｜構築所 Deck Foundry",
   },
   description: DESCRIPTION,
+  keywords: KEYWORDS,
   robots: {
     index: true,
     follow: true,
