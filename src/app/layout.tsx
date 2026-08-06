@@ -38,6 +38,28 @@ const TITLE = "構築所 Deck Foundry｜牌組構築專門";
 const DESCRIPTION =
   "構築所（Deck Foundry）專門販售日本上位環境主流牌組及牌料，同時提供牌組周邊與客製化訂製，價格實惠、當日出貨。";
 
+const FB_URL = "https://www.facebook.com/profile.php?id=61584390375051&locale=zh_TW";
+const LINE_URL = "https://line.me/R/ti/p/@881idjjb";
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "構築所",
+  alternateName: "Deck Foundry",
+  url: SITE_URL,
+  logo: `${SITE_URL}/cover.png`,
+  description: DESCRIPTION,
+  sameAs: [FB_URL, LINE_URL],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "構築所 Deck Foundry",
+  url: SITE_URL,
+  inLanguage: "zh-Hant",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -79,6 +101,14 @@ export default function RootLayout({
       <body
         className={`${serif.variable} ${sans.variable} ${mono.variable} ${display.variable} min-h-screen bg-[#F2ECE0] font-sans text-[#3C382F] antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         <Header />
         <main className="min-h-[60vh]">{children}</main>
         <Footer />

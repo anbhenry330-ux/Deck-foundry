@@ -19,9 +19,15 @@ export function Footer() {
               </div>
               <ul className="mt-3 max-w-sm space-y-2 text-base text-[#3C382F]/80">
                 <li>專營PTCG主流及熱門牌組構築</li>
-                <li>日本最新上位卡表、賽場環境變化分享</li>
-                <li>服務全臺各地PTCG玩家，解決組牌需求</li>
-                <li>牌組皆可客製化、構築可根據需求調整</li>
+                <li>
+                  日本最新上位卡表、<br className="sm:hidden" />賽場環境變化分享
+                </li>
+                <li>
+                  服務全臺各地PTCG玩家，<br className="sm:hidden" />解決組牌需求
+                </li>
+                <li>
+                  牌組皆可客製化、<br className="sm:hidden" />構築可根據需求調整
+                </li>
               </ul>
             </div>
 

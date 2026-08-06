@@ -1,9 +1,16 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { ChevronLeft } from "lucide-react";
 import { sortedResults, tournamentResults } from "@/data/tournament-results";
 import { tierList } from "@/data/tier-list";
 import { ResultCard } from "@/components/ResultCard";
 import { DeckGlyph } from "@/components/DeckGlyph";
+
+export const metadata: Metadata = {
+  title: "上位卡表與賽事戰績",
+  description:
+    "PTCG 上位環境卡表即時更新，收錄各大賽事戰績牌組與構築牌譜，掌握最新環境強勢牌組動態。",
+};
 
 export default async function TournamentResultsPage({
   searchParams,

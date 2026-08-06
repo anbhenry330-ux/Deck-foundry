@@ -134,10 +134,10 @@ export function DeckBuildFlow() {
                     {m.pros.map((p) => (
                       <li
                         key={p}
-                        className="flex gap-2 text-base leading-relaxed text-[#3C382F]/80"
+                        className="flex items-center gap-2 text-base leading-relaxed text-[#3C382F]/80"
                       >
                         <CheckCircle2
-                          className="mt-0.5 h-4 w-4 shrink-0 text-[#4B5741]"
+                          className="h-4 w-4 shrink-0 text-[#4B5741]"
                           strokeWidth={1.75}
                         />
                         {p}
@@ -146,10 +146,10 @@ export function DeckBuildFlow() {
                     {m.cons.map((c) => (
                       <li
                         key={c}
-                        className="flex gap-2 text-base leading-relaxed text-[#3C382F]/70"
+                        className="flex items-center gap-2 text-base leading-relaxed text-[#3C382F]/70"
                       >
                         <XCircle
-                          className="mt-0.5 h-4 w-4 shrink-0 text-[#A6553A]"
+                          className="h-4 w-4 shrink-0 text-[#A6553A]"
                           strokeWidth={1.75}
                         />
                         {c}

@@ -1,6 +1,13 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { getProducts, type ProductCategory } from "@/lib/store";
 import { ProductCard } from "@/components/ProductCard";
+
+export const metadata: Metadata = {
+  title: "商品目錄",
+  description:
+    "構築所商品目錄：日本上位環境主流 PTCG 牌組、牌組周邊現貨供應，價格實惠、當日出貨，支援貨到付款。",
+};
 
 const CATEGORIES: ProductCategory[] = ["牌組", "卡套"];
 

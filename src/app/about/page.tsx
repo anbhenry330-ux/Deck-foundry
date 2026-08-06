@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 import {
   Hammer,
   ShoppingBag,
@@ -9,6 +10,12 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
+
+export const metadata: Metadata = {
+  title: "關於我們",
+  description:
+    "構築所（Deck Foundry）品牌故事與經營理念：專營 PTCG 上位環境牌組即時供應、客製化訂製與完善售後服務，服務全臺各地玩家。",
+};
 
 const TABS = [
   { key: "story", label: "品牌故事", sub: "Our Story" },
@@ -36,7 +43,7 @@ const ADVANTAGES = [
   {
     icon: Wrench,
     title: "客製化服務",
-    desc: "告知您的預算、需求或喜好的牌組類型，我們將為您客製化牌組，無須額外付費即可享有良好的組牌體驗。",
+    desc: "告知您的預算、需求或喜好牌組類型，我們將為您客製化牌組，無須額外付費即可享有良好組牌體驗。",
   },
   {
     icon: ShieldCheck,
@@ -46,7 +53,7 @@ const ADVANTAGES = [
   {
     icon: MessagesSquare,
     title: "完善的售後服務",
-    desc: "買了之後我們還在：牌組構築調整、對戰策略建議、賽場環境分析等售後服務免費提供。",
+    desc: "買了後我們還在：牌組構築調整、對戰策略建議、賽場環境分析等售後服務免費提供。",
   },
 ];
 
