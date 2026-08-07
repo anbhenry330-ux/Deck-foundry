@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Serif_TC, Noto_Sans_TC, JetBrains_Mono, Fraunces } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -129,6 +131,8 @@ export default function RootLayout({
         <Header />
         <main className="min-h-[60vh]">{children}</main>
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
