@@ -59,6 +59,14 @@ export default async function ProductDetailPage({
         ? "https://schema.org/InStock"
         : "https://schema.org/OutOfStock",
       url: `${SITE_URL}/products/${product.slug}`,
+      hasMerchantReturnPolicy: {
+        "@type": "MerchantReturnPolicy",
+        applicableCountry: "TW",
+        returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+        merchantReturnDays: 7,
+        returnMethod: "https://schema.org/ReturnByMail",
+        returnFees: "https://schema.org/FreeReturn",
+      },
     },
   };
 
