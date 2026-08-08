@@ -42,8 +42,8 @@ const HERO_SLIDES: HeroSlide[] = [
   {
     image: "/cover.png",
     alt: "構築所工作桌：牌組整理、卡表分析與出貨作業的日常",
-    title: "把手中的卡牌，\n構築成專屬於你的牌組",
-    desc: "構築所－讓您不再為組牌擔憂",
+    title: "把手中的卡牌，\n構築成專屬於你的 PTCG 牌組",
+    desc: "構築所－PTCG牌組構築專門店，讓您不再為組牌擔憂",
     ctaLabel: "瀏覽本期牌組",
     ctaHref: "/products",
   },
