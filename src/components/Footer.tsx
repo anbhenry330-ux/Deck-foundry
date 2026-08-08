@@ -6,7 +6,7 @@ const FB_URL = "https://www.facebook.com/profile.php?id=61584390375051&locale=zh
 
 export function Footer() {
   return (
-    <footer className="bg-kraft-texture">
+    <footer className="bg-kraft-texture-static">
       <div className="mx-auto max-w-6xl px-6 py-14">
         <div className="card-mounted rounded-2xl border border-[#3C382F]/10 px-7 py-10 sm:px-10">
           <div className="grid grid-cols-1 gap-x-10 gap-y-8 md:grid-cols-[1.3fr_1fr_1fr] md:gap-y-3">
