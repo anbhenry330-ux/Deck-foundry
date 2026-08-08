@@ -11,7 +11,7 @@ export function Footer() {
         <div className="card-mounted rounded-2xl border border-[#3C382F]/10 px-7 py-10 sm:px-10">
           <div className="grid grid-cols-1 gap-x-10 gap-y-8 md:grid-cols-[1.3fr_1fr_1fr] md:gap-y-3">
             <div>
-              <div className="leading-none">
+              <div className="inline-flex flex-col items-center leading-none">
                 <p className="font-serif text-xl font-black text-[#3C382F]">構築所</p>
                 <p className="font-display text-[10px] italic tracking-[0.15em] text-[#3C382F]/50">
                   Deck Foundry
