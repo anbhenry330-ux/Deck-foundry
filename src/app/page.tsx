@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 import {
   ArrowRight,
   Hammer,
@@ -20,6 +21,11 @@ import { CountUpStat } from "@/components/CountUpStat";
 import { HeroCarousel, type HeroSlide } from "@/components/HeroCarousel";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { DeckGlyph } from "@/components/DeckGlyph";
+import { SITE_URL } from "@/lib/site";
+
+export const metadata: Metadata = {
+  alternates: { canonical: SITE_URL },
+};
 
 const LINE_URL = "https://line.me/R/ti/p/@881idjjb";
 const FB_URL = "https://www.facebook.com/profile.php?id=61584390375051&locale=zh_TW";

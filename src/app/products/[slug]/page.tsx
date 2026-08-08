@@ -50,7 +50,11 @@ export default async function ProductDetailPage({
     name: product.name,
     description: product.description,
     image: product.image,
-    category: product.category,
+    category: "Arts & Entertainment > Hobbies & Creative Arts > Collectibles > Collectible Trading Cards",
+    brand: {
+      "@type": "Brand",
+      name: "構築所 Deck Foundry",
+    },
     offers: {
       "@type": "Offer",
       priceCurrency: "TWD",
@@ -66,6 +70,33 @@ export default async function ProductDetailPage({
         merchantReturnDays: 7,
         returnMethod: "https://schema.org/ReturnByMail",
         returnFees: "https://schema.org/FreeReturn",
+      },
+      shippingDetails: {
+        "@type": "OfferShippingDetails",
+        shippingRate: {
+          "@type": "MonetaryAmount",
+          value: 38,
+          currency: "TWD",
+        },
+        shippingDestination: {
+          "@type": "DefinedRegion",
+          addressCountry: "TW",
+        },
+        deliveryTime: {
+          "@type": "ShippingDeliveryTime",
+          handlingTime: {
+            "@type": "QuantitativeValue",
+            minValue: 0,
+            maxValue: 0,
+            unitCode: "DAY",
+          },
+          transitTime: {
+            "@type": "QuantitativeValue",
+            minValue: 2,
+            maxValue: 4,
+            unitCode: "DAY",
+          },
+        },
       },
     },
   };

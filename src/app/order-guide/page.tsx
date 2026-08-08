@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { UserPlus, ExternalLink } from "lucide-react";
 import { OrderFlow } from "@/components/OrderFlow";
 import { FraudAwareness } from "@/components/FraudAwareness";
+import { SITE_URL } from "@/lib/site";
 
 const MEMBER_REGISTER_URL = "https://myship.7-11.com.tw/Member/Register";
 
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
   description:
     "構築所下單流程完整教學：透過賣貨便（7-11 MyShip）支援貨到付款，含會員註冊提醒、完整下單步驟與防詐提醒，購買前請先詳閱。",
   keywords: ["賣貨便下單教學", "7-11 MyShip", "貨到付款牌組", "超商取貨PTCG"],
+  alternates: { canonical: `${SITE_URL}/order-guide` },
 };
 
 export default function OrderGuidePage() {
