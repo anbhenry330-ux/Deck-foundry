@@ -32,6 +32,12 @@ export async function generateMetadata({
       description,
       images: [{ url: product.image }],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: product.name,
+      description,
+      images: [product.image],
+    },
   };
 }
 
@@ -101,6 +107,26 @@ export default async function ProductDetailPage({
     },
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "商品目錄", item: `${SITE_URL}/products` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: product.category,
+        item: `${SITE_URL}/products?category=${encodeURIComponent(product.category)}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: product.name,
+        item: `${SITE_URL}/products/${product.slug}`,
+      },
+    ],
+  };
+
   const products = await getProducts();
   const related = products
     .filter((p) => p.category === product.category && p.id !== product.id)
@@ -111,6 +137,10 @@ export default async function ProductDetailPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <nav className="mb-8 flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-xs text-[#3C382F]/50">
         <Link href="/products" className="shrink-0 hover:underline">

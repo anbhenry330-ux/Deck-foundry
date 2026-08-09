@@ -130,6 +130,19 @@ const FAQ_ITEMS = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  })),
+};
+
 function SectionEyebrow({
   children,
   line = true,
@@ -153,6 +166,10 @@ export default async function Home() {
 
   return (
     <div className="bg-cream-texture">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <HeroCarousel slides={HERO_SLIDES} />
 
       {/* Announcement ticker */}
