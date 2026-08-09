@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { ChevronLeft } from "lucide-react";
 import { sortedResults, tournamentResults } from "@/data/tournament-results";
-import { tierList } from "@/data/tier-list";
+import { DECK_TYPE_ORDER, tierList } from "@/data/tier-list";
 import { ResultCard } from "@/components/ResultCard";
 import { DeckGlyph } from "@/components/DeckGlyph";
 import { SITE_URL } from "@/lib/site";
@@ -32,26 +32,35 @@ export default async function TournamentResultsPage({
           </span>
           <h1 className="mt-2 font-serif text-3xl font-bold text-[#3C382F]">上位卡表</h1>
           <p className="mt-3 max-w-2xl text-base leading-relaxed text-[#3C382F]/80">
-            點擊圖片查看該牌組近期上位戰績及卡表。
+            點擊圖片查看該牌組近期上位戰績及卡表，依屬性分類瀏覽各系上位牌組。
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-          {tierList.map((d) => (
-            <Link
-              key={d.slug}
-              href={`/tournament-results?deck=${encodeURIComponent(d.slug)}`}
-              className="group flex flex-col gap-2"
-            >
-              <DeckGlyph deck={d} />
-              <div>
-                <p className="font-serif text-base font-bold leading-snug text-[#3C382F] group-hover:underline">
-                  {d.nameZh}
-                </p>
+        {DECK_TYPE_ORDER.map((type) => {
+          const decks = tierList.filter((d) => d.type === type);
+          if (decks.length === 0) return null;
+          return (
+            <div key={type} className="mt-12 first:mt-10">
+              <h2 className="font-serif text-xl font-bold text-[#3C382F]">{type}牌組</h2>
+              <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+                {decks.map((d) => (
+                  <Link
+                    key={d.slug}
+                    href={`/tournament-results?deck=${encodeURIComponent(d.slug)}`}
+                    className="group flex flex-col gap-2"
+                  >
+                    <DeckGlyph deck={d} />
+                    <div>
+                      <p className="font-serif text-base font-bold leading-snug text-[#3C382F] group-hover:underline">
+                        {d.nameZh}
+                      </p>
+                    </div>
+                  </Link>
+                ))}
               </div>
-            </Link>
-          ))}
-        </div>
+            </div>
+          );
+        })}
       </div>
     );
   }
@@ -70,13 +79,13 @@ export default async function TournamentResultsPage({
 
       <div className="mt-4 border-l-4 border-[#D9CEB4] pl-6">
         <span className="font-mono text-xs uppercase tracking-[0.25em] text-[#3C382F]/50">
-          環境情報
+          環境情報 · {deck.type}牌組
         </span>
         <h1 className="mt-2 font-serif text-3xl font-bold text-[#3C382F]">
           {deck.nameZh}｜近期上位戰績
         </h1>
         <p className="mt-3 max-w-2xl text-base leading-relaxed text-[#3C382F]/80">
-          彙整國外各大賽事的上位卡表，依賽事時間由新到舊排列，提供訓練家作為組牌參考。
+          {deck.nameZh}屬於 PTCG {deck.type}上位環境牌組，以下彙整國外各大賽事的上位卡表，依賽事時間由新到舊排列，提供訓練家作為組牌參考。
         </p>
       </div>
 
