@@ -21,9 +21,8 @@ export default function DeckBuildingPage() {
           如何構築一副完整牌組？
         </h1>
         <p className="mt-3 text-base leading-relaxed text-[#3C382F]/80">
-          一副完整的 PTCG 牌組為 60 張，
-          <br />
-          由寶可夢卡、訓練家卡（物品、道具、支援者、競技場）及能量卡組成。
+          一副完整的 PTCG 牌組共 60 張，由寶可夢卡 12–15 張、訓練家卡 30 張
+          （物品、道具、支援者、競技場）及能量卡 10–12 張組成。
         </p>
       </div>
 

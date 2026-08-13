@@ -130,7 +130,11 @@ export function DeckBuildFlow() {
                 </div>
                 <div className="flex-1 rounded-lg border border-[#D9CEB4]/60 bg-[#F2ECE0] px-4 pb-4 pt-3">
                   <h4 className="font-serif text-base font-bold text-[#3C382F]">{m.title}</h4>
-                  <ul className="mt-2 space-y-1.5">
+
+                  <p className="mt-3 font-mono text-[11px] font-semibold uppercase tracking-[0.15em] text-[#4B5741]">
+                    優點
+                  </p>
+                  <ul className="mt-1.5 space-y-1.5">
                     {m.pros.map((p) => (
                       <li
                         key={p}
@@ -143,6 +147,12 @@ export function DeckBuildFlow() {
                         {p}
                       </li>
                     ))}
+                  </ul>
+
+                  <p className="mt-3 font-mono text-[11px] font-semibold uppercase tracking-[0.15em] text-[#A6553A]">
+                    缺點
+                  </p>
+                  <ul className="mt-1.5 space-y-1.5">
                     {m.cons.map((c) => (
                       <li
                         key={c}
