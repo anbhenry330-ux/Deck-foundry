@@ -36,9 +36,9 @@ const display = Fraunces({
   display: "swap",
 });
 
-const TITLE = "構築所 Deck Foundry｜PTCG牌組構築專門店";
+const TITLE = "構築所 Deck Foundry｜PTCG實體牌組構築專門店";
 const DESCRIPTION =
-  "構築所（Deck Foundry）專門販售日本上位環境PTCG牌組及牌料，同時提供牌組構築、周邊與客製化訂製服務，價格實惠、當日出貨。";
+  "構築所（Deck Foundry）專門販售日本上位環境PTCG實體牌組及牌料，同時提供牌組構築、周邊與客製化訂製服務，價格實惠、當日出貨。";
 
 const FB_URL = "https://www.facebook.com/profile.php?id=61584390375051&locale=zh_TW";
 const LINE_URL = "https://line.me/R/ti/p/@881idjjb";
@@ -66,11 +66,13 @@ const KEYWORDS = [
   "構築所",
   "Deck Foundry",
   "PTCG",
+  "PTCG實體牌組",
   "寶可夢集換式卡牌",
   "寶可夢卡牌",
   "神奇寶貝卡牌",
   "牌組構築",
   "牌組購買",
+  "實體卡牌店",
   "日本上位環境",
   "上位環境牌組",
   "客製化牌組",

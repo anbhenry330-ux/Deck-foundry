@@ -25,7 +25,7 @@ export async function generateMetadata({
   return {
     title: product.name,
     description,
-    keywords: [product.name, product.category, "PTCG牌組", "寶可夢卡牌購買"],
+    keywords: [product.name, product.category, "PTCG牌組", "PTCG實體牌組", "寶可夢卡牌購買"],
     alternates: { canonical: `${SITE_URL}/products/${product.slug}` },
     openGraph: {
       title: product.name,

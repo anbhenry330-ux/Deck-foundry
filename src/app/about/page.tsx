@@ -15,8 +15,8 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "關於我們",
   description:
-    "構築所（Deck Foundry）品牌故事與經營理念：專營 PTCG 上位環境牌組即時供應、客製化訂製與完善售後服務，服務全臺各地玩家。",
-  keywords: ["構築所品牌故事", "PTCG卡牌店", "寶可夢卡牌店家", "牌組客製化服務"],
+    "構築所（Deck Foundry）品牌故事與經營理念：專營 PTCG 上位環境實體牌組即時供應、客製化訂製與完善售後服務，服務全臺各地玩家。",
+  keywords: ["構築所品牌故事", "PTCG卡牌店", "PTCG實體牌組", "寶可夢卡牌店家", "牌組客製化服務"],
   alternates: { canonical: `${SITE_URL}/about` },
 };
 

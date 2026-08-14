@@ -43,7 +43,7 @@ const HERO_SLIDES: HeroSlide[] = [
     image: "/cover.png",
     alt: "構築所工作桌：牌組整理、卡表分析與出貨作業的日常",
     title: "把手中的卡牌，\n構築成專屬於你的 PTCG 牌組",
-    desc: "構築所－PTCG牌組構築專門店，讓您不再為組牌擔憂",
+    desc: "構築所－PTCG實體牌組構築專門店，讓您不再為組牌擔憂",
     ctaLabel: "瀏覽本期牌組",
     ctaHref: "/products",
   },
@@ -264,7 +264,7 @@ export default async function Home() {
               牌組構築專門店
             </h2>
             <p className="mt-4 text-base leading-relaxed text-[#3C382F]/75">
-              專營PTCG牌組構築，參考國外各大賽事卡表構築各式主流及強勢牌組，同時販售牌組周邊，服務全臺各地玩家，解決其組牌需求。
+              專營PTCG實體牌組構築，參考國外各大賽事卡表構築各式主流及強勢牌組，同時販售牌組周邊，服務全臺各地玩家，解決其組牌需求。
             </p>
             <Link
               href="/about"
