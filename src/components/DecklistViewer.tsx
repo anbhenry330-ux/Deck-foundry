@@ -38,6 +38,7 @@ export function DecklistViewer({
   return (
     <>
       <div className="relative overflow-hidden rounded-md border border-[#D9CEB4] bg-[#D9CEB4]/10">
+        {/* 賣貨便圖床會擋掉 Vercel 最佳化代理的請求（401/403），需繞過最佳化直接讀取 */}
         <Image
           src={src}
           alt={alt}
@@ -45,6 +46,7 @@ export function DecklistViewer({
           height={height}
           sizes="(max-width: 768px) 100vw, 50vw"
           className="h-auto w-full"
+          unoptimized
           priority
         />
 

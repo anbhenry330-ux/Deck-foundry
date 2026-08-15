@@ -16,11 +16,13 @@ export function ProductGlyph({
     <div
       className={`relative aspect-[16/9] w-full overflow-hidden rounded-md border border-[#D9CEB4] bg-[#D9CEB4]/20 ${className}`}
     >
+      {/* 賣貨便圖床會擋掉 Vercel 最佳化代理的請求（401/403），需繞過最佳化直接讀取 */}
       <Image
         src={product.image}
         alt={product.name}
         fill
         sizes={sizes}
+        unoptimized
         className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.06]"
       />
 
