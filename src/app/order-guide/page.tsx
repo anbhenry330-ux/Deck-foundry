@@ -6,12 +6,27 @@ import { SITE_URL } from "@/lib/site";
 
 const MEMBER_REGISTER_URL = "https://myship.7-11.com.tw/Member/Register";
 
+const TITLE = "下單教學";
+const DESCRIPTION =
+  "構築所下單流程完整教學：透過賣貨便（7-11 MyShip）支援貨到付款，含會員註冊提醒、完整下單步驟與防詐提醒，購買前請先詳閱。";
+
 export const metadata: Metadata = {
-  title: "下單教學",
-  description:
-    "構築所下單流程完整教學：透過賣貨便（7-11 MyShip）支援貨到付款，含會員註冊提醒、完整下單步驟與防詐提醒，購買前請先詳閱。",
+  title: TITLE,
+  description: DESCRIPTION,
   keywords: ["賣貨便下單教學", "7-11 MyShip", "貨到付款牌組", "超商取貨PTCG"],
   alternates: { canonical: `${SITE_URL}/order-guide` },
+  openGraph: {
+    title: `${TITLE}｜構築所 Deck Foundry`,
+    description: DESCRIPTION,
+    url: `${SITE_URL}/order-guide`,
+    images: [{ url: "/cover.png", width: 1600, height: 900 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${TITLE}｜構築所 Deck Foundry`,
+    description: DESCRIPTION,
+    images: ["/cover.png"],
+  },
 };
 
 export default function OrderGuidePage() {

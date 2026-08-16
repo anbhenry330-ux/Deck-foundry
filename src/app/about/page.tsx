@@ -12,12 +12,27 @@ import {
 import { Reveal } from "@/components/Reveal";
 import { SITE_URL } from "@/lib/site";
 
+const TITLE = "關於我們";
+const DESCRIPTION =
+  "構築所（Deck Foundry）品牌故事與經營理念：專營 PTCG 上位環境實體牌組即時供應、客製化訂製與完善售後服務，服務全臺各地玩家。";
+
 export const metadata: Metadata = {
-  title: "關於我們",
-  description:
-    "構築所（Deck Foundry）品牌故事與經營理念：專營 PTCG 上位環境實體牌組即時供應、客製化訂製與完善售後服務，服務全臺各地玩家。",
+  title: TITLE,
+  description: DESCRIPTION,
   keywords: ["構築所品牌故事", "PTCG卡牌店", "PTCG實體牌組", "寶可夢卡牌店家", "牌組客製化服務"],
   alternates: { canonical: `${SITE_URL}/about` },
+  openGraph: {
+    title: `${TITLE}｜構築所 Deck Foundry`,
+    description: DESCRIPTION,
+    url: `${SITE_URL}/about`,
+    images: [{ url: "/cover.png", width: 1600, height: 900 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${TITLE}｜構築所 Deck Foundry`,
+    description: DESCRIPTION,
+    images: ["/cover.png"],
+  },
 };
 
 const TABS = [

@@ -4,12 +4,27 @@ import { getProducts, type ProductCategory } from "@/lib/store";
 import { ProductCard } from "@/components/ProductCard";
 import { SITE_URL } from "@/lib/site";
 
+const TITLE = "商品目錄";
+const DESCRIPTION =
+  "構築所商品目錄：日本上位環境主流 PTCG 實體牌組、牌組周邊現貨供應，價格實惠、當日出貨，支援貨到付款。";
+
 export const metadata: Metadata = {
-  title: "商品目錄",
-  description:
-    "構築所商品目錄：日本上位環境主流 PTCG 實體牌組、牌組周邊現貨供應，價格實惠、當日出貨，支援貨到付款。",
+  title: TITLE,
+  description: DESCRIPTION,
   keywords: ["PTCG牌組購買", "PTCG實體牌組", "寶可夢卡牌目錄", "卡套周邊販售", "上位環境牌組現貨"],
   alternates: { canonical: `${SITE_URL}/products` },
+  openGraph: {
+    title: `${TITLE}｜構築所 Deck Foundry`,
+    description: DESCRIPTION,
+    url: `${SITE_URL}/products`,
+    images: [{ url: "/cover.png", width: 1600, height: 900 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${TITLE}｜構築所 Deck Foundry`,
+    description: DESCRIPTION,
+    images: ["/cover.png"],
+  },
 };
 
 const CATEGORIES: ProductCategory[] = ["牌組", "卡套"];

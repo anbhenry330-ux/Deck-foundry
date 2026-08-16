@@ -2,12 +2,27 @@ import type { Metadata } from "next";
 import { DeckBuildFlow } from "@/components/DeckBuildFlow";
 import { SITE_URL } from "@/lib/site";
 
+const TITLE = "牌組構築教學";
+const DESCRIPTION =
+  "如何構築一副完整的 PTCG 牌組？寶可夢卡、訓練家卡、能量卡建議配置比例，以及開卡包、購買官方戰術牌組、實體卡牌店、線上通路等獲取完整牌組的四種方式比較。";
+
 export const metadata: Metadata = {
-  title: "牌組構築教學",
-  description:
-    "如何構築一副完整的 PTCG 牌組？寶可夢卡、訓練家卡、能量卡建議配置比例，以及開卡包、購買官方戰術牌組、實體卡牌店、線上通路等獲取完整牌組的四種方式比較。",
+  title: TITLE,
+  description: DESCRIPTION,
   keywords: ["PTCG牌組教學", "寶可夢卡牌配置", "能量卡比例", "牌組構築方法"],
   alternates: { canonical: `${SITE_URL}/deck-building` },
+  openGraph: {
+    title: `${TITLE}｜構築所 Deck Foundry`,
+    description: DESCRIPTION,
+    url: `${SITE_URL}/deck-building`,
+    images: [{ url: "/cover.png", width: 1600, height: 900 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${TITLE}｜構築所 Deck Foundry`,
+    description: DESCRIPTION,
+    images: ["/cover.png"],
+  },
 };
 
 export default function DeckBuildingPage() {
