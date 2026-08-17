@@ -62,18 +62,21 @@ export const tierList: TierDeck[] = [
   { slug: "beedrill-arboliva", nameZh: "大針鋒奧利瓦", type: "草系", image: "/decks/beedrill-arboliva.png" },
   { slug: "tera-box", nameZh: "太晶BOX", type: "草系", image: "/decks/tera-box.png" },
   { slug: "clefairy-grass-box", nameZh: "皮皮草碰BOX", type: "草系", image: "/decks/clefairy-grass-box.png" },
+  { slug: "golisopod", nameZh: "超級具甲武者", type: "草系", image: "/decks/golisopod.png" },
   // 水系
   { slug: "abomasnow", nameZh: "超級暴雪王", type: "水系", image: "/decks/abomasnow.png" },
   { slug: "cryogonal", nameZh: "冰岩怪", type: "水系", image: "/decks/cryogonal.png" },
   { slug: "relicanth", nameZh: "古空棘魚", type: "水系", image: "/decks/relicanth.png" },
   { slug: "starmie-froslass", nameZh: "寶石海星雪妖女", type: "水系", image: "/decks/starmie-froslass.png" },
   { slug: "froslass-lopunny", nameZh: "雪妖女長耳兔", type: "水系", image: "/decks/froslass-lopunny.png" },
+  { slug: "wailord", nameZh: "吼鯨王", type: "水系", image: "/decks/wailord.png" },
   // 惡系
   { slug: "zoroark", nameZh: "索羅亞克", type: "惡系", image: "/decks/zoroark.png" },
   { slug: "dark-box", nameZh: "惡BOX", type: "惡系", image: "/decks/dark-box.png" },
   { slug: "grimmsnarl", nameZh: "長毛巨魔", type: "惡系", image: "/decks/grimmsnarl.png" },
-  { slug: "darkrai", nameZh: "達克萊伊", type: "惡系", image: "/decks/darkrai.png" },
+  { slug: "darkrai", nameZh: "超級達克萊伊", type: "惡系", image: "/decks/darkrai.png" },
   { slug: "honchkrow", nameZh: "烏鴉頭頭", type: "惡系", image: "/decks/honchkrow.png" },
+  { slug: "malamar", nameZh: "超級烏賊王", type: "惡系", image: "/decks/malamar.png" },
   // 超系
   { slug: "mega-diancie", nameZh: "超級蒂安西", type: "超系", image: "/decks/mega-diancie.png" },
   { slug: "slowking", nameZh: "呆呆王", type: "超系", image: "/decks/slowking.png" },
@@ -84,6 +87,8 @@ export const tierList: TierDeck[] = [
   { slug: "cinccino", nameZh: "奇諾栗鼠", type: "一般系", image: "/decks/cinccino.png" },
   { slug: "lopunny", nameZh: "超級長耳兔", type: "一般系", image: "/decks/lopunny.png" },
   { slug: "mega-kangaskhan", nameZh: "超級袋獸", type: "一般系", image: "/decks/mega-kangaskhan.png" },
+  { slug: "rayquaza", nameZh: "超級烈空坐", type: "一般系", image: "/decks/rayquaza.png" },
+  { slug: "toucannon", nameZh: "銃嘴大鳥", type: "一般系", image: "/decks/toucannon.png" },
   // 鋼系
   { slug: "archaludon", nameZh: "鋁鋼橋龍", type: "鋼系", image: "/decks/archaludon.png" },
   { slug: "dragon-diglett", nameZh: "超級龍頭地鼠", type: "鋼系", image: "/decks/dragon-diglett.jpg" },
