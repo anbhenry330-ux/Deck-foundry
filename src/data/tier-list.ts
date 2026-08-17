@@ -17,6 +17,12 @@ export interface TierDeck {
   type: DeckType;
   /** 牌組主要角色圖片，放在 public/decks 底下。 */
   image: string;
+  /**
+   * 官方尚未公開完整卡表時，用來查詢 https://www.ptcgtw.shop/DL?search= 的關鍵字。
+   * 該站以子字串比對牌組名稱，本站自訂的複合暱稱（如「其他多龍」）搜不到，
+   * 需改用官方寶可夢名稱；未填則不顯示替代連結。
+   */
+  ptcgtwKeyword?: string;
 }
 
 /** 屬性分組顯示順序。 */
@@ -36,12 +42,12 @@ export const DECK_TYPE_ORDER: DeckType[] = [
 // 同屬性內排序：整張EX → 整張小閃／普通卡 → 一格兩張圖片；中文名稱相同（同系列）者相鄰。
 export const tierList: TierDeck[] = [
   // 龍系
-  { slug: "dragapult-ex", nameZh: "其他多龍", type: "龍系", image: "/decks/dragapult-ex.png" },
-  { slug: "ground-dragapult", nameZh: "土龍多龍", type: "龍系", image: "/decks/ground-dragapult.png" },
-  { slug: "blaziken-dragapult", nameZh: "火焰雞多龍", type: "龍系", image: "/decks/blaziken-dragapult.png" },
-  { slug: "ghost-dragapult", nameZh: "魔靈多龍", type: "龍系", image: "/decks/ghost-dragapult.png" },
+  { slug: "dragapult-ex", nameZh: "其他多龍", type: "龍系", image: "/decks/dragapult-ex.png", ptcgtwKeyword: "多龍" },
+  { slug: "ground-dragapult", nameZh: "土龍多龍", type: "龍系", image: "/decks/ground-dragapult.png", ptcgtwKeyword: "多龍" },
+  { slug: "blaziken-dragapult", nameZh: "火焰雞多龍", type: "龍系", image: "/decks/blaziken-dragapult.png", ptcgtwKeyword: "多龍" },
+  { slug: "ghost-dragapult", nameZh: "魔靈多龍", type: "龍系", image: "/decks/ghost-dragapult.png", ptcgtwKeyword: "多龍" },
   { slug: "dragonite", nameZh: "超級快龍", type: "龍系", image: "/decks/dragonite.png" },
-  { slug: "raging-bolt", nameZh: "猛雷鼓", type: "龍系", image: "/decks/raging-bolt.png" },
+  { slug: "raging-bolt", nameZh: "猛雷鼓", type: "龍系", image: "/decks/raging-bolt.png", ptcgtwKeyword: "猛雷鼓" },
   // 電系
   { slug: "zeraora", nameZh: "超級捷拉奧拉", type: "電系", image: "/decks/zeraora.png" },
   { slug: "mega-manectric", nameZh: "超級雷電獸", type: "電系", image: "/decks/mega-manectric.png" },
@@ -51,14 +57,14 @@ export const tierList: TierDeck[] = [
   { slug: "garchomp", nameZh: "烈咬陸鯊", type: "鬥系", image: "/decks/garchomp.png" },
   { slug: "zygarde", nameZh: "超級基格爾德", type: "鬥系", image: "/decks/zygarde.png" },
   { slug: "gou-zan-gou", nameZh: "夠讚狗", type: "鬥系", image: "/decks/gou-zan-gou.png" },
-  { slug: "greninja", nameZh: "甲賀忍蛙", type: "鬥系", image: "/decks/greninja.png" },
+  { slug: "greninja", nameZh: "甲賀忍蛙", type: "鬥系", image: "/decks/greninja.png", ptcgtwKeyword: "甲賀忍蛙" },
   { slug: "fossil-box", nameZh: "化石", type: "鬥系", image: "/decks/fossil-box.png" },
   // 草系
   { slug: "venusaur", nameZh: "超級妙蛙花", type: "草系", image: "/decks/venusaur.png" },
   { slug: "decidueye", nameZh: "狙射樹梟", type: "草系", image: "/decks/decidueye.png" },
   { slug: "honey-serpent", nameZh: "蜜集大蛇", type: "草系", image: "/decks/honey-serpent.png" },
   { slug: "crustle", nameZh: "岩殿居蟹", type: "草系", image: "/decks/crustle.png" },
-  { slug: "festival-dance", nameZh: "祭典樂舞", type: "草系", image: "/decks/festival-dance.png" },
+  { slug: "festival-dance", nameZh: "祭典樂舞", type: "草系", image: "/decks/festival-dance.png", ptcgtwKeyword: "祭典樂舞" },
   { slug: "beedrill-arboliva", nameZh: "大針鋒奧利瓦", type: "草系", image: "/decks/beedrill-arboliva.png" },
   { slug: "tera-box", nameZh: "太晶BOX", type: "草系", image: "/decks/tera-box.png" },
   { slug: "clefairy-grass-box", nameZh: "皮皮草碰BOX", type: "草系", image: "/decks/clefairy-grass-box.png" },
@@ -71,7 +77,7 @@ export const tierList: TierDeck[] = [
   { slug: "froslass-lopunny", nameZh: "雪妖女長耳兔", type: "水系", image: "/decks/froslass-lopunny.png" },
   { slug: "wailord", nameZh: "吼鯨王", type: "水系", image: "/decks/wailord.png" },
   // 惡系
-  { slug: "zoroark", nameZh: "索羅亞克", type: "惡系", image: "/decks/zoroark.png" },
+  { slug: "zoroark", nameZh: "索羅亞克", type: "惡系", image: "/decks/zoroark.png", ptcgtwKeyword: "索羅亞克" },
   { slug: "dark-box", nameZh: "惡BOX", type: "惡系", image: "/decks/dark-box.png" },
   { slug: "grimmsnarl", nameZh: "長毛巨魔", type: "惡系", image: "/decks/grimmsnarl.png" },
   { slug: "darkrai", nameZh: "超級達克萊伊", type: "惡系", image: "/decks/darkrai.png" },
@@ -80,9 +86,9 @@ export const tierList: TierDeck[] = [
   // 超系
   { slug: "mega-diancie", nameZh: "超級蒂安西", type: "超系", image: "/decks/mega-diancie.png" },
   { slug: "slowking", nameZh: "呆呆王", type: "超系", image: "/decks/slowking.png" },
-  { slug: "alakazam", nameZh: "胡地", type: "超系", image: "/decks/alakazam.png" },
+  { slug: "alakazam", nameZh: "胡地", type: "超系", image: "/decks/alakazam.png", ptcgtwKeyword: "胡地" },
   { slug: "hua-yin", nameZh: "化隱", type: "超系", image: "/decks/hua-yin.png" },
-  { slug: "rocket-mewtwo", nameZh: "火箭隊超夢", type: "超系", image: "/decks/rocket-mewtwo.png" },
+  { slug: "rocket-mewtwo", nameZh: "火箭隊超夢", type: "超系", image: "/decks/rocket-mewtwo.png", ptcgtwKeyword: "超夢" },
   // 一般系
   { slug: "cinccino", nameZh: "奇諾栗鼠", type: "一般系", image: "/decks/cinccino.png" },
   { slug: "lopunny", nameZh: "超級長耳兔", type: "一般系", image: "/decks/lopunny.png" },

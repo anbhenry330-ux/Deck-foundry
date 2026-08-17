@@ -1,5 +1,6 @@
 import { Calendar, Trophy, User, Image as ImageIcon, ExternalLink } from "lucide-react";
 import type { TournamentResult } from "@/data/tournament-results";
+import { tierList } from "@/data/tier-list";
 
 function formatDate(iso: string) {
   const d = new Date(iso);
@@ -22,6 +23,12 @@ function placementLabel(placement: number) {
 }
 
 export function ResultCard({ result }: { result: TournamentResult }) {
+  const deck = result.deckSlug ? tierList.find((d) => d.slug === result.deckSlug) : undefined;
+  const ptcgtwSearchUrl = deck?.ptcgtwKeyword
+    ? `https://www.ptcgtw.shop/DL?search=${encodeURIComponent(deck.ptcgtwKeyword)}`
+    : undefined;
+  const decklistHref = result.decklistUrl ?? ptcgtwSearchUrl;
+
   return (
     <div className="overflow-hidden rounded-lg border border-[#D9CEB4] bg-[#F2ECE0]">
       <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto]">
@@ -58,9 +65,9 @@ export function ResultCard({ result }: { result: TournamentResult }) {
         {/* 卡表 */}
         <div className="flex flex-col items-center justify-center gap-2 border-t border-[#D9CEB4]/60 bg-[#D9CEB4]/40 p-5 sm:w-44 sm:border-l sm:border-t-0">
           <span className="self-start text-xs text-[#3C382F]/50 sm:self-center">卡表</span>
-          {result.decklistUrl ? (
+          {decklistHref ? (
             <a
-              href={result.decklistUrl}
+              href={decklistHref}
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center gap-1.5 rounded-md border border-[#D9CEB4] bg-[#F2ECE0] px-4 py-3 text-xs font-medium text-[#3C382F] hover:bg-[#D9CEB4]"
