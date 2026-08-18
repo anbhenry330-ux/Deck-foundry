@@ -11,24 +11,58 @@ const TITLE = "上位卡表與賽事戰績";
 const DESCRIPTION =
   "PTCG 上位環境卡表即時更新，收錄各大賽事戰績牌組與構築牌譜，掌握最新環境強勢牌組動態。";
 
-export const metadata: Metadata = {
-  title: TITLE,
-  description: DESCRIPTION,
-  keywords: ["PTCG賽事戰績", "上位卡表", "環境牌組排名", "寶可夢大賽牌組", "PTCG實體牌組"],
-  alternates: { canonical: `${SITE_URL}/tournament-results` },
-  openGraph: {
-    title: `${TITLE}｜構築所 Deck Foundry`,
-    description: DESCRIPTION,
-    url: `${SITE_URL}/tournament-results`,
-    images: [{ url: "/cover.png", width: 1600, height: 900 }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${TITLE}｜構築所 Deck Foundry`,
-    description: DESCRIPTION,
-    images: ["/cover.png"],
-  },
-};
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ deck?: string }>;
+}): Promise<Metadata> {
+  const { deck: deckSlug } = await searchParams;
+  const deck = deckSlug ? tierList.find((d) => d.slug === deckSlug) : undefined;
+
+  if (!deck) {
+    return {
+      title: TITLE,
+      description: DESCRIPTION,
+      keywords: ["PTCG賽事戰績", "上位卡表", "環境牌組排名", "寶可夢大賽牌組", "PTCG實體牌組"],
+      alternates: { canonical: `${SITE_URL}/tournament-results` },
+      openGraph: {
+        title: `${TITLE}｜構築所 Deck Foundry`,
+        description: DESCRIPTION,
+        url: `${SITE_URL}/tournament-results`,
+        images: [{ url: "/cover.png", width: 1600, height: 900 }],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: `${TITLE}｜構築所 Deck Foundry`,
+        description: DESCRIPTION,
+        images: ["/cover.png"],
+      },
+    };
+  }
+
+  const deckTitle = `${deck.nameZh}上位戰績與卡表`;
+  const deckDescription = `${deck.nameZh}屬於 PTCG ${deck.type}上位環境牌組，彙整國外各大賽事的上位卡表戰績，依賽事時間由新到舊排列，提供訓練家組牌參考。`;
+  const canonicalUrl = `${SITE_URL}/tournament-results?deck=${encodeURIComponent(deck.slug)}`;
+
+  return {
+    title: deckTitle,
+    description: deckDescription,
+    keywords: [deck.nameZh, `PTCG ${deck.type}牌組`, "PTCG賽事戰績", "上位卡表", "PTCG實體牌組"],
+    alternates: { canonical: canonicalUrl },
+    openGraph: {
+      title: `${deckTitle}｜構築所 Deck Foundry`,
+      description: deckDescription,
+      url: canonicalUrl,
+      images: [{ url: "/cover.png", width: 1600, height: 900 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${deckTitle}｜構築所 Deck Foundry`,
+      description: deckDescription,
+      images: ["/cover.png"],
+    },
+  };
+}
 
 export default async function TournamentResultsPage({
   searchParams,

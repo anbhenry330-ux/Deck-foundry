@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
 import { getProducts } from "@/lib/store";
+import { tierList } from "@/data/tier-list";
+import { tournamentResults } from "@/data/tournament-results";
 
 const STATIC_ROUTE_PRIORITY: Record<string, number> = {
   "": 1,
@@ -29,5 +31,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...productRoutes];
+  const decksWithResults = new Set(tournamentResults.map((r) => r.deckSlug).filter(Boolean));
+  const tournamentDeckRoutes = tierList
+    .filter((deck) => decksWithResults.has(deck.slug))
+    .map((deck) => ({
+      url: `${SITE_URL}/tournament-results?deck=${encodeURIComponent(deck.slug)}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.6,
+    }));
+
+  return [...staticRoutes, ...productRoutes, ...tournamentDeckRoutes];
 }
