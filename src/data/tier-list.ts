@@ -104,3 +104,15 @@ export const tierList: TierDeck[] = [
   // 火系
   { slug: "ceruledge", nameZh: "蒼炎刃鬼", type: "火系", image: "/decks/ceruledge.png" },
 ];
+
+/**
+ * 依商品名稱（含「牌組」字尾）比對到 tier-list 對應的牌組，用於商品頁與
+ * 上位戰績頁互相連結。賣貨便輪動庫存的商品名稱多半只是商品編號，本來就
+ * 比對不到，屬預期行為，不是 bug。
+ */
+export function matchDeckByProductName(productName: string): TierDeck | undefined {
+  const stripped = productName.replace(/牌組$/, "");
+  return tierList.find(
+    (d) => d.nameZh === stripped || d.nameZh.includes(stripped) || stripped.includes(d.nameZh)
+  );
+}

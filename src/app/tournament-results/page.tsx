@@ -1,11 +1,12 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, ShoppingBag } from "lucide-react";
 import { sortedResults, tournamentResults } from "@/data/tournament-results";
-import { DECK_TYPE_ORDER, tierList } from "@/data/tier-list";
+import { DECK_TYPE_ORDER, matchDeckByProductName, tierList } from "@/data/tier-list";
 import { ResultCard } from "@/components/ResultCard";
 import { DeckGlyph } from "@/components/DeckGlyph";
 import { SITE_URL } from "@/lib/site";
+import { getProducts } from "@/lib/store";
 
 const TITLE = "上位卡表與賽事戰績";
 const DESCRIPTION =
@@ -116,6 +117,11 @@ export default async function TournamentResultsPage({
 
   const results = sortedResults(tournamentResults.filter((r) => r.deckSlug === deck.slug));
 
+  const products = await getProducts();
+  const matchedProduct = products.find(
+    (p) => matchDeckByProductName(p.name)?.slug === deck.slug
+  );
+
   return (
     <div className="mx-auto max-w-3xl px-6 py-14">
       <Link
@@ -136,6 +142,20 @@ export default async function TournamentResultsPage({
         <p className="mt-3 max-w-2xl text-base leading-relaxed text-[#3C382F]/80">
           {deck.nameZh}屬於 PTCG {deck.type}上位環境牌組，以下彙整國外各大賽事的上位卡表，依賽事時間由新到舊排列，提供訓練家作為組牌參考。
         </p>
+
+        {matchedProduct && (
+          <Link
+            href={`/products/${matchedProduct.slug}`}
+            className={`mt-4 inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition-opacity ${
+              matchedProduct.inStock
+                ? "bg-[#3C382F] text-[#F2ECE0] hover:opacity-90"
+                : "bg-[#3C382F]/20 text-[#3C382F]/60"
+            }`}
+          >
+            <ShoppingBag className="h-4 w-4" strokeWidth={1.5} />
+            {matchedProduct.inStock ? "本店現貨供應，前往選購" : "本店有販售（目前已售罄）"}
+          </Link>
+        )}
       </div>
 
       {results.length === 0 ? (

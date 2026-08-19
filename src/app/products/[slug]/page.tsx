@@ -1,11 +1,14 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { TrendingUp } from "lucide-react";
 import { getProductBySlug, getProducts } from "@/lib/store";
 import { DecklistViewer } from "@/components/DecklistViewer";
 import { OrderCTA } from "@/components/OrderCTA";
 import { ProductCard } from "@/components/ProductCard";
 import { SITE_URL } from "@/lib/site";
+import { matchDeckByProductName } from "@/data/tier-list";
+import { tournamentResults } from "@/data/tournament-results";
 
 export async function generateStaticParams() {
   const products = await getProducts();
@@ -132,6 +135,10 @@ export default async function ProductDetailPage({
     .filter((p) => p.category === product.category && p.id !== product.id)
     .slice(0, 3);
 
+  const matchedDeck = matchDeckByProductName(product.name);
+  const hasTournamentResults =
+    matchedDeck && tournamentResults.some((r) => r.deckSlug === matchedDeck.slug);
+
   return (
     <div className="mx-auto max-w-6xl px-6 py-14">
       <script
@@ -185,6 +192,16 @@ export default async function ProductDetailPage({
           <div className="mt-6">
             <OrderCTA product={product} />
           </div>
+
+          {hasTournamentResults && matchedDeck && (
+            <Link
+              href={`/tournament-results?deck=${encodeURIComponent(matchedDeck.slug)}`}
+              className="mt-4 inline-flex items-center gap-1.5 text-sm text-[#3C382F]/70 underline-offset-2 hover:text-[#3C382F] hover:underline"
+            >
+              <TrendingUp className="h-4 w-4" strokeWidth={1.5} />
+              查看「{matchedDeck.nameZh}」近期上位戰績
+            </Link>
+          )}
         </div>
       </div>
 
