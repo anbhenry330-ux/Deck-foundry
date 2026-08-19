@@ -5450,6 +5450,65 @@ export const tournamentResults: TournamentResult[] = [
     standingsUrl: "https://x.com/Tacos_Eorzea/status/2061021277826191512",
     decklistUrl: "https://ptcgtw.shop/?s=US44118",
   },
+
+  // 資料來源：ptcgtw.shop（https://www.ptcgtw.shop/DJ），2026-08-19 補充同步，
+  // 沿用 2026-08-17 那批的收錄規則（僅收「優勝/冠軍→1」「亞軍/準優勝→2」明確名次，
+  // 複合牌組若無法對應到 tier-list.ts 既有牌組或「其他多龍」這類通用分類則不收錄）。
+  {
+    deckSlug: "dragapult-ex",
+    date: "2026-08-18",
+    tournamentNameZh: "道館對戰",
+    tournamentNameEn: "道館對戰",
+    region: "日本",
+    player: "不明",
+    placement: 1,
+    standingsUrl: "https://x.com/hk_izanagi/status/2089363880380338304",
+    decklistUrl: "https://ptcgtw.shop/?s=XG53166",
+  },
+  {
+    deckSlug: "archaludon",
+    date: "2026-08-18",
+    tournamentNameZh: "道館對戰",
+    tournamentNameEn: "道館對戰",
+    region: "日本",
+    player: "不明",
+    placement: 1,
+    standingsUrl: "https://x.com/poyonnmaru/status/2089635590509834539",
+    decklistUrl: "https://ptcgtw.shop/?s=NJ98590",
+  },
+  {
+    deckSlug: "lucario",
+    date: "2026-08-18",
+    tournamentNameZh: "道館對戰",
+    tournamentNameEn: "道館對戰",
+    region: "日本",
+    player: "不明",
+    placement: 1,
+    standingsUrl: "https://x.com/toycomp6/status/2089675689285034165",
+    decklistUrl: "https://ptcgtw.shop/?s=ML65496",
+  },
+  {
+    deckSlug: "mega-manectric",
+    date: "2026-08-18",
+    tournamentNameZh: "道館對戰",
+    tournamentNameEn: "道館對戰",
+    region: "日本",
+    player: "不明",
+    placement: 1,
+    standingsUrl: "https://x.com/toynity3/status/2089578734466773022",
+    decklistUrl: "https://ptcgtw.shop/?s=VZ78454",
+  },
+  {
+    deckSlug: "mega-manectric",
+    date: "2026-08-18",
+    tournamentNameZh: "道館對戰",
+    tournamentNameEn: "道館對戰",
+    region: "日本",
+    player: "不明",
+    placement: 1,
+    standingsUrl: "https://x.com/amisikuT/status/2089314759984459864",
+    decklistUrl: "https://ptcgtw.shop/?s=QY38975",
+  },
 ];
 
 export function sortedResults(results: TournamentResult[] = tournamentResults) {
