@@ -122,8 +122,32 @@ export default async function TournamentResultsPage({
     (p) => matchDeckByProductName(p.name)?.slug === deck.slug
   );
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "上位卡表", item: `${SITE_URL}/tournament-results` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: `${deck.type}牌組`,
+        item: `${SITE_URL}/tournament-results`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: deck.nameZh,
+        item: `${SITE_URL}/tournament-results?deck=${encodeURIComponent(deck.slug)}`,
+      },
+    ],
+  };
+
   return (
     <div className="mx-auto max-w-3xl px-6 py-14">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Link
         href="/tournament-results"
         className="inline-flex items-center gap-1 text-sm text-[#3C382F]/60 hover:text-[#3C382F]"
