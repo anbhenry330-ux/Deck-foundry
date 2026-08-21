@@ -33,7 +33,9 @@ export async function generateMetadata({
     openGraph: {
       title: product.name,
       description,
-      images: [{ url: product.image }],
+      images: [
+        { url: product.image, width: product.imageWidth, height: product.imageHeight },
+      ],
     },
     twitter: {
       card: "summary_large_image",
