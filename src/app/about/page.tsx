@@ -132,7 +132,7 @@ export default async function AboutPage({
             <Reveal>
               <h2 className="font-serif text-xl font-bold text-[#3C382F]">創立起源</h2>
               <p className="mt-3 text-base leading-normal text-justify text-[#3C382F]/80">
-                構築所成立於2024年12月，當時繁中版剛推出年底擴充卡包，收入大量牌料，構築所創辦人發現有大量玩家在抽到自己心儀的卡後，將剩餘的牌料便宜出售，就萌生出可利用玩家手中卡牌組成牌組想法，於是創辦了構築所，開始服務有組牌需求的訓練家，並解決收藏家需要花時間處理牌料的煩惱。
+                構築所成立於2025年12月，當時繁中版剛推出年底擴充卡包，收入大量牌料，構築所創辦人發現有大量玩家在抽到自己心儀的卡後，將剩餘的牌料便宜出售，就萌生出可利用玩家手中卡牌組成牌組想法，於是創辦了構築所，開始服務有組牌需求的訓練家，並解決收藏家需要花時間處理牌料的煩惱。
               </p>
               <h2 className="mt-6 font-serif text-xl font-bold text-[#3C382F]">品牌由來</h2>
               <p className="mt-3 text-base leading-normal text-justify text-[#3C382F]/80">
