@@ -1,9 +1,11 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ChevronLeft, Swords, ShieldAlert, ShieldCheck } from "lucide-react";
+import { ChevronLeft, Swords, ShieldAlert, ShieldCheck, LayoutGrid } from "lucide-react";
 import { DECK_TYPE_ORDER, tierList } from "@/data/tier-list";
 import { getDeckGuide, guidedDecks } from "@/data/deck-guides";
+import { getDeckCardList, deckCardGroupTotal } from "@/data/deck-cards";
 import { DeckGlyph } from "@/components/DeckGlyph";
+import { CardTile } from "@/components/CardTile";
 import { SITE_URL } from "@/lib/site";
 
 const TITLE = "牌組攻略";
@@ -85,6 +87,7 @@ export default async function DeckGuidesPage({
   const { deck: deckSlug } = await searchParams;
   const deck = deckSlug ? tierList.find((d) => d.slug === deckSlug) : undefined;
   const guide = deckSlug ? getDeckGuide(deckSlug) : undefined;
+  const cardGroups = deck ? getDeckCardList(deck.slug) : undefined;
 
   if (!deck || !guide) {
     const decks = guidedDecks();
@@ -223,6 +226,30 @@ export default async function DeckGuidesPage({
           </div>
         </div>
       </div>
+
+      {cardGroups && (
+        <div className="mt-10">
+          <h2 className="flex items-center gap-2 font-serif text-lg font-bold text-[#3C382F]">
+            <LayoutGrid className="h-5 w-5" strokeWidth={1.5} />
+            可投入卡牌
+          </h2>
+          <p className="mt-1 text-sm text-[#3C382F]/60">
+            完整構築卡表，逐張卡片列出。
+          </p>
+          {cardGroups.map((group) => (
+            <div key={group.category} className="mt-6">
+              <h3 className="text-sm font-semibold text-[#3C382F]/70">
+                {group.category}（{deckCardGroupTotal(group)} 張）
+              </h3>
+              <div className="mt-3 grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-6">
+                {group.cards.map((card) => (
+                  <CardTile key={`${card.set}-${card.number}`} card={card} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
 
       <div className="mt-10 rounded-lg border border-[#D9CEB4]/60 bg-[#D9CEB4]/50 p-5 text-base leading-relaxed text-[#3C382F]/70">
         <p>
