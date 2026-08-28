@@ -7,11 +7,6 @@ const nextConfig = {
         hostname: "myship.7-11.com.tw",
         pathname: "/i/cgdm/**",
       },
-      {
-        protocol: "https",
-        hostname: "limitlesstcg.nyc3.cdn.digitaloceanspaces.com",
-        pathname: "/tpci/**",
-      },
     ],
   },
 };
