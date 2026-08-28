@@ -162,7 +162,9 @@ function SectionEyebrow({
 
 export default async function Home() {
   const featured = await getProducts();
-  const highlightResults = sortedResults().slice(0, 4);
+  const highlightResults = sortedResults()
+    .filter((r) => r.placement !== null)
+    .slice(0, 4);
 
   return (
     <div className="bg-cream-texture">

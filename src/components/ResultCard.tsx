@@ -7,7 +7,8 @@ function formatDate(iso: string) {
   return `${d.getFullYear()}/${d.getMonth() + 1}/${d.getDate()}`;
 }
 
-function placementLabel(placement: number) {
+function placementLabel(placement: number | null) {
+  if (placement === null) return "無";
   const mod100 = placement % 100;
   if (mod100 >= 11 && mod100 <= 13) return `${placement}th`;
   switch (placement % 10) {

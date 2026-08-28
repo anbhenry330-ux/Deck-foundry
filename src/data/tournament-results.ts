@@ -5,8 +5,8 @@ export interface TournamentResult {
   tournamentNameZh: string;
   tournamentNameEn: string;
   region: string; // 中文地區名稱，例如「美國・洛杉磯」
-  player: string; // 選手名字維持原文，不翻譯
-  placement: number; // 29 → 顯示為「第 29 名」
+  player: string; // 選手名字維持原文，不翻譯；來源沒寫選手名字時填「無」
+  placement: number | null; // 29 → 顯示為「第 29 名」；來源沒有名次資訊時為 null，顯示「無」
   /** 官方賽事頁面連結，可查詢最新戰績。 */
   standingsUrl: string;
   /** 若官方有公開完整卡表圖片／頁面，放連結；沒有則為 null。 */
@@ -5509,12 +5509,48 @@ export const tournamentResults: TournamentResult[] = [
     standingsUrl: "https://x.com/amisikuT/status/2089314759984459864",
     decklistUrl: "https://ptcgtw.shop/?s=QY38975",
   },
+  {
+    deckSlug: "zeraora",
+    date: "2026-06-17",
+    tournamentNameZh: "道館對戰",
+    tournamentNameEn: "道館對戰",
+    region: "日本",
+    player: "ひー",
+    placement: 1,
+    standingsUrl: "https://x.com/hk_izanagi/status/2066158848390615399",
+    decklistUrl: "https://ptcgtw.shop/?s=ZG12951",
+  },
+  {
+    deckSlug: "dragonite",
+    date: "2026-03-30",
+    tournamentNameZh: "CL2026大阪",
+    tournamentNameEn: "CL2026大阪",
+    region: "日本",
+    player: "無",
+    placement: null,
+    standingsUrl: "https://twitter.com/Takashi3331",
+    decklistUrl: "https://ptcgtw.shop/?s=DW87027",
+  },
+  {
+    deckSlug: "zeraora",
+    date: "2026-07-22",
+    tournamentNameZh: "道館對戰",
+    tournamentNameEn: "道館對戰",
+    region: "日本",
+    player: "無",
+    placement: null,
+    standingsUrl: "https://x.com/sco_itamikoya/status/2079886796423643311",
+    decklistUrl: "https://ptcgtw.shop/?s=MS22689",
+  },
 ];
 
 export function sortedResults(results: TournamentResult[] = tournamentResults) {
   return [...results].sort((a, b) => {
     const dateDiff = new Date(b.date).getTime() - new Date(a.date).getTime();
     if (dateDiff !== 0) return dateDiff;
+    if (a.placement === null && b.placement === null) return 0;
+    if (a.placement === null) return 1;
+    if (b.placement === null) return -1;
     return a.placement - b.placement;
   });
 }
