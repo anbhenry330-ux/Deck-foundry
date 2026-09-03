@@ -12,6 +12,11 @@ const nextConfig = {
         hostname: "limitlesstcg.nyc3.cdn.digitaloceanspaces.com",
         pathname: "/tpci/**",
       },
+      {
+        protocol: "https",
+        hostname: "asia.pokemon-card.com",
+        pathname: "/tw/card-img/**",
+      },
     ],
   },
 };
