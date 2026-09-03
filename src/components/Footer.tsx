@@ -59,24 +59,47 @@ export function Footer() {
               </ul>
             </div>
 
-            <div className="col-span-full mt-2 flex flex-wrap gap-2.5">
-              <a
-                href={LINE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md bg-[#06C755] px-4 py-2 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
-              >
-                <MessageCircle className="h-4 w-4" strokeWidth={1.75} />
-                LINE 官方帳號
-              </a>
-              <a
-                href={FB_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 whitespace-nowrap rounded-md bg-[#1877F2] px-4 py-2 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
-              >
-                FB 粉專
-              </a>
+            <div className="col-span-full mt-2 grid grid-cols-1 gap-x-10 gap-y-6 md:grid-cols-[1.3fr_1fr_1fr]">
+              <div className="flex flex-wrap items-start gap-2.5">
+                <a
+                  href={LINE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-md bg-[#06C755] px-4 py-2 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+                >
+                  <MessageCircle className="h-4 w-4" strokeWidth={1.75} />
+                  LINE 官方帳號
+                </a>
+                <a
+                  href={FB_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 whitespace-nowrap rounded-md bg-[#1877F2] px-4 py-2 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+                >
+                  FB 粉專
+                </a>
+              </div>
+
+              <div className="md:col-span-2">
+                <h4 className="font-mono text-xs uppercase tracking-[0.2em] text-[#3C382F]/45">
+                  友站資訊
+                </h4>
+                <ul className="mt-3 space-y-2 text-base text-[#3C382F]/80">
+                  <li>
+                    <a
+                      href="https://ptcgtw.shop"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      奶爸工作室
+                    </a>
+                  </li>
+                  <li className="whitespace-nowrap">
+                    YouTube 頻道：A先生、建誌Akashi、聽阿順亂講、Troll and Draw
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
