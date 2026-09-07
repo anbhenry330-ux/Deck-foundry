@@ -108,7 +108,10 @@ export const metadata: Metadata = {
     images: ["/cover.png"],
   },
   verification: {
-    google: "Ca3G3S_CWNw2tabGURVpIdV-gvGtzZppNDidGmR-Kso",
+    google: [
+      "Ca3G3S_CWNw2tabGURVpIdV-gvGtzZppNDidGmR-Kso",
+      "UsA-YuuZuR7yF0cXQMZ-4fV4vVkbm1v_oIFGJsO8Y-A",
+    ],
   },
 };
 
