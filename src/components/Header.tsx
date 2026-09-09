@@ -8,7 +8,6 @@ const NAV = [
   { href: "/", label: "首頁" },
   { href: "/products", label: "現有商品" },
   { href: "/tournament-results", label: "上位卡表" },
-  { href: "/deck-guides", label: "牌組攻略" },
   { href: "/deck-building", label: "牌組構築" },
   { href: "/order-guide", label: "下單教學" },
   { href: "/about", label: "關於我們" },
