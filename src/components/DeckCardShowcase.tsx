@@ -39,7 +39,7 @@ export function DeckCardShowcase({ cardGroups }: { cardGroups: DeckCardGroup[] }
           <div className="mt-3 grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-6">
             {group.cards.map((card) => (
               <CardTile
-                key={`${card.set}-${card.number}`}
+                key={card.image ?? `${card.set}-${card.number}`}
                 card={card}
                 onClick={() => setZoomed(card)}
               />
