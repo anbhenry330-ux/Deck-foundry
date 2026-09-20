@@ -62,15 +62,16 @@ export function DeckCardShowcase({ cardGroups }: { cardGroups: DeckCardGroup[] }
             <X className="h-8 w-8" strokeWidth={1.5} />
           </button>
           <div
-            className="relative max-h-[85vh] w-full max-w-sm"
+            className="relative max-h-[92vh] w-full max-w-md sm:max-w-lg"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
               src={cardImageUrl(zoomed, "LG")}
               alt={zoomed.nameEn}
-              width={660}
-              height={924}
-              sizes="(max-width: 640px) 90vw, 384px"
+              width={868}
+              height={1212}
+              quality={90}
+              sizes="(max-width: 640px) 92vw, 512px"
               className="h-auto w-full rounded-lg object-contain shadow-2xl"
               priority
             />
