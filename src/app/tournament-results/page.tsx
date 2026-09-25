@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ChevronLeft, ShoppingBag } from "lucide-react";
+import { ChevronLeft, ChevronRight, ShoppingBag } from "lucide-react";
 import { sortedResults, tournamentResults } from "@/data/tournament-results";
 import { DECK_TYPE_ORDER, matchDeckByProductName, tierList } from "@/data/tier-list";
 import { ResultCard } from "@/components/ResultCard";
@@ -9,15 +9,22 @@ import { SITE_URL } from "@/lib/site";
 import { getProducts } from "@/lib/store";
 
 const TITLE = "上位卡表與賽事戰績";
+const PAGE_SIZE = 30;
+
+function parsePage(raw: string | undefined) {
+  const n = Number(raw);
+  return Number.isInteger(n) && n > 1 ? n : 1;
+}
+
 const DESCRIPTION =
   "PTCG 上位環境卡表即時更新，收錄各大賽事戰績牌組與構築牌譜，掌握最新環境強勢牌組動態。";
 
 export async function generateMetadata({
   searchParams,
 }: {
-  searchParams: Promise<{ deck?: string }>;
+  searchParams: Promise<{ deck?: string; page?: string }>;
 }): Promise<Metadata> {
-  const { deck: deckSlug } = await searchParams;
+  const { deck: deckSlug, page: rawPage } = await searchParams;
   const deck = deckSlug ? tierList.find((d) => d.slug === deckSlug) : undefined;
 
   if (!deck) {
@@ -41,9 +48,16 @@ export async function generateMetadata({
     };
   }
 
-  const deckTitle = `${deck.nameZh}上位戰績與卡表`;
+  const totalPages = Math.max(
+    1,
+    Math.ceil(tournamentResults.filter((r) => r.deckSlug === deck.slug).length / PAGE_SIZE)
+  );
+  const page = Math.min(parsePage(rawPage), totalPages);
+  const deckTitle = `${deck.nameZh}上位戰績與卡表${page > 1 ? `（第 ${page} 頁）` : ""}`;
   const deckDescription = `${deck.nameZh}屬於 PTCG ${deck.type}上位環境牌組，彙整國外各大賽事的上位卡表戰績，依賽事時間由新到舊排列，提供訓練家組牌參考。`;
-  const canonicalUrl = `${SITE_URL}/tournament-results?deck=${encodeURIComponent(deck.slug)}`;
+  const canonicalUrl = `${SITE_URL}/tournament-results?deck=${encodeURIComponent(deck.slug)}${
+    page > 1 ? `&page=${page}` : ""
+  }`;
 
   return {
     title: deckTitle,
@@ -68,9 +82,9 @@ export async function generateMetadata({
 export default async function TournamentResultsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ deck?: string }>;
+  searchParams: Promise<{ deck?: string; page?: string }>;
 }) {
-  const { deck: deckSlug } = await searchParams;
+  const { deck: deckSlug, page: rawPage } = await searchParams;
   const deck = deckSlug ? tierList.find((d) => d.slug === deckSlug) : undefined;
 
   if (!deck) {
@@ -116,6 +130,11 @@ export default async function TournamentResultsPage({
   }
 
   const results = sortedResults(tournamentResults.filter((r) => r.deckSlug === deck.slug));
+  const totalPages = Math.max(1, Math.ceil(results.length / PAGE_SIZE));
+  const page = Math.min(parsePage(rawPage), totalPages);
+  const pageResults = results.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+  const pageHref = (n: number) =>
+    `/tournament-results?deck=${encodeURIComponent(deck.slug)}${n > 1 ? `&page=${n}` : ""}`;
 
   const products = await getProducts();
   const matchedProduct = products.find(
@@ -185,11 +204,66 @@ export default async function TournamentResultsPage({
       {results.length === 0 ? (
         <p className="mt-16 text-center text-base text-[#3C382F]/60">目前尚無收錄的戰績資料。</p>
       ) : (
-        <div className="mt-10 space-y-4">
-          {results.map((result, i) => (
-            <ResultCard key={`${result.player}-${result.date}-${i}`} result={result} />
-          ))}
-        </div>
+        <>
+          <p className="mt-10 text-sm text-[#3C382F]/60">
+            共 {results.length} 筆戰績
+            {totalPages > 1 && `，第 ${page} / ${totalPages} 頁`}
+          </p>
+          <div className="mt-4 space-y-4">
+            {pageResults.map((result, i) => (
+              <ResultCard key={`${result.player}-${result.date}-${i}`} result={result} />
+            ))}
+          </div>
+          {totalPages > 1 && (
+            <nav
+              aria-label="戰績分頁"
+              className="mt-8 flex flex-wrap items-center justify-center gap-2 text-sm"
+            >
+              {page > 1 && (
+                <Link
+                  href={pageHref(page - 1)}
+                  className="inline-flex items-center gap-1 rounded-md border border-[#D9CEB4] px-3 py-1.5 text-[#3C382F] hover:bg-[#D9CEB4]/50"
+                >
+                  <ChevronLeft className="h-4 w-4" strokeWidth={1.5} />
+                  上一頁
+                </Link>
+              )}
+              {Array.from({ length: totalPages }, (_, i) => i + 1)
+                .filter((n) => n === 1 || n === totalPages || Math.abs(n - page) <= 2)
+                .map((n, idx, arr) => (
+                  <span key={n} className="flex items-center gap-2">
+                    {idx > 0 && n - arr[idx - 1] > 1 && (
+                      <span className="text-[#3C382F]/40">…</span>
+                    )}
+                    {n === page ? (
+                      <span
+                        aria-current="page"
+                        className="rounded-md bg-[#3C382F] px-3 py-1.5 font-semibold text-[#F2ECE0]"
+                      >
+                        {n}
+                      </span>
+                    ) : (
+                      <Link
+                        href={pageHref(n)}
+                        className="rounded-md border border-[#D9CEB4] px-3 py-1.5 text-[#3C382F] hover:bg-[#D9CEB4]/50"
+                      >
+                        {n}
+                      </Link>
+                    )}
+                  </span>
+                ))}
+              {page < totalPages && (
+                <Link
+                  href={pageHref(page + 1)}
+                  className="inline-flex items-center gap-1 rounded-md border border-[#D9CEB4] px-3 py-1.5 text-[#3C382F] hover:bg-[#D9CEB4]/50"
+                >
+                  下一頁
+                  <ChevronRight className="h-4 w-4" strokeWidth={1.5} />
+                </Link>
+              )}
+            </nav>
+          )}
+        </>
       )}
 
       <div className="mt-10 rounded-lg border border-[#D9CEB4]/60 bg-[#D9CEB4]/50 p-5 text-base leading-relaxed text-[#3C382F]/70">
