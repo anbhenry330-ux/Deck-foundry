@@ -33,7 +33,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/28236",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-06-10",
     tournamentNameZh: "美國紐奧良國際錦標賽",
     tournamentNameEn: "NAIC 2026,New Orleans",
@@ -121,7 +121,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/28257",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-06-10",
     tournamentNameZh: "美國紐奧良國際錦標賽",
     tournamentNameEn: "NAIC 2026,New Orleans",
@@ -187,7 +187,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/28261",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-06-10",
     tournamentNameZh: "美國紐奧良國際錦標賽",
     tournamentNameEn: "NAIC 2026,New Orleans",
@@ -627,7 +627,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/27611",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-30",
     tournamentNameZh: "美國印第安納RL",
     tournamentNameEn: "Regional Indianapolis,IN",
@@ -638,7 +638,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/27612",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-30",
     tournamentNameZh: "美國印第安納RL",
     tournamentNameEn: "Regional Indianapolis,IN",
@@ -704,7 +704,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/27615",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-30",
     tournamentNameZh: "美國印第安納RL",
     tournamentNameEn: "Regional Indianapolis,IN",
@@ -715,7 +715,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/27612",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-30",
     tournamentNameZh: "美國印第安納RL",
     tournamentNameEn: "Regional Indianapolis,IN",
@@ -770,7 +770,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/27056",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-30",
     tournamentNameZh: "美國印第安納RL",
     tournamentNameEn: "Regional Indianapolis,IN",
@@ -814,7 +814,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/27620",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-30",
     tournamentNameZh: "美國印第安納RL",
     tournamentNameEn: "Regional Indianapolis,IN",
@@ -858,7 +858,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/27626",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-30",
     tournamentNameZh: "美國印第安納RL",
     tournamentNameEn: "Regional Indianapolis,IN",
@@ -869,7 +869,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/27612",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-24",
     tournamentNameZh: "韓國聯賽最終賽季",
     tournamentNameEn: "Korean League Final Season",
@@ -935,7 +935,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/27590",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-24",
     tournamentNameZh: "韓國聯賽最終賽季",
     tournamentNameEn: "Korean League Final Season",
@@ -946,7 +946,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/26507",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-24",
     tournamentNameZh: "韓國聯賽最終賽季",
     tournamentNameEn: "Korean League Final Season",
@@ -1056,7 +1056,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: null,
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-24",
     tournamentNameZh: "韓國聯賽最終賽季",
     tournamentNameEn: "Korean League Final Season",
@@ -1111,7 +1111,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/27144",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-24",
     tournamentNameZh: "韓國聯賽最終賽季",
     tournamentNameEn: "Korean League Final Season",
@@ -1133,7 +1133,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/27601",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-24",
     tournamentNameZh: "韓國聯賽最終賽季",
     tournamentNameEn: "Korean League Final Season",
@@ -1199,7 +1199,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/26835",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-23",
     tournamentNameZh: "祕魯利馬特別賽事",
     tournamentNameEn: "Special Event Lima",
@@ -1287,7 +1287,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/27857",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-23",
     tournamentNameZh: "澳洲墨爾本RL",
     tournamentNameEn: "Regional Melbourne",
@@ -1375,7 +1375,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/26267",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-23",
     tournamentNameZh: "澳洲墨爾本RL",
     tournamentNameEn: "Regional Melbourne",
@@ -1386,7 +1386,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/27436",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-23",
     tournamentNameZh: "祕魯利馬特別賽事",
     tournamentNameEn: "Special Event Lima",
@@ -1441,7 +1441,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/27442",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-23",
     tournamentNameZh: "祕魯利馬特別賽事",
     tournamentNameEn: "Special Event Lima",
@@ -1474,7 +1474,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/26267",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-23",
     tournamentNameZh: "祕魯利馬特別賽事",
     tournamentNameEn: "Special Event Lima",
@@ -1551,7 +1551,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/27864",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-23",
     tournamentNameZh: "澳洲墨爾本RL",
     tournamentNameEn: "Regional Melbourne",
@@ -1617,7 +1617,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/27448",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-23",
     tournamentNameZh: "祕魯利馬特別賽事",
     tournamentNameEn: "Special Event Lima",
@@ -1661,7 +1661,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/26533",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-23",
     tournamentNameZh: "澳洲墨爾本RL",
     tournamentNameEn: "Regional Melbourne",
@@ -1738,7 +1738,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/27871",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-23",
     tournamentNameZh: "澳洲墨爾本RL",
     tournamentNameEn: "Regional Melbourne",
@@ -1815,7 +1815,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/26823",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-16",
     tournamentNameZh: "荷蘭烏特勒支RL",
     tournamentNameEn: "Regional Ultrecht",
@@ -1859,7 +1859,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/26825",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-16",
     tournamentNameZh: "荷蘭烏特勒支RL",
     tournamentNameEn: "Regional Ultrecht",
@@ -1881,7 +1881,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/26828",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-16",
     tournamentNameZh: "荷蘭烏特勒支RL",
     tournamentNameEn: "Regional Ultrecht",
@@ -2024,7 +2024,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/26841",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-16",
     tournamentNameZh: "荷蘭烏特勒支RL",
     tournamentNameEn: "Regional Ultrecht",
@@ -2145,7 +2145,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/26792",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-09",
     tournamentNameZh: "美國洛杉磯RL",
     tournamentNameEn: "Regional League Los Angeles,CA",
@@ -2431,7 +2431,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/26519",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-09",
     tournamentNameZh: "美國洛杉磯RL",
     tournamentNameEn: "Regional League Los Angeles,CA",
@@ -2640,7 +2640,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/26528",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-05-09",
     tournamentNameZh: "美國洛杉磯RL",
     tournamentNameEn: "Regional League Los Angeles,CA",
@@ -3157,7 +3157,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/26116",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-03-28",
     tournamentNameZh: "日本大阪CL",
     tournamentNameEn: "Champions League Osaka",
@@ -3735,7 +3735,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://ptcgtw.shop/?s=YQ24247",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-08-09",
     tournamentNameZh: "閃耀鶴盃",
     tournamentNameEn: "閃耀鶴盃",
@@ -3977,7 +3977,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://ptcgtw.shop/?s=BN24894",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-07-27",
     tournamentNameZh: "上田盃",
     tournamentNameEn: "上田盃",
@@ -4945,7 +4945,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://ptcgtw.shop/?s=KA91842",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-08-09",
     tournamentNameZh: "優勢雙打對戰",
     tournamentNameEn: "優勢雙打對戰",
@@ -5242,7 +5242,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://ptcgtw.shop/?s=XV76056",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-08-09",
     tournamentNameZh: "酒杯賽",
     tournamentNameEn: "酒杯賽",
@@ -5547,7 +5547,7 @@ export const tournamentResults: TournamentResult[] = [
   // 寶可夢世界錦標賽 2026（美國・舊金山，Moscone Center／Chase Center，2026-08-28～30），
   // 收錄 Masters 組 32 強戰績。牌組組合在 tier-list.ts 找不到對應項目時 deckSlug 留 null。
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-08-28",
     tournamentNameZh: "寶可夢世界錦標賽 2026",
     tournamentNameEn: "World Championships 2026",
@@ -5646,7 +5646,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/28759",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-08-28",
     tournamentNameZh: "寶可夢世界錦標賽 2026",
     tournamentNameEn: "World Championships 2026",
@@ -5926,7 +5926,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/29002",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-09-19",
     tournamentNameZh: "Regional Baltimore, MD",
     tournamentNameEn: "Regional Baltimore, MD",
@@ -5970,7 +5970,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/29006",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-09-19",
     tournamentNameZh: "Regional Baltimore, MD",
     tournamentNameEn: "Regional Baltimore, MD",
@@ -6168,7 +6168,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/29024",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-09-19",
     tournamentNameZh: "Regional Baltimore, MD",
     tournamentNameEn: "Regional Baltimore, MD",
@@ -6212,7 +6212,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/29429",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-09-19",
     tournamentNameZh: "Indonesia Premier Ball League",
     tournamentNameEn: "Indonesia Premier Ball League",
@@ -6289,7 +6289,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/29434",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-09-19",
     tournamentNameZh: "Indonesia Premier Ball League",
     tournamentNameEn: "Indonesia Premier Ball League",
@@ -6366,7 +6366,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://limitlesstcg.com/decks/list/29440",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-09-19",
     tournamentNameZh: "Indonesia Premier Ball League",
     tournamentNameEn: "Indonesia Premier Ball League",
@@ -7659,7 +7659,7 @@ export const tournamentResults: TournamentResult[] = [
     decklistUrl: "https://ptcgtw.shop/?s=UU36043",
   },
   {
-    deckSlug: "dragapult-ex",
+    deckSlug: "ground-dragapult",
     date: "2026-09-01",
     tournamentNameZh: "研究發表會",
     tournamentNameEn: "研究發表會",
