@@ -24,14 +24,27 @@ export async function generateMetadata({
   const product = await getProductBySlug(slug);
   if (!product) return {};
 
-  const description = product.tagline || product.description;
+  // 賣貨便的 tagline 通常只有一句短語，單獨當 meta description 太單薄；
+  // 補上屬性、售價與出貨方式，讓搜尋結果摘要有足夠資訊
+  const matchedDeck = matchDeckByProductName(product.name);
+  const summary = product.tagline || product.description;
+  const typeLabel = matchedDeck?.type ?? "";
+  const description = `${summary}${/[。！？]$/.test(summary) ? "" : "。"}${product.name}為PTCG${typeLabel}實體牌組，售價 NT$${product.price}，${summary.includes("完整卡表") ? "" : "附完整卡表，"}超商賣貨便取貨付款，最快當日出貨。`;
+  const title = `${product.name}｜PTCG實體牌組${product.inStock ? "現貨" : ""}`;
   return {
-    title: product.name,
+    title,
     description,
-    keywords: [product.name, product.category, "PTCG牌組", "PTCG實體牌組", "寶可夢卡牌購買"],
+    keywords: [
+      product.name,
+      product.category,
+      ...(matchedDeck ? [`${matchedDeck.type}牌組`, `PTCG ${matchedDeck.nameZh}`] : []),
+      "PTCG牌組",
+      "PTCG實體牌組",
+      "寶可夢卡牌購買",
+    ],
     alternates: { canonical: `${SITE_URL}/products/${product.slug}` },
     openGraph: {
-      title: product.name,
+      title,
       description,
       images: [
         { url: product.image, width: product.imageWidth, height: product.imageHeight },
@@ -39,7 +52,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: product.name,
+      title,
       description,
       images: [product.image],
     },

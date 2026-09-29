@@ -65,7 +65,7 @@ export const tierList: TierDeck[] = [
   { slug: "honey-serpent", nameZh: "蜜集大蛇", type: "草系", image: "/decks/honey-serpent.png" },
   { slug: "crustle", nameZh: "岩殿居蟹", type: "草系", image: "/decks/crustle.png" },
   { slug: "festival-dance", nameZh: "祭典樂舞", type: "草系", image: "/decks/festival-dance.png", ptcgtwKeyword: "祭典樂舞" },
-  { slug: "beedrill-arboliva", nameZh: "大針鋒奧利瓦", type: "草系", image: "/decks/beedrill-arboliva.png" },
+  { slug: "beedrill-arboliva", nameZh: "大針蜂奧利瓦", type: "草系", image: "/decks/beedrill-arboliva.png" },
   { slug: "tera-box", nameZh: "太晶BOX", type: "草系", image: "/decks/tera-box.png" },
   { slug: "clefairy-grass-box", nameZh: "皮皮草碰BOX", type: "草系", image: "/decks/clefairy-grass-box.png" },
   { slug: "golisopod", nameZh: "超級具甲武者", type: "草系", image: "/decks/golisopod.png" },
