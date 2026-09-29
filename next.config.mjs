@@ -27,6 +27,12 @@ const nextConfig = {
         destination: "https://deckfoundry-ptcg.com/:path*",
         permanent: true,
       },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.deckfoundry-ptcg.com" }],
+        destination: "https://deckfoundry-ptcg.com/:path*",
+        permanent: true,
+      },
     ];
   },
 };
