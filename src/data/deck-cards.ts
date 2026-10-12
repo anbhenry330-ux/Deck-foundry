@@ -1795,6 +1795,7 @@ export const deckCardLists: Record<string, DeckCardGroup[]> = {
         { qty: 1, nameEn: "夜間擔架", twId: 19343 },
         { qty: 1, nameEn: "寶可夢交替", twId: 19299 },
         { qty: 1, nameEn: "特殊紅牌", twId: 19364 },
+        { qty: 1, nameEn: "急進開關", twId: 17117 },
         { qty: 1, nameEn: "頂尖捕捉器", twId: 19319 },
         { qty: 1, nameEn: "寶可夢旋風回收機", twId: 17135 },
         { qty: 1, nameEn: "英雄斗篷", twId: 19345 },
