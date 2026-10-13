@@ -69,6 +69,7 @@ export const tierList: TierDeck[] = [
   { slug: "tera-box", nameZh: "太晶BOX", type: "草系", image: "/decks/tera-box.png" },
   { slug: "clefairy-grass-box", nameZh: "皮皮草碰BOX", type: "草系", image: "/decks/clefairy-grass-box.png" },
   { slug: "golisopod", nameZh: "超級具甲武者", type: "草系", image: "/decks/golisopod.png" },
+  { slug: "bug-panic", nameZh: "蟲蟲恐慌", type: "草系", image: "/decks/bug-panic.png", ptcgtwKeyword: "蟲蟲恐慌" },
   // 水系
   { slug: "abomasnow", nameZh: "超級暴雪王", type: "水系", image: "/decks/abomasnow.png" },
   { slug: "cryogonal", nameZh: "冰岩怪", type: "水系", image: "/decks/cryogonal.png" },
@@ -95,6 +96,7 @@ export const tierList: TierDeck[] = [
   { slug: "mega-kangaskhan", nameZh: "超級袋獸", type: "一般系", image: "/decks/mega-kangaskhan.png" },
   { slug: "rayquaza", nameZh: "超級烈空坐", type: "一般系", image: "/decks/rayquaza.png" },
   { slug: "toucannon", nameZh: "銃嘴大鳥", type: "一般系", image: "/decks/toucannon.png" },
+  { slug: "igglybuff", nameZh: "寶寶丁", type: "一般系", image: "/decks/igglybuff.png" },
   // 鋼系
   { slug: "archaludon", nameZh: "鋁鋼橋龍", type: "鋼系", image: "/decks/archaludon.png" },
   { slug: "dragon-diglett", nameZh: "超級龍頭地鼠", type: "鋼系", image: "/decks/dragon-diglett.jpg" },

@@ -336,6 +336,20 @@ export const deckGuides: DeckGuide[] = [
     favorableSlugs: ["archaludon", "aegislash"],
     unfavorableSlugs: ["blaziken-dragapult", "ceruledge"],
   },
+  {
+    slug: "bug-panic",
+    archetype: "翻牌爆發型",
+    summary:
+      "以雨翅蛾、三蜜蜂、圓絲蛛、燒火蚣等持有招式【蟲蟲恐慌】的寶可夢組成，【蟲蟲恐慌】會翻開自己牌庫下方7張卡，依其中持有【蟲蟲恐慌】的寶可夢卡張數×50造成傷害，牌組裡這類寶可夢投入越多，期望傷害越高。",
+    winConditions: [
+      "大量投入持有【蟲蟲恐慌】的寶可夢（參考構築雨翅蛾、三蜜蜂、圓絲蛛、燒火蚣各4張），提高翻開7張時的命中數，翻到3張即可打出150傷害",
+      "翻到的寶可夢卡會放回牌庫重洗、其餘卡則被丟棄，攻擊不會消耗寶可夢，但會削減牌庫中的訓練家卡與能量，需留意牌庫剩餘張數",
+      "溜溜糖球的【增長】可從牌庫放置最多2張溜溜糖球到備戰區，快速鋪出雨翅蛾的進化來源",
+      "雨翅蛾的另一招【恐怖花紋】造成30傷害，並讓中招的寶可夢在下個對手回合無法使用招式，可用來爭取時間",
+    ],
+    favorableSlugs: [],
+    unfavorableSlugs: [],
+  },
   // 水系
   {
     slug: "abomasnow",
@@ -626,6 +640,19 @@ export const deckGuides: DeckGuide[] = [
     ],
     favorableSlugs: ["fossil-box", "tera-box"],
     unfavorableSlugs: ["raging-bolt", "mega-metagross"],
+  },
+  {
+    slug: "igglybuff",
+    archetype: "鋪場型",
+    summary:
+      "寶寶丁是HP30的基礎寶可夢，招式【軟彈陣】只需1個能量，傷害等於自己最大HP為「30」的備戰寶可夢數量×30，把備戰區鋪滿5隻HP30的寶可夢即可打出150傷害。",
+    winConditions: [
+      "盡量把備戰區鋪滿最大HP為「30」的寶可夢，5隻時【軟彈陣】可打出150點傷害；備戰區的寶寶丁本身也算在內",
+      "【軟彈陣】只需1個無色能量，任何種類的能量都能啟動攻擊",
+      "寶寶丁不是寶可夢ex，被擊倒只讓對手拿1張獎賞卡；但HP只有30，備戰區被針對時傷害會跟著下降，需要持續補充HP30的寶可夢",
+    ],
+    favorableSlugs: [],
+    unfavorableSlugs: [],
   },
   // 鋼系
   {

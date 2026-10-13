@@ -1,16 +1,18 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ChevronLeft, Swords, ShieldAlert, ShieldCheck } from "lucide-react";
+import { ChevronLeft, Swords } from "lucide-react";
 import { DECK_TYPE_ORDER, tierList } from "@/data/tier-list";
 import { getDeckGuide, guidedDecks } from "@/data/deck-guides";
 import { getDeckCardList } from "@/data/deck-cards";
 import { DeckGlyph } from "@/components/DeckGlyph";
 import { DeckCardShowcase } from "@/components/DeckCardShowcase";
+import { DeckVariants } from "@/components/DeckVariants";
+import { getDeckVariants } from "@/data/deck-variants";
 import { SITE_URL } from "@/lib/site";
 
 const TITLE = "牌組攻略";
 const DESCRIPTION =
-  "PTCG 環境牌組攻略，解析各牌組的核心打法、致勝關鍵，以及有利／不利對局，幫助訓練家擬定對戰策略。";
+  "PTCG 環境牌組攻略，解析各牌組的核心打法與致勝關鍵，幫助訓練家擬定對戰策略。";
 
 export async function generateMetadata({
   searchParams,
@@ -66,19 +68,6 @@ export async function generateMetadata({
   };
 }
 
-function MatchupPill({ slug }: { slug: string }) {
-  const deck = tierList.find((d) => d.slug === slug);
-  if (!deck) return null;
-  return (
-    <Link
-      href={`/deck-guides?deck=${encodeURIComponent(deck.slug)}`}
-      className="inline-flex items-center gap-1.5 rounded-full border border-[#D9CEB4] bg-[#FBF8F1] px-3 py-1.5 text-sm text-[#3C382F]/85 transition-colors hover:border-[#3C382F]/40 hover:bg-[#D9CEB4]/20"
-    >
-      {deck.nameZh}
-    </Link>
-  );
-}
-
 export default async function DeckGuidesPage({
   searchParams,
 }: {
@@ -88,6 +77,7 @@ export default async function DeckGuidesPage({
   const deck = deckSlug ? tierList.find((d) => d.slug === deckSlug) : undefined;
   const guide = deckSlug ? getDeckGuide(deckSlug) : undefined;
   const cardGroups = deck ? getDeckCardList(deck.slug) : undefined;
+  const variants = deck ? getDeckVariants(deck.slug) : undefined;
 
   if (!deck || !guide) {
     const decks = guidedDecks();
@@ -99,7 +89,7 @@ export default async function DeckGuidesPage({
           </span>
           <h1 className="mt-2 font-serif text-3xl font-bold text-[#3C382F]">牌組攻略</h1>
           <p className="mt-3 max-w-2xl text-base leading-relaxed text-[#3C382F]/80">
-            點擊牌組查看核心打法、致勝關鍵，以及有利／不利對局分析，攻略持續收錄中。
+            點擊牌組查看核心打法與致勝關鍵，攻略持續收錄中。
           </p>
         </div>
 
@@ -198,36 +188,9 @@ export default async function DeckGuidesPage({
         </ul>
       </div>
 
-      <div className="mt-6 grid gap-4 sm:grid-cols-2">
-        <div className="rounded-lg border border-[#D9CEB4]/60 p-5">
-          <h2 className="flex items-center gap-2 font-serif text-base font-bold text-[#3C382F]">
-            <ShieldCheck className="h-4 w-4" strokeWidth={1.5} />
-            有利對局
-          </h2>
-          <div className="mt-3 flex flex-wrap gap-2">
-            {guide.favorableSlugs.length > 0 ? (
-              guide.favorableSlugs.map((slug) => <MatchupPill key={slug} slug={slug} />)
-            ) : (
-              <p className="text-sm text-[#3C382F]/50">資料整理中</p>
-            )}
-          </div>
-        </div>
-        <div className="rounded-lg border border-[#D9CEB4]/60 p-5">
-          <h2 className="flex items-center gap-2 font-serif text-base font-bold text-[#3C382F]">
-            <ShieldAlert className="h-4 w-4" strokeWidth={1.5} />
-            不利對局
-          </h2>
-          <div className="mt-3 flex flex-wrap gap-2">
-            {guide.unfavorableSlugs.length > 0 ? (
-              guide.unfavorableSlugs.map((slug) => <MatchupPill key={slug} slug={slug} />)
-            ) : (
-              <p className="text-sm text-[#3C382F]/50">資料整理中</p>
-            )}
-          </div>
-        </div>
-      </div>
-
       {cardGroups && <DeckCardShowcase cardGroups={cardGroups} />}
+
+      {variants && variants.length > 0 && <DeckVariants variants={variants} />}
 
       <div className="mt-10 rounded-lg border border-[#D9CEB4]/60 bg-[#D9CEB4]/50 p-5 text-base leading-relaxed text-[#3C382F]/70">
         <p>
