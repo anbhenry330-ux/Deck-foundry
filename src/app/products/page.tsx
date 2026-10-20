@@ -4,7 +4,7 @@ import { getProducts, type ProductCategory } from "@/lib/store";
 import { ProductCard } from "@/components/ProductCard";
 import { SITE_URL } from "@/lib/site";
 
-const TITLE = "商品目錄";
+const TITLE = "PTCG實體牌組商品目錄";
 const DESCRIPTION =
   "構築所商品目錄：日本上位環境主流 PTCG 實體牌組、牌組周邊現貨供應，價格實惠、當日出貨，支援貨到付款。";
 

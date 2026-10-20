@@ -8,7 +8,7 @@ import { DeckGlyph } from "@/components/DeckGlyph";
 import { SITE_URL } from "@/lib/site";
 import { getProducts } from "@/lib/store";
 
-const TITLE = "上位卡表與賽事戰績";
+const TITLE = "PTCG上位卡表與賽事戰績";
 const PAGE_SIZE = 30;
 
 function parsePage(raw: string | undefined) {
@@ -48,13 +48,15 @@ export async function generateMetadata({
     };
   }
 
-  const totalPages = Math.max(
-    1,
-    Math.ceil(tournamentResults.filter((r) => r.deckSlug === deck.slug).length / PAGE_SIZE)
-  );
+  const deckResults = tournamentResults.filter((r) => r.deckSlug === deck.slug);
+  const totalPages = Math.max(1, Math.ceil(deckResults.length / PAGE_SIZE));
   const page = Math.min(parsePage(rawPage), totalPages);
-  const deckTitle = `${deck.nameZh}上位戰績與卡表${page > 1 ? `（第 ${page} 頁）` : ""}`;
-  const deckDescription = `${deck.nameZh}屬於 PTCG ${deck.type}上位環境牌組，彙整國外各大賽事的上位卡表戰績，依賽事時間由新到舊排列，提供訓練家組牌參考。`;
+  const latestDate = deckResults.reduce((max, r) => (r.date > max ? r.date : max), "");
+  // 標題帶「牌組」對應實際搜尋字（例如「大針蜂牌組」），描述帶筆數與最新日期提高點擊意願
+  const deckTitle = `${deck.nameZh}牌組上位卡表與戰績${page > 1 ? `（第 ${page} 頁）` : ""}`;
+  const deckDescription = deckResults.length
+    ? `${deck.nameZh}牌組（PTCG ${deck.type}）上位卡表：收錄 ${deckResults.length} 筆各大賽事戰績，最新更新至 ${latestDate}，依時間由新到舊排列，提供訓練家組牌參考。`
+    : `${deck.nameZh}屬於 PTCG ${deck.type}上位環境牌組，彙整各大賽事的上位卡表戰績，提供訓練家組牌參考。`;
   const canonicalUrl = `${SITE_URL}/tournament-results?deck=${encodeURIComponent(deck.slug)}${
     page > 1 ? `&page=${page}` : ""
   }`;
@@ -62,7 +64,15 @@ export async function generateMetadata({
   return {
     title: deckTitle,
     description: deckDescription,
-    keywords: [deck.nameZh, `PTCG ${deck.type}牌組`, "PTCG賽事戰績", "上位卡表", "PTCG實體牌組"],
+    keywords: [
+      deck.nameZh,
+      `${deck.nameZh}牌組`,
+      `${deck.nameZh}卡表`,
+      `PTCG ${deck.type}牌組`,
+      "PTCG賽事戰績",
+      "上位卡表",
+      "PTCG實體牌組",
+    ],
     alternates: { canonical: canonicalUrl },
     openGraph: {
       title: `${deckTitle}｜構築所 Deck Foundry`,
