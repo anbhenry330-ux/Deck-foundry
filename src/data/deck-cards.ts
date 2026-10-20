@@ -110,6 +110,9 @@ export const deckCardLists: Record<string, DeckCardGroup[]> = {
         { qty: 1, nameEn: "竹蘭的花岩怪", twId: 12708 },
         { qty: 1, nameEn: "吉雉雞ex", twId: 19314 },
         { qty: 1, nameEn: "喵喵ex", twId: 19362 },
+        { qty: 1, nameEn: "土龍弟弟", twId: 9826 },
+        { qty: 1, nameEn: "土龍弟弟", twId: 17045 },
+        { qty: 1, nameEn: "土龍節節", twId: 9827 },
       ],
     },
     {
