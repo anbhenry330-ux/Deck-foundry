@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
 };
 
-const CATEGORIES: ProductCategory[] = ["牌組", "卡套"];
+const CATEGORIES: ProductCategory[] = ["牌組", "卡套", "卡盒", "卡墊"];
 
 export default async function ProductsPage({
   searchParams,

@@ -18,7 +18,7 @@
 
 import * as cheerio from "cheerio";
 
-export type ProductCategory = "牌組" | "單卡" | "卡套";
+export type ProductCategory = "牌組" | "卡套" | "卡盒" | "卡墊" | "單卡";
 
 export interface Product {
   id: string;
@@ -140,7 +140,9 @@ function slugify(name: string, id: string) {
 
 function inferCategory(name: string): ProductCategory {
   if (name.endsWith("牌組")) return "牌組";
-  if (/卡套|牌套|套組|收納|對局墊|卡冊/.test(name)) return "卡套";
+  if (/卡墊|對局墊|遊戲墊|桌墊/.test(name)) return "卡墊";
+  if (/卡盒|牌盒|收納/.test(name)) return "卡盒";
+  if (/卡套|牌套|套組|卡冊/.test(name)) return "卡套";
   return "單卡";
 }
 
