@@ -181,7 +181,9 @@ export default async function DeckGuidesPage({
         <ul className="mt-3 space-y-2 text-base leading-relaxed text-[#3C382F]/85">
           {guide.winConditions.map((point, i) => (
             <li key={i} className="flex gap-2">
-              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3C382F]/40" />
+              <span className="flex h-[1lh] shrink-0 items-center">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#3C382F]/40" />
+              </span>
               <span>{point}</span>
             </li>
           ))}
